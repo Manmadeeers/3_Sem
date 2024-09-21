@@ -1,0 +1,13 @@
+Test:  without errors 
+
+Test:  without errors 
+---------- Protocol ---------- Date: 19.09.2024 17:11:39
+----------Parametres----------
+-in: file.txt
+-out: out.out
+-log: jor.log
+----------Entered info----------
+vaclov       is      gay
+Total amount of symbols: 24
+Total amount of ignored symbols: 0
+Total amount of lines: 1

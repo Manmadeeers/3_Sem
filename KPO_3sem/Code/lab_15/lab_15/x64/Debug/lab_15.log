@@ -1,0 +1,64 @@
+﻿Сборка начата 11.09.2024 19:15:40.
+Уровень детализации журнала: Normal.     1>Проект "C:\Users\Manmade\Desktop\KPO_3sem\Code\lab_15\lab_15\lab_15.vcxproj" в узле 2 (целевые объекты Build).
+     1>PrepareForBuild:
+         Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+         Создание каталога "C:\Users\Manmade\Desktop\KPO_3sem\Code\lab_15\x64\Debug\".
+         Создание каталога "x64\Debug\lab_15.tlog\".
+       InitializeBuildStatus:
+         Создание "x64\Debug\lab_15.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+         Обращение к "x64\Debug\lab_15.tlog\unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\bin\HostX64\x64\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"x64\Debug\\" /Fd"x64\Debug\vc143.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt Error.cpp In.cpp lab_15.cpp Log.cpp Out.cpp Parm.cpp
+         Error.cpp
+     1>C:\Users\Manmade\Desktop\KPO_3sem\Code\lab_15\lab_15\In.h(29,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         (компиляция исходного файла "Error.cpp")
+         
+         In.cpp
+     1>C:\Users\Manmade\Desktop\KPO_3sem\Code\lab_15\lab_15\In.h(29,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         (компиляция исходного файла "In.cpp")
+         
+         lab_15.cpp
+     1>C:\Users\Manmade\Desktop\KPO_3sem\Code\lab_15\lab_15\In.h(29,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         (компиляция исходного файла "lab_15.cpp")
+         
+         Log.cpp
+     1>C:\Users\Manmade\Desktop\KPO_3sem\Code\lab_15\lab_15\In.h(29,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         (компиляция исходного файла "Log.cpp")
+         
+         Out.cpp
+     1>C:\Users\Manmade\Desktop\KPO_3sem\Code\lab_15\lab_15\In.h(29,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         (компиляция исходного файла "Out.cpp")
+         
+         Parm.cpp
+     1>C:\Users\Manmade\Desktop\KPO_3sem\Code\lab_15\lab_15\In.h(29,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         (компиляция исходного файла "Parm.cpp")
+         
+         Создание кода...
+       Link:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Manmade\Desktop\KPO_3sem\Code\lab_15\x64\Debug\lab_15.exe" /INCREMENTAL /ILK:"x64\Debug\lab_15.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Manmade\Desktop\KPO_3sem\Code\lab_15\x64\Debug\lab_15.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Manmade\Desktop\KPO_3sem\Code\lab_15\x64\Debug\lab_15.lib" /MACHINE:X64 x64\Debug\Error.obj
+         x64\Debug\In.obj
+         x64\Debug\lab_15.obj
+         x64\Debug\Log.obj
+         x64\Debug\Out.obj
+         x64\Debug\Parm.obj
+         lab_15.vcxproj -> C:\Users\Manmade\Desktop\KPO_3sem\Code\lab_15\x64\Debug\lab_15.exe
+       FinalizeBuildStatus:
+         Файл "x64\Debug\lab_15.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "x64\Debug\lab_15.tlog\lab_15.lastbuildstate".
+     1>Сборка проекта "C:\Users\Manmade\Desktop\KPO_3sem\Code\lab_15\lab_15\lab_15.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+       "C:\Users\Manmade\Desktop\KPO_3sem\Code\lab_15\lab_15\lab_15.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект ClCompile) -> 
+         C:\Users\Manmade\Desktop\KPO_3sem\Code\lab_15\lab_15\In.h(29,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         C:\Users\Manmade\Desktop\KPO_3sem\Code\lab_15\lab_15\In.h(29,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         C:\Users\Manmade\Desktop\KPO_3sem\Code\lab_15\lab_15\In.h(29,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         C:\Users\Manmade\Desktop\KPO_3sem\Code\lab_15\lab_15\In.h(29,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         C:\Users\Manmade\Desktop\KPO_3sem\Code\lab_15\lab_15\In.h(29,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         C:\Users\Manmade\Desktop\KPO_3sem\Code\lab_15\lab_15\In.h(29,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+
+    Предупреждений: 6
+    Ошибок: 0
+
+Прошло времени 00:00:04.24
