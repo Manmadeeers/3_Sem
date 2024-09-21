@@ -1,6 +1,6 @@
 # 3_Sem
 <h1>All the labs from the 3rd semester</h1>
-<li>ASD - "Algoruthms and Data Structures" labs</li>
+<li>ASD - "Algorithms and Data Structures" labs</li>
 <li>KPO - "Software engineering" labs</li>
 <li>OOP - "Object oriented programming" labs</li>
 <li>SPL - "Script Programming languges" labs</li>
