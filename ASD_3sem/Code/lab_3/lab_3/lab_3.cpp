@@ -4,6 +4,7 @@
 // 
 //<-------------------->
 #include <iostream>
+#define INF INT_MAX
 using namespace std;
 
 const int NodesInGraph = 9;				// A  B  C  D  E  F  G  H  I

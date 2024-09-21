@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Manmade\\Desktop\\ASD_3sem\\Code\\lab_3\\",
+  "WorkspaceRootPath": "C:\\Users\\Manmade\\Desktop\\3_Sem\\ASD_3sem\\Code\\lab_3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{81A7C1A3-F655-4E41-879E-36DE3885CD10}|lab_3\\lab_3.vcxproj|C:\\Users\\Manmade\\Desktop\\ASD_3sem\\Code\\lab_3\\lab_3\\lab_3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{81A7C1A3-F655-4E41-879E-36DE3885CD10}|lab_3\\lab_3.vcxproj|C:\\Users\\Manmade\\Desktop\\3_Sem\\ASD_3sem\\Code\\lab_3\\lab_3\\lab_3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{81A7C1A3-F655-4E41-879E-36DE3885CD10}|lab_3\\lab_3.vcxproj|solutionrelative:lab_3\\lab_3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "lab_3.cpp",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\ASD_3sem\\Code\\lab_3\\lab_3\\lab_3.cpp",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\ASD_3sem\\Code\\lab_3\\lab_3\\lab_3.cpp",
               "RelativeDocumentMoniker": "lab_3\\lab_3.cpp",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\ASD_3sem\\Code\\lab_3\\lab_3\\lab_3.cpp",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\ASD_3sem\\Code\\lab_3\\lab_3\\lab_3.cpp",
               "RelativeToolTip": "lab_3\\lab_3.cpp",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-09-20T15:53:02.529Z",
               "EditorCaption": ""
