@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Manmade\\Desktop\\ASD_3sem\\Code\\lab_2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F2B8320E-B675-43E1-9B5E-0F07E452B5DB}|lab_2\\lab_2.vcxproj|C:\\Users\\Manmade\\Desktop\\ASD_3sem\\Code\\lab_2\\lab_2\\lab_2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F2B8320E-B675-43E1-9B5E-0F07E452B5DB}|lab_2\\lab_2.vcxproj|solutionrelative:lab_2\\lab_2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "lab_2.cpp",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\ASD_3sem\\Code\\lab_2\\lab_2\\lab_2.cpp",
+              "RelativeDocumentMoniker": "lab_2\\lab_2.cpp",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\ASD_3sem\\Code\\lab_2\\lab_2\\lab_2.cpp",
+              "RelativeToolTip": "lab_2\\lab_2.cpp",
+              "ViewState": "AgIAAL0AAAAAAAAAAAAAAAQBAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-13T14:00:20.405Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
