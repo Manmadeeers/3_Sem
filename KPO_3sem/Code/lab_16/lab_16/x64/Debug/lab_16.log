@@ -1,32 +1,33 @@
-﻿Сборка начата 19.09.2024 17:17:08.
-Уровень детализации журнала: Normal.     1>Проект "C:\Users\Manmade\Desktop\KPO_3sem\Code\lab_16\lab_16\lab_16.vcxproj" в узле 2 (целевые объекты Build).
+﻿Сборка начата 24.09.2024 15:57:28.
+Уровень детализации журнала: Normal.     1>Проект "C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_16\lab_16\lab_16.vcxproj" в узле 2 (целевые объекты Build).
      1>PrepareForBuild:
          Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
        InitializeBuildStatus:
          Обращение к "x64\Debug\lab_16.tlog\unsuccessfulbuild".
        ClCompile:
-         Для всех выходных данных обновления не требуется.
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX64\x64\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"x64\Debug\\" /Fd"x64\Debug\vc143.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt FST.cpp lab_16.cpp
+         FST.cpp
+     1>C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_16\lab_16\FST.cpp(63,17): warning C4267: инициализация: преобразование из "size_t" в "short"; возможна потеря данных
+         lab_16.cpp
+     1>C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_16\lab_16\lab_16.cpp(3,6): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+         Создание кода...
        Link:
-         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Manmade\Desktop\KPO_3sem\Code\lab_16\x64\Debug\lab_16.exe" /INCREMENTAL /ILK:"x64\Debug\lab_16.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Manmade\Desktop\KPO_3sem\Code\lab_16\x64\Debug\lab_16.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Manmade\Desktop\KPO_3sem\Code\lab_16\x64\Debug\lab_16.lib" /MACHINE:X64 x64\Debug\FST.obj
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_16\x64\Debug\lab_16.exe" /INCREMENTAL /ILK:"x64\Debug\lab_16.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_16\x64\Debug\lab_16.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_16\x64\Debug\lab_16.lib" /MACHINE:X64 x64\Debug\FST.obj
          x64\Debug\lab_16.obj
-     1>lab_16.obj : error LNK2005: "public: __cdecl FST::FST::FST(char *,short,struct FST::NODE,...)" (??0FST@0@QEAA@PEADFUNODE@0@ZZ) уже определен в FST.obj
-     1>lab_16.obj : error LNK2005: "public: __cdecl FST::NODE::NODE(short,struct FST::RELATION,...)" (??0NODE@FST@@QEAA@FURELATION@1@ZZ) уже определен в FST.obj
-     1>lab_16.obj : error LNK2005: "public: __cdecl FST::NODE::NODE(void)" (??0NODE@FST@@QEAA@XZ) уже определен в FST.obj
-     1>lab_16.obj : error LNK2005: "public: __cdecl FST::RELATION::RELATION(char,short)" (??0RELATION@FST@@QEAA@DF@Z) уже определен в FST.obj
-     1>C:\Users\Manmade\Desktop\KPO_3sem\Code\lab_16\x64\Debug\lab_16.exe : fatal error LNK1169: обнаружен многократно определенный символ - один или более
-     1>Сборка проекта "C:\Users\Manmade\Desktop\KPO_3sem\Code\lab_16\lab_16\lab_16.vcxproj" завершена (целевые объекты Build) с ошибкой.
+         lab_16.vcxproj -> C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_16\x64\Debug\lab_16.exe
+       FinalizeBuildStatus:
+         Файл "x64\Debug\lab_16.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "x64\Debug\lab_16.tlog\lab_16.lastbuildstate".
+     1>Сборка проекта "C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_16\lab_16\lab_16.vcxproj" завершена (целевые объекты Build).
 
-Ошибка сборки.
+Сборка успешно завершена.
 
-       "C:\Users\Manmade\Desktop\KPO_3sem\Code\lab_16\lab_16\lab_16.vcxproj" (целевой объект Build ) (1) ->
-       (Целевой объект Link) -> 
-         lab_16.obj : error LNK2005: "public: __cdecl FST::FST::FST(char *,short,struct FST::NODE,...)" (??0FST@0@QEAA@PEADFUNODE@0@ZZ) уже определен в FST.obj
-         lab_16.obj : error LNK2005: "public: __cdecl FST::NODE::NODE(short,struct FST::RELATION,...)" (??0NODE@FST@@QEAA@FURELATION@1@ZZ) уже определен в FST.obj
-         lab_16.obj : error LNK2005: "public: __cdecl FST::NODE::NODE(void)" (??0NODE@FST@@QEAA@XZ) уже определен в FST.obj
-         lab_16.obj : error LNK2005: "public: __cdecl FST::RELATION::RELATION(char,short)" (??0RELATION@FST@@QEAA@DF@Z) уже определен в FST.obj
-         C:\Users\Manmade\Desktop\KPO_3sem\Code\lab_16\x64\Debug\lab_16.exe : fatal error LNK1169: обнаружен многократно определенный символ - один или более
+       "C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_16\lab_16\lab_16.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект ClCompile) -> 
+         C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_16\lab_16\FST.cpp(63,17): warning C4267: инициализация: преобразование из "size_t" в "short"; возможна потеря данных
+         C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_16\lab_16\lab_16.cpp(3,6): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
 
-    Предупреждений: 0
-    Ошибок: 5
+    Предупреждений: 2
+    Ошибок: 0
 
-Прошло времени 00:00:00.23
+Прошло времени 00:00:01.23
