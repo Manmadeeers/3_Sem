@@ -11,6 +11,8 @@ using namespace std;
 #define COS 'C'
 #define SIN 'I'
 #define ENDP 'E'
+#define X 'X'
+#define Y 'Y'
 
 namespace FST
 {
