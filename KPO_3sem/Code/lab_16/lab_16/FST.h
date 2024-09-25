@@ -4,13 +4,13 @@
 using namespace std;
 
 #define PROC 'P'
-#define BLANK ' '
+#define BLANK 'B'
 #define LAMBDA 'L'
 #define END 'E'
 #define START 'S'
 #define COS 'C'
 #define SIN 'I'
-
+#define ENDP 'E'
 
 namespace FST
 {

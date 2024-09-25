@@ -1,9 +1,7 @@
-﻿Сборка начата 24.09.2024 16:07:28.
+﻿Сборка начата 25.09.2024 17:01:33.
 Уровень детализации журнала: Normal.     1>Проект "C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_16\lab_16\lab_16.vcxproj" в узле 2 (целевые объекты Build).
      1>PrepareForBuild:
          Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
-         Создание каталога "C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_16\Debug\".
-         Создание каталога "Debug\lab_16.tlog\".
        InitializeBuildStatus:
          Создание "Debug\lab_16.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
          Обращение к "Debug\lab_16.tlog\unsuccessfulbuild".
@@ -33,4 +31,4 @@
     Предупреждений: 2
     Ошибок: 0
 
-Прошло времени 00:00:01.65
+Прошло времени 00:00:00.89
