@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Manmade\\Desktop\\OOP_3sem\\Code\\lab1\\lab1\\lab1.csproj",
+      "projectUniqueName": "C:\\Users\\Manmade\\Desktop\\3_Sem\\OOP_3sem\\Code\\lab1\\lab1\\lab1.csproj",
       "projectName": "lab1",
-      "projectPath": "C:\\Users\\Manmade\\Desktop\\OOP_3sem\\Code\\lab1\\lab1\\lab1.csproj",
+      "projectPath": "C:\\Users\\Manmade\\Desktop\\3_Sem\\OOP_3sem\\Code\\lab1\\lab1\\lab1.csproj",
       "packagesPath": "C:\\Users\\Manmade\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Manmade\\Desktop\\OOP_3sem\\Code\\lab1\\lab1\\obj\\",
+      "outputPath": "C:\\Users\\Manmade\\Desktop\\3_Sem\\OOP_3sem\\Code\\lab1\\lab1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -72,7 +72,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -10,6 +10,11 @@ namespace lab1
     {
         public static void Main(string[] args)
         {
+
+            int Itopack = 16;
+            object Package = Itopack;
+            short unpack = Convert.ToInt16(Package);
+
             //TASK 1A
             bool boolean_var = false;
             byte unsigned_8bit_int = 14;
