@@ -18,6 +18,8 @@ vector<vector<int>>S0Matrix(NodesInGraph, vector<int>(NodesInGraph));
 vector<vector<int>>DMatrix(NodesInGraph, vector<int>(NodesInGraph));
 vector<vector<int>>SMAtrix(NodesInGraph, vector<int>(NodesInGraph));
 
+
+//possibly parameters should be transfered by the link to InitMatrix functions 
 void InitDMatrix(vector<vector<int>>DMatrix) {
 	for (int i = 0; i < NodesInGraph; i++) {
 		for (int j = 0; j < NodesInGraph; j++) {
