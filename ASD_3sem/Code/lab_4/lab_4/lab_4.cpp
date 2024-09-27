@@ -105,7 +105,8 @@ void main() {
 	AddRelation(5, 4, 10);
 	AddRelation(5, 6, 22);
 	AddRelation(6, 5, 6);
-
+//TO DO:
+//NEED'S TO BE REWRITEN
 	PrintMatirx(D0matrix);
 	DMatrix = D0matrix;
 	FloydWorshall();
