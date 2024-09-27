@@ -1,10 +1,10 @@
 //TASK 1
 function basicOperations(value1,operations,value2){
     switch(operations){
-        case '+':return value1+value2; break;
-        case '-':return value1-value2;break;
-        case '*':return value1*value2;break;
-        case '/':return value1/value2;break;
+        case '+':return value1+value2;
+        case '-':return value1-value2;
+        case '*':return value1*value2;
+        case '/':return value1/value2;
         default:return"Cannot proceed such operation!";
     }
 }
@@ -39,7 +39,7 @@ function midArythm(InputArray){
     for(let i=0;i<ArrayLength;i++){
         SUM+=InputArray[i];
     }
-    return SUM/ArrayLength;
+    return (SUM/ArrayLength).toFixed(10);//fixed
 }
 console.group("Mid Arythm");
 console.log(midArythm([1,2,3,4,5,6,7,8,9,10]));
@@ -52,13 +52,14 @@ console.groupEnd();
 function invertSting(InputString){
     let RevercedString = "";
     for(let i=InputString.length-1;i>=0;i--){
-        if(!(InputString[i]>='А'&&InputString[i]<='я')){
+        //fixed
+        if(InputString[i]>='A'&&InputString[i]<='z'){
             RevercedString+=InputString[i];
         }
         
     }
-    if(RevercedString.length===2){
-        RevercedString =  "The whole string is in russian";
+    if(RevercedString===""){
+        return "The whole string is in russian";
     }
     return RevercedString;
 }

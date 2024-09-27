@@ -21,15 +21,20 @@ vector<vector<int>>SMAtrix(NodesInGraph, vector<int>(NodesInGraph));
 //TO DO
 //possibly parameters should be transfered by the link to InitMatrix functions 
 
-void InitDMatrix(vector<vector<int>>DMatrix) {
+void InitDMatrix(vector<vector<int>>&DMatrix) {
 	for (int i = 0; i < NodesInGraph; i++) {
 		for (int j = 0; j < NodesInGraph; j++) {
-			DMatrix[i][j] = INF;
+			if (i == j) {
+				DMatrix[i][j] = 0;
+			}
+			else {
+				DMatrix[i][j] = INF;
+			}
 		}
 	}
 }
 
-void InitSMatrix(vector<vector<int>>SMatrix) {
+void InitSMatrix(vector<vector<int>>&SMatrix) {
 	for (int i = 0; i < NodesInGraph; i++) {
 		for (int j = 0; j < NodesInGraph; j++) {
 			SMatrix[i][j] = j+1;
@@ -42,7 +47,7 @@ void InitSMatrix(vector<vector<int>>SMatrix) {
 //I assume that it should be [src][dest] instead of [dest][src]
 
 void AddRelation(int Source,int Destination,int Weight) {
-	D0matrix[Destination-1][Source-1] = Weight;
+	D0matrix[Source-1][Destination-1] = Weight;
 }
 
 void PrintMatirx(vector<vector<int>>Matrix) {
@@ -54,22 +59,28 @@ void PrintMatirx(vector<vector<int>>Matrix) {
 	for (int i = 0; i < NodesInGraph; i++) {
 		cout << '\t';
 		for (int j = 0; j < NodesInGraph; j++) {
-			cout << Matrix[i][j] << '\t';
+			if (Matrix[i][j] == INF) {
+				cout << "INF" << '\t';
+			}
+			else {
+				cout << Matrix[i][j] << '\t';
+			}
+			
 		}
 		cout<<i+1 << endl;
 	}
 	cout << endl << endl;
 }
 
-void FloydWorshall() {
+void FloydWarshall(vector<vector<int>>&Matrix,vector<vector<int>>&Smatrix) {
 
-	int LeadingLC = 1;//needs substraction because of an array
+	//int LeadingLC = 1;//needs substraction because of an array
 	for (int k = 0; k < NodesInGraph; k++) {
 		for (int i = 0; i < NodesInGraph; i++) {
 			for (int j = 0; j < NodesInGraph; j++) {
-				if (D0matrix[i][j] > (D0matrix[i][k] + D0matrix[k][j])&&(D0matrix[k][j]!=INF&&D0matrix[i][k]!=INF)) {
-					DMatrix[i][j] = D0matrix[i][k] + D0matrix[k][j];
-					SMAtrix[i][j] = k + 1;
+				if (Matrix[i][j] > (Matrix[i][k] + Matrix[k][j])&&(Matrix[k][j]!=INF&&Matrix[i][k]!=INF)) {
+					Matrix[i][j] = Matrix[i][k] + Matrix[k][j];
+					Smatrix[i][j] = k + 1;
 				}
 			}
 		}
@@ -105,23 +116,13 @@ void main() {
 	AddRelation(5, 4, 10);
 	AddRelation(5, 6, 22);
 	AddRelation(6, 5, 6);
-//TO DO:
-//NEED'S TO BE REWRITEN
+
 	PrintMatirx(D0matrix);
-	DMatrix = D0matrix;
-	FloydWorshall();
-	PrintMatirx(DMatrix);
-	PrintMatirx(SMAtrix);
-	/*InitSMatrix(S0Matrix);
+	InitSMatrix(S0Matrix);
+
+	FloydWarshall(D0matrix,S0Matrix);
+
+	PrintMatirx(D0matrix);
 	PrintMatirx(S0Matrix);
-
-	InitDMatrix(DMatrix);
-	InitSMatrix(SMAtrix);
-	DMatrix = D0matrix;
-	SMAtrix = S0Matrix;*/
-
-	//FloydWorshall();
-	//PrintMatirx(DMatrix);
-	//PrintMatirx(SMAtrix);
 
 }
