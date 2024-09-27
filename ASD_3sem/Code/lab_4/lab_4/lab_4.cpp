@@ -18,8 +18,9 @@ vector<vector<int>>S0Matrix(NodesInGraph, vector<int>(NodesInGraph));
 vector<vector<int>>DMatrix(NodesInGraph, vector<int>(NodesInGraph));
 vector<vector<int>>SMAtrix(NodesInGraph, vector<int>(NodesInGraph));
 
-
+//TO DO
 //possibly parameters should be transfered by the link to InitMatrix functions 
+
 void InitDMatrix(vector<vector<int>>DMatrix) {
 	for (int i = 0; i < NodesInGraph; i++) {
 		for (int j = 0; j < NodesInGraph; j++) {
@@ -35,6 +36,10 @@ void InitSMatrix(vector<vector<int>>SMatrix) {
 		}
 	}
 }
+
+
+//TO DO:
+//I assume that it should be [src][dest] instead of [dest][src]
 
 void AddRelation(int Source,int Destination,int Weight) {
 	D0matrix[Destination-1][Source-1] = Weight;
