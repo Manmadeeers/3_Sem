@@ -15,11 +15,7 @@ using namespace std;
 const int NodesInGraph = 6;
 vector<vector<int>>D0matrix(NodesInGraph, vector<int>(NodesInGraph));
 vector<vector<int>>S0Matrix(NodesInGraph, vector<int>(NodesInGraph));
-vector<vector<int>>DMatrix(NodesInGraph, vector<int>(NodesInGraph));
-vector<vector<int>>SMAtrix(NodesInGraph, vector<int>(NodesInGraph));
 
-//TO DO
-//possibly parameters should be transfered by the link to InitMatrix functions 
 
 void InitDMatrix(vector<vector<int>>&DMatrix) {
 	for (int i = 0; i < NodesInGraph; i++) {
@@ -37,21 +33,26 @@ void InitDMatrix(vector<vector<int>>&DMatrix) {
 void InitSMatrix(vector<vector<int>>&SMatrix) {
 	for (int i = 0; i < NodesInGraph; i++) {
 		for (int j = 0; j < NodesInGraph; j++) {
-			SMatrix[i][j] = j+1;
+			if (i == j) {
+				SMatrix[i][j] = 0;
+			}
+			else {
+				SMatrix[i][j] = j + 1;
+			}
+			
 		}
 	}
 }
 
 
-//TO DO:
-//I assume that it should be [src][dest] instead of [dest][src]
 
+//substraction needed because of "human" input
 void AddRelation(int Source,int Destination,int Weight) {
 	D0matrix[Source-1][Destination-1] = Weight;
 }
 
 void PrintMatirx(vector<vector<int>>Matrix) {
-	cout << "The matrix is: " << endl << endl;
+	cout << endl << endl;
 	for (int k = 0; k < NodesInGraph; k++) {
 		cout << '\t' << k + 1;
 	}
@@ -74,7 +75,6 @@ void PrintMatirx(vector<vector<int>>Matrix) {
 
 void FloydWarshall(vector<vector<int>>&Matrix,vector<vector<int>>&Smatrix) {
 
-	//int LeadingLC = 1;//needs substraction because of an array
 	for (int k = 0; k < NodesInGraph; k++) {
 		for (int i = 0; i < NodesInGraph; i++) {
 			for (int j = 0; j < NodesInGraph; j++) {
@@ -117,12 +117,16 @@ void main() {
 	AddRelation(5, 6, 22);
 	AddRelation(6, 5, 6);
 
+	cout << "Start Dmatrix: ";
 	PrintMatirx(D0matrix);
 	InitSMatrix(S0Matrix);
+	cout << "Start Smatirx: ";
+	PrintMatirx(S0Matrix);
 
 	FloydWarshall(D0matrix,S0Matrix);
-
+	cout << "Updated Dmatrix: ";
 	PrintMatirx(D0matrix);
+	cout << "Updated Smatrix: ";
 	PrintMatirx(S0Matrix);
 
 }
