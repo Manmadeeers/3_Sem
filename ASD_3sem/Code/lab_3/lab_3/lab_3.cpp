@@ -75,13 +75,6 @@ void Dijkstra(char StartVertex) {
 
 		//check all the nodes 
 		for (int i = 0; i < NodesInGraph; i++) {
-			//if the current node is:
-			//Not visited yet
-			// it has connection with the minimal path to it 
-			// the U node already has initialized distance in Distancies array
-			// distance to this node added to the distance of connection between this note and current is smaller then 
-			// Minimal distance to this node
-			//
 			if (!VisitedNodes[i] && AdjMatrix[U][i]!=0 && Distancies[U] != INF && Distancies[U] + AdjMatrix[U][i] < Distancies[i]) {
 				//set the minimal distance from start node to this current node to the new meaning
 				Distancies[i] = Distancies[U] + AdjMatrix[U][i];
