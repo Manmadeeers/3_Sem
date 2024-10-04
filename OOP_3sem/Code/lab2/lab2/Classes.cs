@@ -8,7 +8,7 @@ namespace lab2
 {
     class Triangle
     {
-
+        
     }
     class Point
     {
