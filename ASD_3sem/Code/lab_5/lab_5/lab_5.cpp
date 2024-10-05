@@ -3,12 +3,15 @@
 // finding Minimal Spanning Tree (MST) via different algorythms
 // 
 //<-------------------->
+
 #include <iostream>
 #include <vector>
 #define INF INT_MAX
 using namespace std;
 const int NodesInGraph = 8;
 vector<vector<int>>AdjMatrix(NodesInGraph, vector<int>(NodesInGraph));
+
+
 
 void addRelation(int Source,int Dest,int Weight) {
 	//substraction because of a human input
@@ -52,37 +55,56 @@ void printMatrix(vector < vector<int>>Matrix) {
 	}
 }
 
-
-void PrimMST(vector<vector<int>>Matrix, int StartVertex) {
-	vector<bool>InMST(NodesInGraph, false);
-	vector<int>MST(NodesInGraph,0);
-	InMST[StartVertex] = true;
-	int edge_iterator = 0;
-	int x, y;
-	cout << "Edge : Weigth" << endl;
-	while (edge_iterator < NodesInGraph - 1) {
-		int Minimum = INF;
-		x = 0;
-		y = 0;
-		for (int i = 0; i < NodesInGraph; i++) {
-			if (InMST[i]) {
-				for (int j = 0; j < NodesInGraph; j++) {
-					if (!InMST[j] && AdjMatrix[i][j]) {
-						if (Minimum > AdjMatrix[j][j]) {
-							Minimum = AdjMatrix[i][j];
-							x = i;
-							y = j;
-						}
-					}
-				}
-			}
-
+void PrintPrim(vector<int>MST) {
+	cout << "Relation\tWeight" << endl << endl;
+	for (int i = 0; i < NodesInGraph; i++) {
+		if (i + 1 < NodesInGraph) {
+			cout << MST[i]+1 << " - " << MST[i + 1]+1 << " : " << AdjMatrix[MST[i]][MST[i + 1]] << endl;
 		}
-		cout << x+1 << " - " << y+1 << " : " << AdjMatrix[x][y] << endl;
-		InMST[y] = true;
-		edge_iterator++;
 	}
+}
 
+int FindMinDist(vector<int>Dist, vector<bool>Visited) {
+	int Min = INF;
+	int MinIndex;
+	for (int i = 0; i < NodesInGraph; i++) {
+		if (!Visited[i] && Dist[i] < Min) {
+			Min = Dist[i];
+			MinIndex = i;
+		}
+	}
+	return MinIndex;
+}
+
+
+void Prim(vector<vector<int>>Matrix, int StartVertex) {
+	vector<bool>Visited(NodesInGraph, false);
+	vector<int>MST;
+	vector<int>Dist(NodesInGraph, INF);
+	Dist[StartVertex] = 0;
+	Visited[StartVertex] = true;
+	MST.push_back(StartVertex);
+	int CountEdges = 0;
+	int CurrentLine = StartVertex;
+	int Next;
+	
+	while (CountEdges < NodesInGraph-1) {
+		int Min = FindMinDist(Dist, Visited);
+		Visited[Min] = true;
+
+		int ForMST;
+		int ForDist;
+		for (int i = 0; i < NodesInGraph; i++) {
+
+			if (AdjMatrix[Min][i] && Visited[i] == false && AdjMatrix[Min][i] < Dist[i]) {
+				ForMST = i;
+				Dist[i] = AdjMatrix[Min][i];
+			}
+		}
+		MST.push_back(ForMST);
+		CountEdges++;
+	}
+	PrintPrim(MST);
 }
 
 
@@ -114,5 +136,5 @@ void main()
 	cout << "Enter the start vertex for Prima algorythm: ";
 	cin >> StartVertexPrima;
 
-	PrimMST(AdjMatrix, StartVertexPrima-1);
+	Prim(AdjMatrix, StartVertexPrima-1);
 }
