@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace lab2
 {
-    class Triangle
-    {
-        
-    }
-    class Point
+
+    public class Point
     {
 
     }
