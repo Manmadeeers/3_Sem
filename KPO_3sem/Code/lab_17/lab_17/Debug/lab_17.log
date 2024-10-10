@@ -1,4 +1,4 @@
-﻿Сборка начата 03.10.2024 17:42:18.
+﻿Сборка начата 09.10.2024 18:53:04.
 Уровень детализации журнала: Normal.     1>Проект "C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17\lab_17\lab_17.vcxproj" в узле 2 (целевые объекты Build).
      1>PrepareForBuild:
          Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
@@ -6,12 +6,33 @@
          Создание "Debug\lab_17.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
          Обращение к "Debug\lab_17.tlog\unsuccessfulbuild".
        ClCompile:
-         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"Debug\\" /Fd"Debug\vc143.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt In.cpp
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"Debug\\" /Fd"Debug\vc143.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt Error.cpp In.cpp Log.cpp Out.cpp Parm.cpp lab_17.cpp
+         Error.cpp
+     1>C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17\lab_17\In.h(29,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         (компиляция исходного файла "Error.cpp")
+         
          In.cpp
      1>C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17\lab_17\In.h(29,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
          (компиляция исходного файла "In.cpp")
          
      1>C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17\lab_17\In.cpp(39,9): warning C4101: next: неиспользованная локальная переменная
+         Log.cpp
+     1>C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17\lab_17\In.h(29,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         (компиляция исходного файла "Log.cpp")
+         
+         Out.cpp
+     1>C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17\lab_17\In.h(29,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         (компиляция исходного файла "Out.cpp")
+         
+         Parm.cpp
+     1>C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17\lab_17\In.h(29,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         (компиляция исходного файла "Parm.cpp")
+         
+         lab_17.cpp
+     1>C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17\lab_17\In.h(29,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         (компиляция исходного файла "lab_17.cpp")
+         
+         Создание кода...
        Link:
          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17\Debug\lab_17.exe" /INCREMENTAL /ILK:"Debug\lab_17.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17\Debug\lab_17.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17\Debug\lab_17.lib" /MACHINE:X86 Debug\Error.obj
          Debug\In.obj
@@ -30,9 +51,14 @@
        "C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17\lab_17\lab_17.vcxproj" (целевой объект Build ) (1) ->
        (Целевой объект ClCompile) -> 
          C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17\lab_17\In.h(29,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17\lab_17\In.h(29,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
          C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17\lab_17\In.cpp(39,9): warning C4101: next: неиспользованная локальная переменная
+         C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17\lab_17\In.h(29,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17\lab_17\In.h(29,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17\lab_17\In.h(29,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17\lab_17\In.h(29,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
 
-    Предупреждений: 2
+    Предупреждений: 7
     Ошибок: 0
 
-Прошло времени 00:00:01.30
+Прошло времени 00:00:04.54

@@ -1,4 +1,5 @@
 #pragma once
+#include "stdafx.h"
 #define LEXEM_FIXSIZE 1
 #define LT_MAXSIZE 4096
 #define LT_NULLINDEX 0xffffffff
@@ -31,8 +32,8 @@ namespace LT{
 	};
 
 	struct LexTable {
-		int maxsize;
-		int size;
+		int maxsize;//lexem table capacity(less then LT_MAXSIZE)
+		int size;//current lexem table size
 		Entry* table;
 	};
 	LexTable Create(int size);
