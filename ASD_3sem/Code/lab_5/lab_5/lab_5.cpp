@@ -6,12 +6,16 @@
 
 #include <iostream>
 #include <vector>
+#include <algorithm>
 #define INF INT_MAX
 using namespace std;
 const int NodesInGraph = 8;
 vector<vector<int>>AdjMatrix(NodesInGraph, vector<int>(NodesInGraph));
-
-
+struct Edge {
+	int Source;
+	int Destination;
+	int Weight;
+};
 
 void addRelation(int Source,int Dest,int Weight) {
 	//substraction because of a human input
@@ -54,59 +58,67 @@ void printMatrix(vector < vector<int>>Matrix) {
 		cout << i + 1 << endl;
 	}
 }
-
-void PrintPrim(vector<int>MST) {
-	cout << "Relation\tWeight" << endl << endl;
-	for (int i = 0; i < NodesInGraph; i++) {
-		if (i + 1 < NodesInGraph) {
-			cout << MST[i]+1 << " - " << MST[i + 1]+1 << " : " << AdjMatrix[MST[i]][MST[i + 1]] << endl;
-		}
-	}
-}
-
-int FindMinDist(vector<int>Dist, vector<bool>Visited) {
+int findMinKey(vector<int>Key, vector<bool>Visited) {
 	int Min = INF;
 	int MinIndex;
-	for (int i = 0; i < NodesInGraph; i++) {
-		if (!Visited[i] && Dist[i] < Min) {
-			Min = Dist[i];
+	for (int i = 1; i < NodesInGraph; i++) {
+		if (Visited[i] == false && Key[i] < Min) {
+			Min = Key[i];
 			MinIndex = i;
 		}
 	}
 	return MinIndex;
 }
 
-
-void Prim(vector<vector<int>>Matrix, int StartVertex) {
-	vector<bool>Visited(NodesInGraph, false);
-	vector<int>MST;
-	vector<int>Dist(NodesInGraph, INF);
-	Dist[StartVertex] = 0;
-	Visited[StartVertex] = true;
-	MST.push_back(StartVertex);
-	int CountEdges = 0;
-	int CurrentLine = StartVertex;
-	int Next;
-	
-	while (CountEdges < NodesInGraph-1) {
-		int Min = FindMinDist(Dist, Visited);
-		Visited[Min] = true;
-
-		int ForMST;
-		int ForDist;
-		for (int i = 0; i < NodesInGraph; i++) {
-
-			if (AdjMatrix[Min][i] && Visited[i] == false && AdjMatrix[Min][i] < Dist[i]) {
-				ForMST = i;
-				Dist[i] = AdjMatrix[Min][i];
-			}
-		}
-		MST.push_back(ForMST);
-		CountEdges++;
+void PrintPrim(vector<Edge>Edges) {
+	cout << "Edge\tWeight:" << endl;
+	for (int i = 0; i < Edges.size(); i++) {
+		cout << Edges[i].Source+1 << "---" << Edges[i].Destination+1 << " : " << Edges[i].Weight << endl;
 	}
-	PrintPrim(MST);
 }
 
+void Prim(int StartVertex) {
+	vector<bool>Visited(NodesInGraph, false);
+	vector<Edge>StoreOrder;
+
+	Visited[StartVertex] = true;
+	int count_edges = 0;
+	int minimum_weight = 0;
+	while (count_edges < NodesInGraph - 1) {
+		int Min = INF;
+		int x= -1;
+		int y = -1;
+		for (int i = 0; i < NodesInGraph; i++) {
+			for (int j = 0; j < NodesInGraph; j++) {
+				if (AdjMatrix[i][j] < Min) {
+					if (i != j && !(Visited[i] == false && Visited[j] == false) && !(Visited[i] == true && Visited[j] == true)) {
+						Min = AdjMatrix[i][j];
+						x = i;
+						y = j;
+					}
+
+				}
+			}
+		}
+		if (x != -1 && y != -1) {
+			Edge newEdge;
+			newEdge.Source = x;
+			newEdge.Destination = y;
+			newEdge.Weight = Min;
+			StoreOrder.push_back(newEdge);
+		}
+		minimum_weight += Min;
+		Visited[x] = true;
+		Visited[y] = true;
+		count_edges++;
+	}
+	PrintPrim(StoreOrder);
+	cout << "MST minimum weight: " << minimum_weight << endl << endl;
+}
+
+void Kruskal() {
+
+}
 
 void main()
 {
@@ -132,9 +144,11 @@ void main()
 	cout << "The source matrix: " << endl;
 	printMatrix(AdjMatrix);
 	 
-	int StartVertexPrima;
-	cout << "Enter the start vertex for Prima algorythm: ";
-	cin >> StartVertexPrima;
+	int StartVertexPrim;
+	cout << "Enter the start vertex for Prim's algorythm: ";
+	cin >> StartVertexPrim;
+	Prim( StartVertexPrim-1);
 
-	Prim(AdjMatrix, StartVertexPrima-1);
+	
+	cout << "And now Kruskal's algorythm: " << endl << endl << endl;
 }
