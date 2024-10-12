@@ -15,6 +15,13 @@ struct Edge {
 	int Source;
 	int Destination;
 	int Weight;
+
+	bool operator<(const Edge& other) {
+		return Weight < other.Weight;
+	}
+	bool operator>(const Edge& other) {
+		return Weight > other.Weight;
+	}
 };
 
 void addRelation(int Source,int Dest,int Weight) {
@@ -115,9 +122,38 @@ void Prim(int StartVertex) {
 	PrintPrim(StoreOrder);
 	cout << "MST minimum weight: " << minimum_weight << endl << endl;
 }
+void GetEdges(vector<Edge>& Edges) {
+	for (int i = 0; i < NodesInGraph; i++) {
+		for (int j = 0; j < NodesInGraph; j++) {
+			if (AdjMatrix[i][j] != 0 && AdjMatrix[i][j] != INF) {
+				Edge newEdge;
+				newEdge.Source = i;
+				newEdge.Destination = j;
+				newEdge.Weight = AdjMatrix[i][j];
+				Edges.push_back(newEdge);
+			}
+		}
+	}
+}
+
+bool SortEdges(const Edge&E1, const Edge& E2) {
+	return E1.Weight<E2.Weight;
+}
+
+void PrintKruskal(vector<Edge>Edges) {
+	cout << "Edge\tWeight:" << endl;
+	for (int i = 0; i < Edges.size(); i++) {
+		cout << Edges[i].Source + 1 << "---" << Edges[i].Destination + 1 << " : " << Edges[i].Weight << endl;
+	}
+}
 
 void Kruskal() {
-
+	vector<Edge> Edges;
+	GetEdges(Edges);
+	PrintKruskal(Edges);
+	sort(Edges.begin(), Edges.end(), SortEdges);
+	cout << "Edges sorted in non-decreasing order:" << endl;
+	PrintKruskal(Edges);
 }
 
 void main()
@@ -151,4 +187,5 @@ void main()
 
 	
 	cout << "And now Kruskal's algorythm: " << endl << endl << endl;
+	Kruskal();
 }
