@@ -8,125 +8,327 @@ using System.Threading.Tasks;
 
 namespace lab2
 {
-    public class Mno
+    public partial class Mno
     {
+        private string _name;
         private int size;
-        private int[] arr;
-        public readonly int id = MaxElements/15;
-        private int controll_elements = 0;
+        private List<int> items;
+        public readonly int id = MaxElements / 15;
         const int MaxElements = 100;
+        private static int indexer = 0;
 
-        public int[] Arr { 
-            get { return arr; }
-            set { }
+        public List<int>Items
+        {
+            get { return items; }
+            set { items = value; }
         }
-        public int GetSize { get { return size + 100; } set { } }
+        public int Size { get { return size; } set { } }
+
+        public string Name { get { return _name; } }
 
         //constructors
         public Mno() { }
 
-        public Mno(int newsize) { 
-            if (newsize > MaxElements) { throw new Exception("Array subscript out of range"); } arr = new int[newsize];size = newsize ;
+        public Mno(int newsize,string newname)
+        {
+            if (newsize > MaxElements) { throw new Exception("Array subscript out of range"); }
+            if (String.IsNullOrEmpty(newname)) { throw new Exception("A set could not be initialized without the name"); }
+            items = new List<int>();
+            size = newsize;
+            _name = newname;
+            id = newsize * 100 - 4;
+            indexer++;
         }
 
-        public Mno(int[] arr) { }
+        public Mno(List<int>items,string newname) {
+            size = items.Count;
+            if (String.IsNullOrEmpty(newname))
+            {
+                throw new Exception("A set could not be initialized without the name");
+            }
+            if (items == null)
+            {
+                throw new Exception("A transfered list could not be null");
+            }
+            Items = items;
+            _name = newname;
+            id = items.Count * 100 - 4;
+            indexer++;
+        }
 
-        static Mno() { }
+        static Mno() {
+            indexer++;
+        }
 
-       // private Mno(int size, int[] arr) { Size = size; Arr = arr; }
+        private Mno(int size, List<int>items) { Size = size; Items = items; }
 
-        
+
 
         //methods
 
         public void AddElement(int value)
         {
-            arr[controll_elements] = value;
-            controll_elements++;
-            if(controll_elements >= MaxElements)
-            {
-                throw new Exception("Set subscript out of range");
-            }
+            items.Add(value);
+
         }
 
         public void DeleteElement(int value)
         {
-            int position = -1;
-            for (int i = 0; i < arr.Length; i++)
+            if (items.Contains(value))
             {
-                if (arr[i] == value)
-                {
-                    position = i;
-                }
-            }
-            var temp = new List<int>(size);
-            if (position!=-1) {
-
-                temp.RemoveAt(position);
-                arr = temp.ToArray();
+                items.Remove(value);
             }
             else
             {
-                throw new Exception("Cannot delete such element because it is not in a required array");
+                throw new Exception("Could not delete such value!");
+            }
+
+        }
+
+        public void SumElements(out int result)
+        {
+            Console.WriteLine();
+            result = 0;
+            foreach (var item in Items)
+            {
+                result += item;
             }
         }
 
-        public bool CheckPresense(List<int> list,int element)
+       
+        public void FindIntersection( Mno SetToCompare)
         {
-            bool hasElement = false;
-            foreach (var item in list) {
-                if (item == element) {
-                    return hasElement = true;
-                }
-            }
-            return hasElement;
-        }
-        public int[] FindIntersection(Mno set1,Mno set2)
-        {
-            var inter_temp = new List<int>();
-            if (set1.size > set2.size) {
-                for(int i = 0; i < set2.size; i++)
+            List<int> intersection = new List<int>();
+            if (size <= SetToCompare.size)
+            {
+                foreach (var item in items)
                 {
-                    if (set2.arr[i] == set1.arr[i] && !CheckPresense(inter_temp, set2.arr[i]))
+                    if (SetToCompare.items.Contains(item))
                     {
-                        inter_temp.Add(set2.arr[i]);
+                        intersection.Add(item);
                     }
                 }
             }
             else
             {
-                for(int i=0;i<set1.size; i++)
+                foreach (var item in SetToCompare.items)
                 {
-                    if (set1.arr[i]== set2.arr[i] && !CheckPresense(inter_temp, set1.arr[i]))
+                    if (items.Contains(item))
                     {
-                        inter_temp.Add(set2.arr[i]);
+                        intersection.Add(item);
                     }
                 }
             }
-            return inter_temp.ToArray();
+
+            Console.Write($"Intersection of {_name} and {SetToCompare._name}:");
+            foreach(var item in intersection)
+            {
+                Console.Write(item+ " ");
+            }
+            Console.WriteLine();
         }
 
-        public int[] FindSubstraction(Mno set1, Mno set2) {
+        public void FindSubstraction( Mno SetToCompare)
+        {
+            Console.WriteLine();
+            List<int> substraction = new List<int>();
 
-            var sub_temp = new List<int>();
-            for(int i = 0; i < set1.size; i++)
+           foreach(var item in SetToCompare.items)
             {
-                if (set1.arr[i]!= set2.arr[i] && !CheckPresense(sub_temp, set1.arr[i]))
+                if (!items.Contains(item))
                 {
-                    sub_temp.Add(set1.arr[i]);
+                    substraction.Add(item);
                 }
             }
-            return sub_temp.ToArray();
+            Console.Write($"Substraction of {SetToCompare._name} from {_name}: ");
+            if (substraction.Count == 0)
+            {
+                Console.WriteLine("Result of substraction is an empty set");
+            }
+            else
+            {
+                foreach (var item in substraction)
+                {
+                    Console.Write(item + " ");
+                }
+            }
+           
+            Console.WriteLine();
         }
 
-        public void PrintElems()
+        public void Print()
         {
             if (size == 0) { throw new Exception("Array ia still empty"); }
-            for(int i = 0; i < size; i++)
+            Console.Write($"{_name} items: ");
+            foreach (var item in items)
             {
-                Console.Write(arr[i]+" ");
+                Console.Write(item + " ");
+            }
+            Console.WriteLine();
+        }
+
+        public void PrintInfo()
+        {
+            Console.WriteLine($"<----------{_name} Info---------->");
+            Console.WriteLine($"Set size: {size}");
+            Console.Write("Set Items: ");
+            foreach (var item in items)
+            {
+                Console.Write(item + " ");
+            }
+            Console.WriteLine();
+            Console.WriteLine($"ID: {id}");
+            Console.WriteLine($"Index number: {indexer}");
+            Console.WriteLine("<----------------------------->");
+            Console.WriteLine();
+        }
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+            if (this.GetType() != obj.GetType()) { 
+                return false;
+            }
+
+            return true;
+        }
+        public override string ToString()
+        {
+            return base.ToString()+" "+id;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode()^items.GetHashCode();
+        }
+    }
+
+    public class MnoArray
+    {
+        private Mno[] MnoArr;
+        private int size;
+        public MnoArray(Mno[] Mnos) { 
+            MnoArr = Mnos; 
+            size = MnoArr.Length;
+            if (size == 0) {
+                throw new Exception("Array could not be initialized with null meaning");
             }
         }
 
+        public Mno[] MNoARR
+        {
+            get { return MnoArr; }
+            set { MnoArr = value; }
+        }
+        public int Size
+        {
+            get { return size; }
+        }
+
+        public Mno this[int index]
+        {
+            get { return MnoArr[index]; }
+            set { MnoArr[index] = value; }
+        }
+
+        public void PrintOddSets()
+        {
+            Console.WriteLine("Odd Sets: ");
+            int countOddSets = 0;
+            for (int i = 0; i < size; i++)
+            {
+                bool hasEven = false; 
+
+                foreach(var item in MnoArr[i].Items)
+                {
+                    if (item % 2 != 0)
+                    {
+                        hasEven = true;
+                        break;
+                    }
+                }
+                if (!hasEven) 
+                { 
+                    countOddSets++;
+                    Console.Write($"{MnoArr[i].Name}:");
+                    foreach(var item in MnoArr[i].Items)
+                    {
+                        Console.Write(item+" ");
+                    }
+                    Console.WriteLine();
+                }
+               
+            }
+            if (countOddSets == 0)
+            {
+                Console.WriteLine("There are no odd sets in this array");
+            }
+        }
+        
+        public void PrintEvenSets()
+        {
+            Console.WriteLine("Even sets:");
+            int countEvenSets = 0;
+            for(int i = 0;i < size; i++)
+            {
+                bool hasOdd = false;
+                foreach(var item in MnoArr[i].Items)
+                {
+                    if (item % 2 == 0)
+                    {
+                        hasOdd = true;
+                        break;
+                    }
+                }
+                if (!hasOdd)
+                {
+                    countEvenSets++;
+                    Console.Write($"{MnoArr[i].Name}");
+                    foreach(var item in MnoArr[i].Items)
+                    {
+                        Console.Write(item+" ");
+                    }
+                    Console.WriteLine();
+                }
+            }
+            if(countEvenSets == 0)
+            {
+                Console.WriteLine("There are no even sets in array");
+            }
+        }
+
+        public void PrintSetsWithNegative()
+        {
+            Console.WriteLine("Sets with negative elements:");
+            int countSetsWithNegative = 0;
+            for(int i = 0; i < size; i++)
+            {
+                
+                bool hasNegative = false;
+                foreach(var item in MnoArr[i].Items)
+                {
+                    if (item < 0)
+                    {
+                        hasNegative = true;
+                        break;
+                    }
+                }
+                if (hasNegative)
+                {
+                    countSetsWithNegative++;
+                    Console.Write($"{MnoArr[i].Name}: ");
+                    foreach(var item in MnoArr[i].Items)
+                    {
+                        Console.Write(item+" ");
+                    }
+                }
+            }
+            if(countSetsWithNegative == 0)
+            {
+                Console.WriteLine("There are no sets with negative elements in array");
+            }
+        }
     }
 }
