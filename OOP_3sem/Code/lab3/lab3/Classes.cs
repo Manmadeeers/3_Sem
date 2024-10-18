@@ -2,17 +2,32 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace lab3
 {
-    public partial class Password
+    public class Password
     {
         private string _password;
         private int _length;
         private const string _default = "1234pass";
         private const int _defaultLenght = 8;
         private const int _maxLength = 12;
+        private Production production;
+        private Developer developer;
+
+        public Production Prod
+        {
+            get { return production; }
+            set { production = value; }
+        }
+
+        public Developer Dev
+        {
+            get { return developer; }
+            set { developer = value; }
+        }
 
         public int MaxLength
         {
@@ -50,99 +65,159 @@ namespace lab3
             _length = password.Length;
         }
 
-
-        public void PrintPass()
+        public class Production
         {
-            Console.Write("Shhhhh, don't tell anybody: ");
-            Console.Write(_password);
-            Console.WriteLine();
-        }
+            private string id;
 
-
-
-        public static bool operator >(Password pass1, Password pass2)
-        {
-            if (pass1._length > pass2._length)
+            public string ID
             {
-                return true;
+                get { return id; }
+                set { id = value; }
             }
-            return false;
 
-        }
-
-        public static bool operator <(Password pass1, Password pass2)
-        {
-            if (pass1._length < pass2._length)
+            public Production(string id)
             {
-                return true;
+                if (string.IsNullOrEmpty(id))
+                {
+                    throw new Exception("Can not initialize id with a null or empty meaning");
+                }
+                this.id = id;
             }
-            return false;
         }
 
-        public static bool operator !=(Password pass1, Password pass2)
+        public class Developer
         {
-            if (!pass1._password.Equals(pass2._password))
+            private string developer;
+            private string id;
+            private string otd;
+
+            public string Dev
             {
-                return true;
+                get { return developer; }
+                set { developer = value; }
             }
-            return false;
-        }
-
-        public static bool operator ==(Password pass1, Password pass2)
-        {
-            if (pass1._password.Equals(pass2._password))
+            public string ID
             {
-                return true;
+                get { return id; }
+                set { id = value; }
             }
-            return false;
-        }
-
-        public static Password operator ++(Password pass)
-        {
-            
-            pass._password = pass.Default;
-            pass._length = pass.DefLength;
-            return pass;
-
-        }
-        public static Password operator --(Password pass)
-        {
-            pass._password = "nullpass";
-            pass._length = 8;
-            return pass;
-        }
-
-        
-        public static bool operator true(Password pass)
-        {
-
-            if (pass._length >= 10 && (pass._password.Contains('!') || pass._password.Contains('$')))
+            public string OTD
             {
-                return true; 
+                get { return otd; }
+                set {  otd = value; }
             }
-            return false;
+            public Developer(string dev, string id,string otd)
+            {
+                if (String.IsNullOrEmpty(id) || String.IsNullOrEmpty(dev)||String.IsNullOrEmpty(otd))
+                {
+                    throw new Exception("Can not initialize with a null or empty string!");
+                }
+                developer = dev;
+                ID = id;
+                OTD = otd;
+            }
         }
 
-        public static bool operator false(Password pass)
-        {
-            if(!(pass._length >= 10 && (pass._password.Contains('!') || pass._password.Contains('$'))))
+            public void PrintPass()
             {
+                Console.Write("Shhhhh, don't tell anybody: ");
+                Console.Write(_password);
+                Console.WriteLine();
+            }
+
+
+            public override bool Equals(object? obj)
+            {
+                return base.Equals(obj);
+            }
+            public override int GetHashCode()
+            {
+                return base.GetHashCode();
+            }
+
+            public static bool operator >(Password pass1, Password pass2)
+            {
+                if (pass1._length > pass2._length)
+                {
+                    return true;
+                }
+                return false;
+
+            }
+
+            public static bool operator <(Password pass1, Password pass2)
+            {
+                if (pass1._length < pass2._length)
+                {
+                    return true;
+                }
                 return false;
             }
-            return true;
-        }
 
-        public static Password operator -( Password pass,char item)
-        {
-            if (item.ToString() == "")
+            public static bool operator !=(Password pass1, Password pass2)
             {
-                throw new ArgumentException("Could not substract null from a password");
+                if (!pass1._password.Equals(pass2._password))
+                {
+                    return true;
+                }
+                return false;
             }
-             string modifiedPassword =pass._password.Substring(0,pass._length - 1);
-            modifiedPassword += item;
-            pass._password = modifiedPassword;
-            return pass;
-        }
+
+            public static bool operator ==(Password pass1, Password pass2)
+            {
+                if (pass1._password.Equals(pass2._password))
+                {
+                    return true;
+                }
+                return false;
+            }
+
+            public static Password operator ++(Password pass)
+            {
+
+                pass._password = pass.Default;
+                pass._length = pass.DefLength;
+                return pass;
+
+            }
+            public static Password operator --(Password pass)
+            {
+                pass._password = "nullpass";
+                pass._length = 8;
+                return pass;
+            }
+
+
+            public static bool operator true(Password pass)
+            {
+
+                if (pass._length >= 10 && (pass._password.Contains('!') || pass._password.Contains('$')))
+                {
+                    return true;
+                }
+                return false;
+            }
+
+            public static bool operator false(Password pass)
+            {
+                if (!(pass._length >= 10 && (pass._password.Contains('!') || pass._password.Contains('$'))))
+                {
+                    return false;
+                }
+                return true;
+            }
+
+            public static Password operator -(Password pass, char item)
+            {
+                if (item.ToString() == "")
+                {
+                    throw new ArgumentException("Could not substract null from a password");
+                }
+                string modifiedPassword = pass._password.Substring(0, pass._length - 1);
+                modifiedPassword += item;
+                pass._password = modifiedPassword;
+                return pass;
+            }
     }
 
     internal static class StaticOperation
@@ -159,7 +234,7 @@ namespace lab3
             return middle;
         }
 
-        public static bool CheckPassLength(this string pass,int minLength,int maxLength)
+        public static bool CheckPassLength(this string pass, int minLength, int maxLength)
         {
             if (String.IsNullOrEmpty(pass))
             {
@@ -171,5 +246,51 @@ namespace lab3
             }
             return false;
         }
+
+
+        public static int GetSum(Password pass1, Password pass2)
+        {
+
+            int sum;
+            sum = pass1.Length + pass2.Length;
+            return sum;
+
+        }
+
+        public static int GetDiffMinandMax(Password pass1, Password pass2)
+        {
+            
+            if(pass1.Length > pass2.Length)
+            {
+                return pass1.Length - pass2.Length;
+            }
+            else if (pass1.Length == pass2.Length)
+            {
+                return 0;
+            }
+            else
+            {
+                return pass2.Length- pass1.Length;
+            }
+
+            
+        }
+
+        public static int CountElements(Password[]Passes)
+        {
+            if (Passes == null)
+            {
+                throw new Exception("Empty array");
+            }
+            return Passes.Length;
+        }
+
+
+
+
+
     }
+
+
+
 }

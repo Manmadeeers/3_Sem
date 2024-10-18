@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Net;
 using System.Numerics;
@@ -62,7 +63,11 @@ namespace lab2
 
         private Mno(int size, List<int>items) { Size = size; Items = items; }
 
-
+        public Mno ClosedMno()
+        {
+            return new Mno(size = 5, items = new List<int>());
+        }
+        
 
         //methods
 

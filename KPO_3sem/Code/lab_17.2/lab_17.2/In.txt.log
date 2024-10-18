@@ -1,0 +1,10 @@
+Test:  without errors 
+
+Test:  without errors 
+---------- Protocol ---------- Date: 17.10.2024 17:26:34
+----------Parametres----------
+-in: In.txt
+-out: In.txt.out
+-log: In.txt.log
+----------Errors----------
+Error 110 Ошибка при открытии файла с исходным кодом (-in)
