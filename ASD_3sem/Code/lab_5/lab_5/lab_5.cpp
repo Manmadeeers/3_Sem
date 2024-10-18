@@ -137,7 +137,7 @@ void GetEdges(vector<Edge>& Edges) {
 }
 
 bool SortEdges(const Edge&E1, const Edge& E2) {
-	return E1.Weight<E2.Weight;
+	return E1.Weight>E2.Weight;
 }
 
 void PrintKruskal(vector<Edge>Edges) {
@@ -149,11 +149,30 @@ void PrintKruskal(vector<Edge>Edges) {
 
 void Kruskal() {
 	vector<Edge> Edges;
+	vector<Edge>MST;
 	GetEdges(Edges);
-	PrintKruskal(Edges);
+	//PrintKruskal(Edges);
 	sort(Edges.begin(), Edges.end(), SortEdges);
-	cout << "Edges sorted in non-decreasing order:" << endl;
-	PrintKruskal(Edges);
+	//cout << "Edges sorted in non-decreasing order:" << endl;
+	//PrintKruskal(Edges);
+	MST.push_back(Edges[Edges.size()-1]);
+	//Edges.pop_back();
+	for (int i = Edges.size()-1; i >=0; i--) {
+		Edge current_edge = Edges[i];
+		bool flag = true;
+		for (int j = 0; j < MST.size(); j++) {
+			if (current_edge.Destination == MST[j].Source || current_edge.Destination == MST[j].Destination) {
+				flag = false;
+				break;
+			}
+		}
+		if (flag) {
+			MST.push_back(current_edge);
+		}
+	}
+	PrintKruskal(MST);
+	
+
 }
 
 void main()
