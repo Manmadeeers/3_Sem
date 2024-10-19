@@ -1,25 +1,32 @@
 //TASK 1
 let GoodsList = new Set();
 function addToList(ObjtoAdd){
-    return GoodsList.add(ObjtoAdd);
-}
-function deleteFromList(ObjtoDelete){
-    return GoodsList.delete(ObjtoDelete);
+    GoodsList.add(ObjtoAdd);
 }
 function checkPresense(ObjtoCheck){
     return GoodsList.has(ObjtoCheck);
 }
+function deleteFromList(ObjtoDelete){
+    GoodsList.delete(ObjtoDelete);
+}
+
 console.group("Goods");
+
 let Good1 = {name:"Computer",price:"200$"};
-let Good2 = {name:"Smartphone",price:"100$"};
-let Good3 = {name:"SmartWatch",price:"50$"};
+let Good2 = {name:"SmartWatch",price:"50$"};
+let Good3 = {name:"Smartphone",price:"200$"};
 addToList(Good1);
 addToList(Good2);
 addToList(Good3);
-console.log(GoodsList);
+addToList("com")
+
+for(let elem of GoodsList){
+    console.log(elem);
+}
+console.log(checkPresense(Good2));
 deleteFromList(Good2);
 console.log(GoodsList);
-console.log(checkPresense(Good2));
+
 console.groupEnd();
 //TASK 2
 let Students =new Set();

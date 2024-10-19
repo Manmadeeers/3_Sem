@@ -153,8 +153,8 @@ void Kruskal() {
 	GetEdges(Edges);
 	//PrintKruskal(Edges);
 	sort(Edges.begin(), Edges.end(), SortEdges);
-	//cout << "Edges sorted in non-decreasing order:" << endl;
-	//PrintKruskal(Edges);
+	/*cout << "Edges sorted in non-decreasing order:" << endl;
+	PrintKruskal(Edges);*/
 	MST.push_back(Edges[Edges.size()-1]);
 	//Edges.pop_back();
 	for (int i = Edges.size()-1; i >=0; i--) {
