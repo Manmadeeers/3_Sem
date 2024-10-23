@@ -24,12 +24,12 @@ namespace FST
 
 	struct FST
 	{
-		char* chain;
+		unsigned char* chain;
 		short position;
 		short nstates;
 		NODE* nodes;
 		short* rstates;
-		FST(char* s, short ns, NODE n, ...);
+		FST(unsigned char* s, short ns, NODE n, ...);
 	};
 
 	bool execute(FST& fst);

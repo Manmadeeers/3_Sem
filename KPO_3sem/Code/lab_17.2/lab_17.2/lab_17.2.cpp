@@ -66,6 +66,9 @@ int _tmain(int argc, _TCHAR* argv[])
 		LOG::WriteLog(log);
 		LOG::WriteParm(log, parm);
 		In::IN in = In::getin(parm.in);
+		for (int i = 0; i < in.words_size; i++) {
+			cout << in.words[i] << endl;
+		}
 		LOG::WriteIN(log, in);
 		OUT::WriteOUT(in, parm.out);
 	}

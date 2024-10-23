@@ -45,6 +45,11 @@ namespace In {
 				column++;
 				in_to_return.size++;
 				break;
+			case IN::Q:
+				text[in_to_return.size] = current_symbol;
+				column++;
+				in_to_return.size++;
+				break;
 			case IN::I:
 				in_to_return.ignore++;
 				column++;
@@ -86,7 +91,7 @@ namespace In {
 		}
 		
 	
-		
+		//transfer a string into an array of single separated words
 		in_to_return.text = text;
 		unsigned char** words = new unsigned char*[LT_MAXSIZE];
 		for (int i = 0; i < LT_MAXSIZE; i++) {
@@ -95,39 +100,63 @@ namespace In {
 
 		int count_words = 0;
 		int count_symbols = 0;
+		
 		for (int i = 0; i < in_to_return.size; i++) {
 			unsigned char current_symbol = in_to_return.text[i];
+			
 			switch (in_to_return.code[current_symbol]) {
-			case IN::T:
-				if (words[count_words][0] == '|') {
-					words[count_words][1] = '\0';
-					count_words++;
-					count_symbols = 0;
-				}
-				words[count_words][count_symbols++] = current_symbol;
-				break;
+			
+
+			
+
 			case IN::L:
-				words[count_words][count_symbols] = '\0';
-				count_words++;
-				words[count_words][0] = current_symbol;
-				words[count_words][1] = '\0';
+				words[count_words][count_symbols++] = '\0';
 				count_words++;
 				count_symbols = 0;
+				words[count_words][count_symbols++] = current_symbol;
+				words[count_words][count_symbols] = '\0';
+				count_symbols = 0;
+				count_words++;
 				break;
 			case IN::S:
 				words[count_words][count_symbols] = '\0';
 				count_words++;
 				count_symbols = 0;
 				break;
-			case '|':
-				words[count_words][count_symbols-1] = '\0';
-				count_words++;
-				words[count_words][0] = current_symbol;
-				words[count_words][1] = '\0';
+
+			case IN::Q:
+				words[count_words][count_symbols++] = current_symbol;
+				i++;
+				for (;i<in_to_return.size; i++) {
+					words[count_words][count_symbols++] = in_to_return.text[i];
+					if (in_to_return.code[in_to_return.text[i]] == IN::Q) {
+						break;
+					}
+				}
+				words[count_words][count_symbols] = '\0';
 				count_words++;
 				count_symbols = 0;
 				break;
+
+			default:
+				
+				if (current_symbol == '|') {
+					words[count_words][count_symbols] = '\0';
+					count_words++;
+					count_symbols = 0;
+					words[count_words][0] = current_symbol;
+					words[count_words][1] = '\0';
+					count_words++;
+				}
+
+				else {
+					words[count_words][count_symbols++] = current_symbol;
+				}
+				
+				
+				break;
 			}
+		
 			
 		}
 		in_to_return.words = words;

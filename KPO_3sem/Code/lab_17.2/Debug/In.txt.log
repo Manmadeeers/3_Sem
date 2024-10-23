@@ -1,7 +1,7 @@
 Test:  without errors 
 
 Test:  without errors 
----------- Protocol ---------- Date: 17.10.2024 21:04:20
+---------- Protocol ---------- Date: 23.10.2024 15:18:15
 ----------Parametres----------
 -in: In.txt
 -out: In.txt.out
@@ -22,18 +22,27 @@ x
 integer
 y
 )
+
 |
+
 {
+
 |
+
 |
+
 |
+
 |
+
 |
+
 |
 declare
 integer
 z
 ;
+
 |
 z
 =
@@ -50,14 +59,18 @@ y
 )
 
 ;
+
 |
 return
 z
 ;
+
 |
+
 }
 
 ;
+
 |
 string
 function
@@ -72,13 +85,17 @@ a
 string
 b
 )
+
 |
+
 {
+
 |
 declare
 string
 с
 ;
+
 |
 declare
 string
@@ -92,12 +109,14 @@ a
 integer
 p
 ,
+
 |
 integer
 n
 )
 
 ;
+
 |
 c
 
@@ -117,47 +136,60 @@ a
 
 b
 ;
+
 |
 return
 c
 ;
+
 |
+
 }
 
 ;
+
 |
-main|
+main
+|
+
 {
+
 |
 declare
 integer
 x
 ;
+
 |
 declare
 integer
 y
 ;
+
 |
 declare
 integer
 z
 ;
+
 |
 declare
 string
 sa
 ;
+
 |
 declare
 string
 sb
 ;
+
 |
 declare
 string
 sc
 ;
+
 |
 declare
 integer
@@ -169,6 +201,7 @@ p
 )
 
 ;
+
 |
 x
 
@@ -176,6 +209,7 @@ x
 
 1
 ;
+
 |
 y
 
@@ -183,20 +217,25 @@ y
 
 5
 ;
+
 |
 sa
 
 =
 
 '1234567890'
+
 ;
+
 |
 sb
 
 =
 
 '1234567890'
+
 ;
+
 |
 z
 
@@ -210,6 +249,7 @@ y
 )
 
 ;
+
 |
 sc
 
@@ -223,19 +263,25 @@ sb
 )
 
 ;
+
 |
 print
-'контрольный
-пример'
+'контрольный пример'
+
 ;
+
 |
 print
 z
 ;
+
 |
-4|print
+4
+|
+print
 sc
 ;
+
 |
 print
 strlen
@@ -244,11 +290,14 @@ sc
 )
 
 ;
+
 |
 return
 0
 ;
+
 |
+
 }
 
 ;

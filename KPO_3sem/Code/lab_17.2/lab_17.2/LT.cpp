@@ -32,4 +32,8 @@ namespace LT {
 		LexTable.size = 0;
 	}
 
+	void BuildLexTable(In::IN in, LexTable& LexTable) {
+
+	}
+
 };

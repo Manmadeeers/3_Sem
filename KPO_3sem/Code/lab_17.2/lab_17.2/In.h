@@ -10,7 +10,7 @@
 #define IN_CODE_TABLE {\
 /*0*/	IN::T,	IN::T, IN::T, IN::T, IN::T,	IN::T, IN::T, IN::T, IN::T,	IN::T,  '|' , IN::T, IN::T,	IN::I, IN::T, IN::T,\
 /*1*/	IN::T,	IN::T, IN::T, IN::T, IN::T,	IN::T, IN::T, IN::T, IN::T,	IN::T, IN::T, IN::T, IN::T,	IN::T, IN::T, IN::T,\
-/*2*/	IN::S,	IN::T, IN::F, IN::T, IN::F,	IN::T, IN::T, IN::T, IN::L,	IN::L, IN::L, IN::L, IN::L,	IN::L, IN::T, IN::L,\
+/*2*/	IN::S,	IN::T, IN::F, IN::T, IN::F,	IN::T, IN::T, IN::Q, IN::L,	IN::L, IN::L, IN::L, IN::L,	IN::L, IN::T, IN::L,\
 /*3*/	IN::T,	IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T,	IN::T, IN::T, IN::L, IN::T,	IN::L, IN::T, IN::T,\
 /*4*/	IN::T,	IN::T, IN::T, IN::T, IN::T,	IN::T, IN::T, IN::T, IN::T,	IN::I, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T,\
 /*5*/	IN::T,	IN::T, IN::T, IN::T, IN::T,	IN::T, IN::T, IN::T, IN::I,	IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T,\
@@ -30,7 +30,7 @@
 #include "stdafx.h";
 namespace In {
 	struct IN {
-		enum { T = 1024, F = 2048, I = 4096, S = 8192, L = 16384 };
+		enum { T = 1024, F = 2048, I = 4096, S = 8192, L = 16384, Q = 32768 };
 		int size;
 		int lines;
 		int ignore;

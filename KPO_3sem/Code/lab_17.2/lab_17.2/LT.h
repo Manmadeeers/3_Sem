@@ -40,4 +40,5 @@ namespace LT {
 	void AddToLexTable(LexTable& LexTable, Entry entry);
 	Entry GetEntry(LexTable& LexTable, int str_num);
 	void DeleteLexTable(LexTable& LexTable);
+	void BuildLexTable(In::IN in, LexTable& LexTable);
 };
