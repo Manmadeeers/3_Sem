@@ -1,6 +1,6 @@
 #pragma once
 #include "stdafx.h"
-
+#include "IT.h"
 
 namespace FST
 {
@@ -34,4 +34,5 @@ namespace FST
 
 	bool execute(FST& fst);
 	bool step(FST& fst, short*& rstates);
+	void GetLexem(LT::LexTable& lextable, IT::IDTable& idtable, In::IN in);
 }

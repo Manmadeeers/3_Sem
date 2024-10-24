@@ -35,8 +35,7 @@
               "ViewState": "AgIAAAwAAAAAAAAAAAAAADUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-09-18T15:40:12.12Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -49,8 +48,7 @@
               "ViewState": "AgIAABsAAAAAAAAAAAAAAC8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-09-18T15:40:26.271Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -60,7 +58,7 @@
               "RelativeDocumentMoniker": "lab_16\\lab_16.cpp",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_16\\lab_16\\lab_16.cpp",
               "RelativeToolTip": "lab_16\\lab_16.cpp",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAACsAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACgAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-09-18T15:38:55.036Z",
               "EditorCaption": ""

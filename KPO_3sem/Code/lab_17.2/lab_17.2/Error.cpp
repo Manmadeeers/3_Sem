@@ -14,7 +14,7 @@ namespace ERROR
 		ERROR_ENTRY_NODEF10(10),ERROR_ENTRY_NODEF10(20),ERROR_ENTRY_NODEF10(30),ERROR_ENTRY_NODEF10(40),ERROR_ENTRY_NODEF10(50),
 
 		// ошибки таблиц//table erors
-		ERROR_ENTRY(60, "Lexem Table:failed to add a new element. Table overflow"),
+		ERROR_ENTRY(60, "Lexem Table:failed to add a new element. Table overflow  or impossible size"),
 		ERROR_ENTRY(61, "Lexem Table:failed to get an element by index.Table subscript out of range or less then possible"),
 		ERROR_ENTRY_NODEF(62),
 		ERROR_ENTRY(63, "Lexem Table:failed to open a stream to print the table"),

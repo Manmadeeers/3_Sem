@@ -26,7 +26,7 @@
 namespace LT {
 	struct Entry
 	{
-		char lexem[LEXEM_FIXSIZE];
+		char lexem;
 		int src_str_num;
 		int index;
 	};

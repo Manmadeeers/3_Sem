@@ -1,9 +1,12 @@
 ﻿#include "stdafx.h"
+//#include "Windows.h"
 
 
 int _tmain(int argc, _TCHAR* argv[])
 {
 	setlocale(LC_ALL, "Russian");
+	//SetConsoleCP(1251);
+	//SetConsoleOutputCP(1251);
 
 #ifdef GETERROR_TEST
 	//test geteror function
@@ -67,10 +70,18 @@ int _tmain(int argc, _TCHAR* argv[])
 		LOG::WriteParm(log, parm);
 		In::IN in = In::getin(parm.in);
 		for (int i = 0; i < in.words_size; i++) {
-			cout << in.words[i] << endl;
+			cout<<i << in.words[i] << endl;
 		}
 		LOG::WriteIN(log, in);
 		OUT::WriteOUT(in, parm.out);
+		LT::LexTable LexTable = LT::Create(in.words_size);
+		IT::IDTable IDTable = IT::Create(in.words_size);
+		FST::GetLexem(LexTable, IDTable, in);
+		cout << "Lexem table" << endl;
+		for (int i = 0; i < LexTable.size; i++) {
+			cout<<i << LT::GetEntry(LexTable, i).lexem << endl;
+		}
+
 	}
 	catch (ERROR::ERROR exception) {
 		LOG::WriteERROR(log, exception);

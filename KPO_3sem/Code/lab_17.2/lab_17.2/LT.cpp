@@ -3,6 +3,9 @@
 
 namespace LT {
 	LexTable Create(int size) {
+		if (size<0 || size>LT_MAXSIZE) {
+			throw ERROR_THROW(60);
+		}
 		LexTable newLexTable;
 		newLexTable.maxsize = LT_MAXSIZE;
 		newLexTable.size = 0;
@@ -32,8 +35,6 @@ namespace LT {
 		LexTable.size = 0;
 	}
 
-	void BuildLexTable(In::IN in, LexTable& LexTable) {
 
-	}
 
 };
