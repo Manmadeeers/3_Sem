@@ -67,14 +67,17 @@ void assignCodes(Node* root, string current_code, map<char, string>& codes) {
 }
 
 void printCodes(map<char, string>codes) {
+	string encoded_line;
 	for (const auto&pair:codes) {
 		cout << pair.first << " : " << pair.second << endl;
+		encoded_line += pair.second;
 	}
+	cout << endl << endl<<"Encoded line: " << encoded_line << endl;
 }
 //<---end of util functions--->
 
 void buildHaffman(string line) {
-	if (line == "") {
+	if (line == "") {  
 		return;
 	}
 	vector<Node*>Nodes;
@@ -103,13 +106,13 @@ void buildHaffman(string line) {
 		Node* leftNode = Nodes[0];
 		Node* rightNode = Nodes[1];
 		SummaryNode->freq = leftNode->freq + rightNode->freq;
-		//SUM_SYMBOL was chosen because it's simillar to S sumbol 
 		SummaryNode->symbol = SUM_SYMBOL;
 		SummaryNode->left = leftNode;
 		SummaryNode->right = rightNode;
 		Nodes.erase(Nodes.begin());
 		Nodes.erase(Nodes.begin());
 		Nodes.push_back(SummaryNode);
+		//cout << leftNode->symbol << "+" << rightNode->symbol << endl;
 		sort(Nodes.begin(), Nodes.end(), sortNodes);
 	}
 	cout<<"For debug: " << Nodes[0]->freq << endl;
