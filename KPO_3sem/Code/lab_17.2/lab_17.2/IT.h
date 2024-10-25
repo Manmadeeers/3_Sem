@@ -13,7 +13,7 @@ namespace IT {
 
 	struct Entry {
 		int first_line_ID;//link to the lexem table
-		char id[ID_MAXSIZE];
+		char* id;
 		DATATYPES IDDataType;
 		IDTYPE IDType;
 		union {

@@ -69,18 +69,55 @@ int _tmain(int argc, _TCHAR* argv[])
 		LOG::WriteLog(log);
 		LOG::WriteParm(log, parm);
 		In::IN in = In::getin(parm.in);
+		
+		cout<<endl << "<-----Source text----->" << endl << endl;;
+		int src_line_counter = 0;
+		cout << src_line_counter << ' ';
+
 		for (int i = 0; i < in.words_size; i++) {
-			cout<<i << in.words[i] << endl;
+
+			
+			if (in.words[i][0] == '|') {
+				cout << endl;
+				cout << ++src_line_counter<< " ";
+			}
+			else {
+				cout << in.words[i] << ' ';
+			}
 		}
 		LOG::WriteIN(log, in);
 		OUT::WriteOUT(in, parm.out);
 		LT::LexTable LexTable = LT::Create(in.words_size);
 		IT::IDTable IDTable = IT::Create(in.words_size);
 		FST::GetLexem(LexTable, IDTable, in);
-		cout << "Lexem table" << endl;
+		cout << endl << endl << "<-----Lexem table----->" << endl;
+		
+		int store_prev=0;
 		for (int i = 0; i < LexTable.size; i++) {
-			cout<<i << LT::GetEntry(LexTable, i).lexem << endl;
+			LT::Entry current = LT::GetEntry(LexTable, i);
+			
+			if (current.src_str_num!=store_prev) {
+
+				cout << endl;
+				if (current.src_str_num <= 9) {
+					cout<<'0' << current.src_str_num << ' ';
+				}
+				else {
+					cout << current.src_str_num << ' ';
+				}
+				
+			}
+			else {
+				
+				cout<< current.lexem;
+			}
+			store_prev = current.src_str_num;
+			
 		}
+		cout << endl << endl;
+
+		cout << "<-----Identifier table----->" << endl;
+
 
 	}
 	catch (ERROR::ERROR exception) {
