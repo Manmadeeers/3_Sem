@@ -63,6 +63,23 @@ if(!window.Promise){
 window.X = "new X";
 window.Y = "new Y";
 console.group("Global objects");
-console.log(window.X);
-console.log(window.Y);
+console.log(window);
+console.groupEnd();
+
+//TASK 6
+function makeCounter(){
+    let currentCount = 1;
+    return function(){
+        return currentCount++;
+    };
+}
+
+let counter = makeCounter();
+let counter2 = makeCounter();
+console.group("Counter");
+console.log(counter());
+console.log(counter());
+console.log(counter());
+console.log(counter2());
+console.log(counter2());
 console.groupEnd();
