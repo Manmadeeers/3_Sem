@@ -67,8 +67,9 @@ console.log(window);
 console.groupEnd();
 
 //TASK 6
+let currentCount = 1;
 function makeCounter(){
-    let currentCount = 1;
+    
     return function(){
         return currentCount++;
     };
