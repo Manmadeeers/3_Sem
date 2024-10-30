@@ -86,7 +86,7 @@ namespace FST
 	void GetLexem(LT::LexTable& lextable, IT::IDTable& idtable, In::IN in) {
 		char special[] = { '(',')','{','}',';',','};
 		char signs[] = { '+','-','/','*','=' };
-		int count_lines = 1;
+		int count_lines = 0;
 		const int spec_size = 11;
 		const int sign_size = 5;
 		unsigned char* lexem;
@@ -97,6 +97,7 @@ namespace FST
 				continue;
 			}
 
+			bool special_flag = false;
 			if (lexem[0] == '|') {
 				count_lines++;
 			}
@@ -104,7 +105,7 @@ namespace FST
 			LT::Entry NewEntry;
 			IT::Entry NewIdent;
 
-			bool special_flag = false;
+			
 			for (int j = 0; j < spec_size; j++) {
 				if (lexem[0] == special[j]) {
 					special_flag = true;
@@ -508,7 +509,6 @@ namespace FST
 					NewEntry.lexem = 'i';
 					NewEntry.src_str_num = count_lines;
 					LT::AddToLexTable(lextable, NewEntry);
-
 
 					continue;
 				}

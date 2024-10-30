@@ -35,7 +35,7 @@ namespace IT {
 		}
 		return NULL_INDEX;
 	}
-
+	                                 
 	void DeleteIdTable(IDTable& idtable) {
 		idtable.table = nullptr;
 		delete[] idtable.table;

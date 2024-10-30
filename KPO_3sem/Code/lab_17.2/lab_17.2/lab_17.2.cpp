@@ -90,6 +90,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		LT::LexTable LexTable = LT::Create(in.words_size);
 		IT::IDTable IDTable = IT::Create(in.words_size);
 		FST::GetLexem(LexTable, IDTable, in);
+		cout<<endl << ';' << in.words[0] << ';' << endl;
 		cout << endl << endl << "<-----Lexem table----->" << endl;
 		
 		int store_prev=0;
@@ -116,7 +117,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		}
 		cout << endl << endl;
 
-		cout << "<-----Identifier table----->" << endl;
+		
 
 
 	}
