@@ -1,11 +1,22 @@
-﻿Сборка начата 30.10.2024 17:00:01.
+﻿Сборка начата 31.10.2024 15:27:27.
 Уровень детализации журнала: Normal.     1>Проект "C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17.2\lab_17.2\lab_17.2.vcxproj" в узле 2 (целевые объекты Build).
      1>PrepareForBuild:
          Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
        InitializeBuildStatus:
+         Создание "Debug\lab_17.2.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
          Обращение к "Debug\lab_17.2.tlog\unsuccessfulbuild".
        ClCompile:
-         Для всех выходных данных обновления не требуется.
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"Debug\\" /Fd"Debug\vc143.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt FST.cpp lab_17.2.cpp
+         FST.cpp
+     1>C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17.2\lab_17.2\In.h(30,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         (компиляция исходного файла "FST.cpp")
+         
+     1>C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17.2\lab_17.2\FST.cpp(70,17): warning C4267: инициализация: преобразование из "size_t" в "short"; возможна потеря данных
+         lab_17.2.cpp
+     1>C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17.2\lab_17.2\In.h(30,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         (компиляция исходного файла "lab_17.2.cpp")
+         
+         Создание кода...
        Link:
          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17.2\Debug\lab_17.2.exe" /INCREMENTAL /ILK:"Debug\lab_17.2.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17.2\Debug\lab_17.2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17.2\Debug\lab_17.2.lib" /MACHINE:X86 Debug\Error.obj
          Debug\FST.obj
@@ -23,7 +34,14 @@
      1>Сборка проекта "C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17.2\lab_17.2\lab_17.2.vcxproj" завершена (целевые объекты Build).
 
 Сборка успешно завершена.
-    Предупреждений: 0
+
+       "C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17.2\lab_17.2\lab_17.2.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект ClCompile) -> 
+         C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17.2\lab_17.2\In.h(30,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17.2\lab_17.2\FST.cpp(70,17): warning C4267: инициализация: преобразование из "size_t" в "short"; возможна потеря данных
+         C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab_17.2\lab_17.2\In.h(30,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+
+    Предупреждений: 3
     Ошибок: 0
 
-Прошло времени 00:00:00.16
+Прошло времени 00:00:01.91

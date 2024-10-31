@@ -93,6 +93,8 @@ namespace In {
 	
 		//transfer a string into an array of single separated words
 		in_to_return.text = text;
+
+
 		unsigned char** words = new unsigned char*[LT_MAXSIZE];
 		for (int i = 0; i < LT_MAXSIZE; i++) {
 			words[i] = new unsigned char[MAX_WORD_LENGTH];

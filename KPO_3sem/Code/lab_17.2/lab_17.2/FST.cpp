@@ -103,7 +103,7 @@ namespace FST
 			}
 
 			LT::Entry NewEntry;
-			IT::Entry NewIdent;
+			
 
 			
 			for (int j = 0; j < spec_size; j++) {
@@ -509,7 +509,10 @@ namespace FST
 					NewEntry.lexem = 'i';
 					NewEntry.src_str_num = count_lines;
 					LT::AddToLexTable(lextable, NewEntry);
-
+					IT::Entry NewIdent;
+					NewIdent.id = (char*)lexem;
+					NewIdent.first_line_ID = count_lines;
+					IT::AddToIDTable(idtable, NewIdent);
 					continue;
 				}
 

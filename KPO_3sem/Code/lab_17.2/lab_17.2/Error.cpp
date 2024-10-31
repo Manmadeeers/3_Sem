@@ -22,7 +22,8 @@ namespace ERROR
 		ERROR_ENTRY(65, "ID Table:Id's name is longer then alowed length"),
 		ERROR_ENTRY(66, "ID Tbale:failed to add a new element.Table overflow"),
 		ERROR_ENTRY(67, "ID Table:failed to get an element by index.Table subscript out of range or less then possible"),
-		ERROR_ENTRY_NODEF(68), ERROR_ENTRY_NODEF(69),
+		ERROR_ENTRY(68,"ID Table:failed to create an ID Table. Size is more then allowed"),
+		ERROR_ENTRY_NODEF(69),
 		ERROR_ENTRY_NODEF10(70), ERROR_ENTRY_NODEF10(80),
 
 		// ошибки лексического анализатора//lecsical analyzer erors
