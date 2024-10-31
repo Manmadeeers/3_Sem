@@ -96,6 +96,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		cout << endl << endl << "<-----Lexem table----->" << endl;
 		
 		int store_prev=0;
+		cout<<"0" << store_prev<<" ";
 		for (int i = 0; i < LexTable.size; i++) {
 			LT::Entry current = LT::GetEntry(LexTable, i);
 			
@@ -122,7 +123,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		cout << "<-----Identifier table----->" << endl;
 		for (int i = 0; i < IDTable.size; i++) {
 			IT::Entry current = IDTable.table[i];
-			cout << current.first_line_ID << " : " << current.id << endl;
+			cout << current.first_line_ID << "  " << current.id << endl;
 		}
 		cout << endl << endl;
 		
