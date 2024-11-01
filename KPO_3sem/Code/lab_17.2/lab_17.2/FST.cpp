@@ -451,7 +451,7 @@ namespace FST
 			LT::Entry NewLex;
 			IT::Entry NewId;
 			unsigned char* current_word = in.words[i];
-			if (current_word[0] == '\0'||current_word[0]==' ') {
+			if (current_word[0] == '\0') {
 				continue;
 			}
 			if (current_word[0] == '|') {
@@ -464,7 +464,13 @@ namespace FST
 			if (lexem == 'i') {
 				NewId.id = (char*)current_word;
 				NewId.first_line_ID = count_lines;
-				IT::AddToIDTable(idtable, NewId);
+				if (!(IT::InIdTable(idtable, NewId))) {
+					IT::AddToIDTable(idtable, NewId);
+				}
+				else {
+					continue;
+				}
+				
 			}
 		}
 	}
