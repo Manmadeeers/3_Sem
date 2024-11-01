@@ -96,9 +96,8 @@ void buildHaffman(string line) {
 		}
 	}
 
-	printNodes(Nodes);
 	sort(Nodes.begin(), Nodes.end(), sortNodes);
-	cout << "Sorted nodes" << endl;
+	cout << "Nodes" << endl;
 	printNodes(Nodes);
 
 	while (Nodes.size() > 1) {
@@ -115,7 +114,7 @@ void buildHaffman(string line) {
 		//cout << leftNode->symbol << "+" << rightNode->symbol << endl;
 		sort(Nodes.begin(), Nodes.end(), sortNodes);
 	}
-	cout<<"For debug: " << Nodes[0]->freq << endl;
+	cout<<"Summary: " << Nodes[0]->freq << endl;
 	
 	assignCodes(Nodes[0], "", Codes);
 	cout << "Huffman codes: " << endl;
