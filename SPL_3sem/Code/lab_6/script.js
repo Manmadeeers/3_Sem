@@ -1,10 +1,11 @@
 //TASK 1
 let numbers = [1,2,3,4,5,6];
 const[y] = numbers;
-const[,,third] = numbers
+const[,,third,,fiv] = numbers
 console.group("Array destructuring:");
 console.log(y);
 console.log(third);
+console.log(fiv);
 console.groupEnd();
 
 //TASK 2
@@ -48,9 +49,11 @@ function getThird(obj){
     return {posts,dialogs,messages};
 
 }
+let destr = getThird(store);
 
 console.group("Complex object destructuring");
 console.log(getThird(store));
+console.log(destr.messages[2].id);
 console.groupEnd();
 
 //TASK 4

@@ -51,7 +51,7 @@ bool sortNodes(const Node* Node1, const Node* Node2) {
 	if (Node1->freq != Node2->freq) {
 		return Node1->freq < Node2->freq;
 	}
-	return Node1->symbol < Node2->symbol;
+	return Node1->symbol < Node2->symbol; 
 }
 
 void assignCodes(Node* root, string current_code, map<char, string>& codes) {
@@ -95,8 +95,9 @@ void buildHaffman(string line) {
 			Nodes.push_back(NewNode);
 		}
 	}
-
 	sort(Nodes.begin(), Nodes.end(), sortNodes);
+
+
 	cout << "Nodes" << endl;
 	printNodes(Nodes);
 
