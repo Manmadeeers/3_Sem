@@ -64,7 +64,7 @@ let tasks = [
     {id:4,title:"Rest API",isDone:false},
     {id:5,title:"GraphQL",isDone:false},
 ];
-let NewTask = {id:6,title:"Find a job",isDone:false};
+let NewTask = {id:6,title:"Make a final build",isDone:false};
 tasks = [...tasks,NewTask];
 console.group("Add to an array using spread operator");
 console.log(tasks);
