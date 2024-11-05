@@ -37,13 +37,7 @@ namespace IT {
 	}
 
 	bool InIdTable(IDTable idtable, Entry check_entry) {
-		for (int i = 0; i < idtable.size; i++) {
-			Entry current = idtable.table[i];
-			if (check_entry.id == current.id) {
-				return true;
-			}
-		}
-		return false;
+		return true;
 	}
 	                                 
 	void DeleteIdTable(IDTable& idtable) {

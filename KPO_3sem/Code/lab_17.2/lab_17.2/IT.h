@@ -10,7 +10,6 @@
 namespace IT {
 	enum DATATYPES { INT = 1, STR = 2 };
 	enum IDTYPE { V = 1, F = 2, P = 3, L = 3 };
-
 	struct Entry {
 		int first_line_ID;//link to the lexem table
 		char* id;

@@ -464,13 +464,31 @@ namespace FST
 			if (lexem == 'i') {
 				NewId.id = (char*)current_word;
 				NewId.first_line_ID = count_lines;
-				if (!(IT::InIdTable(idtable, NewId))) {
-					IT::AddToIDTable(idtable, NewId);
+				if (FiniteAutomats(in.words[i - 1]) == 't') {
+					FST integer_au(
+						in.words[i-1],
+						8,
+						NODE(1, RELATION('i', 1)),
+						NODE(1, RELATION('n', 2)),
+						NODE(1, RELATION('t', 3)),
+						NODE(1, RELATION('e', 4)),
+						NODE(1, RELATION('g', 5)),
+						NODE(1, RELATION('e', 6)),
+						NODE(1, RELATION('r', 7)),
+						NODE()
+					);
+					if (execute(integer_au)) {
+						NewId.IDDataType = IT::INT;
+					}
+					else {
+						NewId.IDDataType = IT::STR;
+					}
+					
 				}
-				else {
-					continue;
+				else if (FiniteAutomats(in.words[i - 1]) == 'f') {
+					NewId.IDType = IT::F;
 				}
-				
+				IT::AddToIDTable(idtable, NewId);
 			}
 		}
 	}

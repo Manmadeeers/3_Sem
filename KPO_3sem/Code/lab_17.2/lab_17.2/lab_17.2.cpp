@@ -124,10 +124,10 @@ int _tmain(int argc, _TCHAR* argv[])
 		for (int i = 0; i < IDTable.size; i++) {
 			IT::Entry current = IDTable.table[i];
 			if (current.first_line_ID <= 9) {
-				cout<<"0" << current.first_line_ID << " " << current.id << endl;
+				cout<<"0" << current.first_line_ID << " "<<"Identifier: " << current.id <<" Data type: " << current.IDDataType<<" Type: " << current.IDType << endl;
 			}
 			else {
-				cout << current.first_line_ID << " " << current.id << endl;
+				cout << current.first_line_ID << " " << current.id << current.IDDataType << current.IDType << endl;
 			}
 		}
 			
