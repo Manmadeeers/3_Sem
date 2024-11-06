@@ -442,6 +442,180 @@ namespace FST
 		return 'U';
 	}
 
+	bool check_int(unsigned char* word) {
+		FST integer_au(
+			word,
+			8,
+			NODE(1, RELATION('i', 1)),
+			NODE(1, RELATION('n', 2)),
+			NODE(1, RELATION('t', 3)),
+			NODE(1, RELATION('e', 4)),
+			NODE(1, RELATION('g', 5)),
+			NODE(1, RELATION('e', 6)),
+			NODE(1, RELATION('r', 7)),
+			NODE()
+		);
+		if (execute(integer_au)) {
+			return true;
+		}
+		return false;
+	}
+	bool check_str(unsigned char* word) {
+		FST string_au(
+			word,
+			7,
+			NODE(1, RELATION('s', 1)),
+			NODE(1, RELATION('t', 2)),
+			NODE(1, RELATION('r', 3)),
+			NODE(1, RELATION('i', 4)),
+			NODE(1, RELATION('n', 5)),
+			NODE(1, RELATION('g', 6)),
+			NODE()
+		);
+		if (execute(string_au)) {
+			return true;
+		}
+		return false;
+	}
+	bool check_id(unsigned char* word) {
+		FST identifier_au(
+			word,
+			3,
+			NODE(156,
+				//uppercase latin
+				RELATION('A', 0), RELATION('A', 1), RELATION('A', 2),
+				RELATION('B', 0), RELATION('B', 1), RELATION('B', 2),
+				RELATION('C', 0), RELATION('C', 1), RELATION('C', 2),
+				RELATION('D', 0), RELATION('D', 1), RELATION('D', 2),
+				RELATION('E', 0), RELATION('E', 1), RELATION('E', 2),
+				RELATION('F', 0), RELATION('F', 1), RELATION('F', 2),
+				RELATION('G', 0), RELATION('G', 1), RELATION('G', 2),
+				RELATION('H', 0), RELATION('H', 1), RELATION('H', 2),
+				RELATION('I', 0), RELATION('I', 1), RELATION('I', 2),
+				RELATION('J', 0), RELATION('J', 1), RELATION('J', 2),
+				RELATION('K', 0), RELATION('K', 1), RELATION('K', 2),
+				RELATION('L', 0), RELATION('L', 1), RELATION('L', 2),
+				RELATION('M', 0), RELATION('M', 1), RELATION('M', 2),
+				RELATION('N', 0), RELATION('N', 1), RELATION('N', 2),
+				RELATION('O', 0), RELATION('O', 1), RELATION('O', 2),
+				RELATION('P', 0), RELATION('P', 1), RELATION('P', 2),
+				RELATION('Q', 0), RELATION('Q', 1), RELATION('Q', 2),
+				RELATION('R', 0), RELATION('R', 1), RELATION('R', 2),
+				RELATION('S', 0), RELATION('S', 1), RELATION('S', 2),
+				RELATION('T', 0), RELATION('T', 1), RELATION('T', 2),
+				RELATION('U', 0), RELATION('U', 1), RELATION('U', 2),
+				RELATION('V', 0), RELATION('V', 1), RELATION('V', 2),
+				RELATION('W', 0), RELATION('W', 1), RELATION('W', 2),
+				RELATION('X', 0), RELATION('X', 1), RELATION('X', 2),
+				RELATION('Y', 0), RELATION('Y', 1), RELATION('Y', 2),
+				RELATION('Z', 0), RELATION('Z', 1), RELATION('Z', 2),
+				//lowercase latin
+				RELATION('a', 0), RELATION('a', 1), RELATION('a', 2),
+				RELATION('b', 0), RELATION('b', 1), RELATION('b', 2),
+				RELATION('c', 0), RELATION('c', 1), RELATION('c', 2),
+				RELATION('d', 0), RELATION('d', 1), RELATION('d', 2),
+				RELATION('e', 0), RELATION('e', 1), RELATION('e', 2),
+				RELATION('f', 0), RELATION('f', 1), RELATION('f', 2),
+				RELATION('g', 0), RELATION('g', 1), RELATION('g', 2),
+				RELATION('h', 0), RELATION('h', 1), RELATION('h', 2),
+				RELATION('i', 0), RELATION('i', 1), RELATION('i', 2),
+				RELATION('j', 0), RELATION('j', 1), RELATION('j', 2),
+				RELATION('k', 0), RELATION('k', 1), RELATION('k', 2),
+				RELATION('l', 0), RELATION('l', 1), RELATION('l', 2),
+				RELATION('m', 0), RELATION('m', 1), RELATION('m', 2),
+				RELATION('n', 0), RELATION('n', 1), RELATION('n', 2),
+				RELATION('o', 0), RELATION('o', 1), RELATION('o', 2),
+				RELATION('p', 0), RELATION('p', 1), RELATION('p', 2),
+				RELATION('q', 0), RELATION('q', 1), RELATION('q', 2),
+				RELATION('r', 0), RELATION('r', 1), RELATION('r', 2),
+				RELATION('s', 0), RELATION('s', 1), RELATION('s', 2),
+				RELATION('t', 0), RELATION('t', 1), RELATION('t', 2),
+				RELATION('u', 0), RELATION('u', 1), RELATION('u', 2),
+				RELATION('v', 0), RELATION('v', 1), RELATION('v', 2),
+				RELATION('w', 0), RELATION('w', 1), RELATION('w', 2),
+				RELATION('x', 0), RELATION('x', 1), RELATION('x', 2),
+				RELATION('y', 0), RELATION('y', 1), RELATION('y', 2),
+				RELATION('z', 0), RELATION('z', 1), RELATION('z', 2),
+				//special
+				RELATION('_', 0), RELATION('_', 1)
+			),
+			NODE(126,
+				RELATION('0', 1), RELATION('0', 2),
+				RELATION('1', 1), RELATION('1', 2),
+				RELATION('2', 1), RELATION('2', 2),
+				RELATION('3', 1), RELATION('3', 2),
+				RELATION('4', 1), RELATION('4', 2),
+				RELATION('5', 1), RELATION('5', 2),
+				RELATION('6', 1), RELATION('6', 2),
+				RELATION('7', 1), RELATION('7', 2),
+				RELATION('8', 1), RELATION('8', 2),
+				RELATION('9', 1), RELATION('9', 2),
+
+				RELATION('_', 1), RELATION('_', 2),
+				//uppercase latin
+				RELATION('A', 1), RELATION('A', 2),
+				RELATION('B', 1), RELATION('B', 2),
+				RELATION('C', 1), RELATION('C', 2),
+				RELATION('D', 1), RELATION('D', 2),
+				RELATION('E', 1), RELATION('E', 2),
+				RELATION('F', 1), RELATION('F', 2),
+				RELATION('G', 1), RELATION('G', 2),
+				RELATION('H', 1), RELATION('H', 2),
+				RELATION('I', 1), RELATION('I', 2),
+				RELATION('J', 1), RELATION('J', 2),
+				RELATION('K', 1), RELATION('K', 2),
+				RELATION('L', 1), RELATION('L', 2),
+				RELATION('M', 1), RELATION('M', 2),
+				RELATION('N', 1), RELATION('N', 2),
+				RELATION('O', 1), RELATION('O', 2),
+				RELATION('P', 1), RELATION('P', 2),
+				RELATION('Q', 1), RELATION('Q', 2),
+				RELATION('R', 1), RELATION('R', 2),
+				RELATION('S', 1), RELATION('S', 2),
+				RELATION('T', 1), RELATION('T', 2),
+				RELATION('U', 1), RELATION('U', 2),
+				RELATION('V', 1), RELATION('V', 2),
+				RELATION('W', 1), RELATION('W', 2),
+				RELATION('X', 1), RELATION('X', 2),
+				RELATION('Y', 1), RELATION('Y', 2),
+				RELATION('Z', 1), RELATION('Z', 2),
+				//lowercase latin
+				RELATION('a', 1), RELATION('a', 2),
+				RELATION('b', 1), RELATION('b', 2),
+				RELATION('c', 1), RELATION('c', 2),
+				RELATION('d', 1), RELATION('d', 2),
+				RELATION('e', 1), RELATION('e', 2),
+				RELATION('f', 1), RELATION('f', 2),
+				RELATION('g', 1), RELATION('g', 2),
+				RELATION('h', 1), RELATION('h', 2),
+				RELATION('i', 1), RELATION('i', 2),
+				RELATION('j', 1), RELATION('j', 2),
+				RELATION('k', 1), RELATION('k', 2),
+				RELATION('l', 1), RELATION('l', 2),
+				RELATION('m', 1), RELATION('m', 2),
+				RELATION('n', 1), RELATION('n', 2),
+				RELATION('o', 1), RELATION('o', 2),
+				RELATION('p', 1), RELATION('p', 2),
+				RELATION('q', 1), RELATION('q', 2),
+				RELATION('r', 1), RELATION('r', 2),
+				RELATION('s', 1), RELATION('s', 2),
+				RELATION('t', 1), RELATION('t', 2),
+				RELATION('u', 1), RELATION('u', 2),
+				RELATION('v', 1), RELATION('v', 2),
+				RELATION('w', 1), RELATION('w', 2),
+				RELATION('x', 1), RELATION('x', 2),
+				RELATION('y', 1), RELATION('y', 2),
+				RELATION('z', 1), RELATION('z', 2)
+
+			),
+			NODE()
+		);
+
+		if (execute(identifier_au)) {
+			return true;
+		}
+		return false;
+	}
 
 	void GetLexem(LT::LexTable& lextable, IT::IDTable& idtable, In::IN in) {
 		
@@ -461,34 +635,49 @@ namespace FST
 			NewLex.lexem = lexem;
 			NewLex.src_str_num = count_lines;
 			LT::AddToLexTable(lextable, NewLex);
-			if (lexem == 'i') {
-				NewId.id = (char*)current_word;
+			int gap_front = 1;
+			if (lexem == 't') {
 				NewId.first_line_ID = count_lines;
-				if (FiniteAutomats(in.words[i - 1]) == 't') {
-					FST integer_au(
-						in.words[i-1],
-						8,
-						NODE(1, RELATION('i', 1)),
-						NODE(1, RELATION('n', 2)),
-						NODE(1, RELATION('t', 3)),
-						NODE(1, RELATION('e', 4)),
-						NODE(1, RELATION('g', 5)),
-						NODE(1, RELATION('e', 6)),
-						NODE(1, RELATION('r', 7)),
-						NODE()
-					);
-					if (execute(integer_au)) {
-						NewId.IDDataType = IT::INT;
+				bool done = false;
+				while (true) {
+					if (FiniteAutomats(in.words[i + gap_front]) == 'f') {
+						NewId.IDType = IT::F;
+						if (check_int(in.words[i])) {
+							NewId.IDDataType = IT::INT;
+						}
+						else {
+							NewId.IDDataType = IT::STR;
+						}
+						break;
 					}
-					else {
-						NewId.IDDataType = IT::STR;
+					else if (FiniteAutomats(in.words[i + gap_front]) == 'i') {
+						NewId.IDType = IT::V;//check
+						NewId.id = (char*)in.words[i + gap_front];
+						if (check_int(in.words[i])) {
+							NewId.IDDataType = IT::INT;
+						}
+						else {
+							NewId.IDDataType = IT::STR;
+						}
+						IT::AddToIDTable(idtable, NewId);
+						done = true;
+						break;
 					}
-					
+					gap_front++;
 				}
-				else if (FiniteAutomats(in.words[i - 1]) == 'f') {
-					NewId.IDType = IT::F;
+				if (!done) {
+					gap_front++;
+					while (!done) {
+						if (FiniteAutomats(in.words[i + gap_front]) == 'i') {
+							NewId.id = (char*)in.words[i + gap_front];
+							IT::AddToIDTable(idtable, NewId);
+							done = true;
+						}
+						gap_front++;
+					}
 				}
-				IT::AddToIDTable(idtable, NewId);
+				continue;
+
 			}
 		}
 	}

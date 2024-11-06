@@ -127,7 +127,7 @@ int _tmain(int argc, _TCHAR* argv[])
 				cout<<"0" << current.first_line_ID << " "<<"Identifier: " << current.id <<" Data type: " << current.IDDataType<<" Type: " << current.IDType << endl;
 			}
 			else {
-				cout << current.first_line_ID << " " << current.id << current.IDDataType << current.IDType << endl;
+				cout << current.first_line_ID << " " << "Identifier: " << current.id << " Data type: " << current.IDDataType << " Type: " << current.IDType << endl;
 			}
 		}
 			
