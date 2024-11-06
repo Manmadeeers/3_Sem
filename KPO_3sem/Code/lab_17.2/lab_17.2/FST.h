@@ -36,7 +36,5 @@ namespace FST
 	bool step(FST& fst, short*& rstates);
 	void GetLexem(LT::LexTable& lextable, IT::IDTable& idtable, In::IN in);
 	bool check_int(unsigned char*word);
-	bool check_str(unsigned char*word);
-	bool check_id(unsigned char*word);
 
 }

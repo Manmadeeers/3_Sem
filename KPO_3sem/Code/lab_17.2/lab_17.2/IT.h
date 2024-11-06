@@ -9,7 +9,7 @@
 
 namespace IT {
 	enum DATATYPES { INT = 1, STR = 2 };
-	enum IDTYPE { V = 1, F = 2, P = 3, L = 3 };
+	enum IDTYPE { V = 1, F = 2, P = 3, L = 4 };
 	struct Entry {
 		int first_line_ID;//link to the lexem table
 		char* id;
@@ -18,8 +18,8 @@ namespace IT {
 		union {
 			int vint;
 			struct {
-				char len;
-				char str[STR_MAXSIZE - 1];
+				short len;
+				char* str;
 			}vstr;
 		}value;
 	};
