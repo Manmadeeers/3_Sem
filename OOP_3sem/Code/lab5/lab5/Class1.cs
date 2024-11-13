@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace lab5
 {
@@ -25,13 +26,19 @@ namespace lab5
         public int quantity;
     }
 
-    public abstract class Product
+    public abstract class Product:IComparable<Product>
     {
         protected Quality quality;
         protected Descr description;
         protected string name;
         protected bool clean = false;
         protected int weight;
+        protected double priceweight;
+
+        public int CompareTo(Product other)
+        {
+            return Priceweight.CompareTo(other.Priceweight);
+        }
         public string Name
         {
             get { return name; }
@@ -48,6 +55,12 @@ namespace lab5
             get => weight;
             set => weight = value;
         }
+
+        public double Priceweight
+        {
+            get { return priceweight; }
+            set { priceweight = value; }
+        }
         protected Product(string Nname, string Nprice,int Nweight)
         {
             if (String.IsNullOrEmpty(Nname) || String.IsNullOrEmpty(Nprice))
@@ -60,6 +73,7 @@ namespace lab5
             quality = Quality.Amazing;
             description.descr = "Description";
             description.quantity = 100;
+            priceweight = int.Parse(price) / weight;
         }
 
         public virtual void getDescription()
@@ -181,28 +195,33 @@ namespace lab5
     {
         protected List<T> elements = new List<T>();
         public abstract void Set(List<T>list);
-        public abstract void Get();
+        public abstract List<Product> Get();
         public abstract void AddNew(T element);
         public abstract void Remove(T element);
         public abstract void Clear();
-        public abstract void Print(T element);
+        public abstract void Print();
 
     }
 
     public class Storage : ContainerClass<Product>
     {
+        public List<Product> Elems
+        {
+            get { return elements; }
+            set { elements = value; }
+        }
+        public Product this[int index]
+        {
+            get { return elements[index]; }
+            set { elements[index] = value; }
+        }
         public override void Set(List<Product> list)
         {
             elements = list;
         }
-        public override void Get()
+        public override List<Product> Get()
         {
-            Console.WriteLine("<----------Storage---------->");
-            foreach (var element in elements)
-            {
-                Console.WriteLine(element.ToString());
-            }
-            Console.WriteLine("<--------------------------->");
+            return elements;
         }
         public override void AddNew(Product element)
         {
@@ -233,47 +252,37 @@ namespace lab5
             elements.Clear();
             Console.WriteLine("List is cleared");
         }
-        public override void Print(Product element)
+        public override void Print()
         {
-            bool InList = false;
-            foreach(var item in elements)
-            {
-                if(item == element)
-                {
-                    InList = true;
-                    break;
-                }
-            }
-            if (InList)
-            {
-                Console.WriteLine($"{element.Name}, {element.Quality}, {element.Price}");
-                element.getDescription();
-            }
-            else
-            {
-                Console.WriteLine("There's no such an element, therefore it could not be printedx");
-            }
-        }
-        public void calculateWoredrobeCost()
-        {
-            int totalSum = 0;
+            Console.WriteLine("Your storage:");
             foreach(var element in elements)
             {
-                if (element is Woredrobe||element is Closet)
-                {
-                    int price = int.Parse(element.Price);
-                    totalSum += price;
-                }
-                
+                Console.WriteLine($"{element.Name}->{element.Price}");
             }
-            Console.WriteLine($"The total price of all Worederobes and Closets is: {totalSum}$");
+        }
+    }
+
+    static class StorageController
+    {
+        public static int calculateWorderobeCost(Storage container)
+        {
+            int totalCost = 0;
+            for(int i = 0; i < container.Get().Count(); i++)
+            {
+                var current = container.Get()[i];
+                if(current is Woredrobe||current is Closet)
+                {
+                    totalCost += int.Parse(current.Price);
+                }
+            }
+            return totalCost;
         }
 
-        public void printPriceRange(int requiredPrice)
+        public static void printPriceRange(Storage container,int requiredPrice)
         {
             Console.WriteLine($"<----------Items in price range {requiredPrice}---------->");
             bool hasElement = false;
-            foreach(var element in elements)
+            foreach (var element in container.Get())
             {
                 int currentPrice = int.Parse(element.Price);
                 if (currentPrice == requiredPrice)
@@ -285,7 +294,16 @@ namespace lab5
             if (!hasElement) { Console.WriteLine("There are no elements in such a price range"); }
             Console.WriteLine($"<-------------------------------------------->");
         }
-        public void sortBy
+
+        public static void SortByPriceWeight(Storage storage)
+        {
+            storage.Elems.Sort();
+            Console.WriteLine("Ypue sorted by Price/Weight storage");
+            foreach(var elem in storage.Elems)
+            {
+                Console.WriteLine($"{elem.Name}->{elem.Priceweight}");
+            }
+        }
     }
 
 }

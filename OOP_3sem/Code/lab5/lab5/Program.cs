@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Sofa sofa1 = new Sofa("Sofa", "200$",150);
+            Sofa sofa1 = new Sofa("Sofa", "200",150);
             Console.WriteLine(sofa1.Quality);
             sofa1.getDescription();
 
@@ -20,9 +20,12 @@
             storage.AddNew(closet1);
             storage.AddNew(closet2);
             storage.AddNew(chair1);
-            storage.Get();
-            storage.calculateWoredrobeCost();
-            storage.printPriceRange(500);
+            storage.Print();
+            
+
+            Console.WriteLine($"Total cost of all woredrobes is: {StorageController.calculateWorderobeCost(storage)}");
+            StorageController.printPriceRange(storage, 500);
+            StorageController.SortByPriceWeight(storage);
         }
     }
 }

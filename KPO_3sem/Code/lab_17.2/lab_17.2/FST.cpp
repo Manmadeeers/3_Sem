@@ -96,7 +96,7 @@ namespace FST
 
 		for (int k = 0; k < sign_size; k++) {
 			if (word[0] == signs[k]) {
-				return signs[k];
+				return LEX_MATH;
 			}
 		}
 
@@ -113,7 +113,7 @@ namespace FST
 			NODE()
 		);
 		if (execute(integer_au)) {
-			return 't';
+			return LEX_DATATYPE;
 		}
 
 		FST string_au(
@@ -128,7 +128,7 @@ namespace FST
 			NODE()
 		);
 		if (execute(string_au)) {
-			return 't';
+			return LEX_DATATYPE;
 		}
 
 		FST function_au(
@@ -146,7 +146,7 @@ namespace FST
 		);
 
 		if (execute(function_au)) {
-			return 'f';
+			return LEX_FUNCTION;
 		}
 
 		FST declare_au(
@@ -163,7 +163,7 @@ namespace FST
 		);
 
 		if (execute(declare_au)) {
-			return 'd';
+			return LEX_DECLARE;
 		}
 
 		FST return_au(
@@ -179,7 +179,7 @@ namespace FST
 		);
 
 		if (execute(return_au)) {
-			return 'r';
+			return LEX_RETURN;
 		}
 
 		FST print_au(
@@ -194,7 +194,7 @@ namespace FST
 		);
 
 		if (execute(print_au)) {
-			return 'p';
+			return LEX_PRINT;
 		}
 
 		FST main_au(
@@ -208,7 +208,7 @@ namespace FST
 		);
 
 		if (execute(main_au)) {
-			return 'm';
+			return LEX_MAIN;
 		}
 
 		FST integer_literal_au(
@@ -221,7 +221,7 @@ namespace FST
 			NODE()
 		);
 		if (execute(integer_literal_au)) {
-			return 'l';
+			return LEX_LITERAL;
 		}
 
 
@@ -299,7 +299,7 @@ namespace FST
 			NODE()
 		);
 		if (execute(string_literal_au)) {
-			return 'l';
+			return LEX_LITERAL;
 		}
 
 		FST identifier_au(
@@ -436,10 +436,10 @@ namespace FST
 		);
 
 		if (execute(identifier_au)) {
-			return 'i';
+			return LEX_ID;
 		}
 
-		return 'U';
+		return LEX_UNDEF;
 	}
 
 	bool check_int(unsigned char* word) {

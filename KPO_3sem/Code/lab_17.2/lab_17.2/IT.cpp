@@ -36,9 +36,6 @@ namespace IT {
 		return NULL_INDEX;
 	}
 
-	bool InIdTable(IDTable idtable, Entry check_entry) {
-		return true;
-	}
 	                                 
 	void DeleteIdTable(IDTable& idtable) {
 		idtable.table = nullptr;

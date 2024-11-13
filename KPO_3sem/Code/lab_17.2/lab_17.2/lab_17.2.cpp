@@ -120,19 +120,33 @@ int _tmain(int argc, _TCHAR* argv[])
 		}
 		cout << endl << endl;
 
-		cout << "<-----Identifier table----->" << endl<<endl<<endl;
-		cout << "<-----Identifier data types----->" << endl;
-		cout << "1 - INT   2 - STR" << endl;
-		cout << "<----Identifier types----->" << endl;
-		cout << "1-Variable   2-Function   3-Parametres   4-Literal(str or int)" << endl << endl;
+		cout << "<-----Identifier table----->" << endl;
+		cout << "Identifier data types: " << "1 - INT   2 - STR" << endl;
+		cout << "Identifier types: " << "1-Variable   2-Function   3-Parametres   4-Literal(str or int)" << endl << endl;
+
+
+		cout<<" №" << '\t' << "Identifier" << '\t' << '\t' << "Data type" << '\t' << '\t' << "Identifier type" << endl;
 		for (int i = 0; i < IDTable.size; i++) {
 			IT::Entry current = IDTable.table[i];
 			if (current.first_line_ID <= 9) {
-				cout<<"0" << current.first_line_ID << " "<<"Identifier: " << current.id <<" Data type: " << current.IDDataType<<" Identifier Type: " << current.IDType << endl;
+				if (FST::FiniteAutomats((unsigned char*)current.id) == LEX_LITERAL) {
+					cout << "0" << current.first_line_ID << "\t" << "Literal " << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType<<" ( "<<current.id<<" )" << endl;
+
+				}
+				else {
+					cout << "0" << current.first_line_ID << "\t" << current.id << "\t\t\t" << current.IDDataType << "\t\t\t" << current.IDType << endl;
+				}
+				
 			}
 			else {
-				cout << current.first_line_ID << " " << "Identifier: " << current.id << " Data type: " << current.IDDataType << " Identifier Type: " << current.IDType << endl;
+				if (FST::FiniteAutomats((unsigned char*)current.id) == LEX_LITERAL) {
+					cout << current.first_line_ID << "\t" << "Literal " << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType << " ( " << current.id << " )" << endl;
+				}
+				else {
+					cout << current.first_line_ID << "\t" << current.id << "\t\t\t" << current.IDDataType << "\t\t\t" << current.IDType << endl;
+				}
 			}
+				
 		}
 			
 		cout << endl << endl;
