@@ -129,13 +129,16 @@
   <ItemGroup>
     <ClCompile Include="Error.cpp" />
     <ClCompile Include="FST.cpp" />
+    <ClCompile Include="GRB.cpp" />
     <ClCompile Include="In.cpp" />
     <ClCompile Include="IT.cpp" />
     <ClCompile Include="lab_17.2.cpp" />
     <ClCompile Include="Log.cpp" />
     <ClCompile Include="LT.cpp" />
+    <ClCompile Include="MFST.cpp" />
     <ClCompile Include="Out.cpp" />
     <ClCompile Include="Parm.cpp" />
+    <ClCompile Include="Syntax.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Error.h" />
@@ -144,9 +147,11 @@
     <ClInclude Include="IT.h" />
     <ClInclude Include="Log.h" />
     <ClInclude Include="LT.h" />
+    <ClInclude Include="MFST.h" />
     <ClInclude Include="Out.h" />
     <ClInclude Include="Parm.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Syntax.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -10,6 +10,7 @@
 #include <tchar.h>
 #include <fstream>
 #include <ctime>
+#include <stack>
 
 #include "Error.h"
 #include "In.h"
@@ -19,4 +20,6 @@
 #include "LT.h"
 #include "FST.h"
 #include "IT.h"
+#include "Syntax.h"
+#include "MFST.h"
 using namespace std;
