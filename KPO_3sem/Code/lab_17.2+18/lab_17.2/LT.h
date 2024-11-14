@@ -13,7 +13,7 @@
 #define LEX_MAIN 'm'
 #define LEX_MATH 'v'
 #define LEX_UNDEF 'U'
-
+#define STR_END 'E'
 
 namespace LT {
 	struct Entry

@@ -35,7 +35,25 @@ namespace IT {
 		}
 		return NULL_INDEX;
 	}
-
+	bool CheckLiteralPresense(IDTable idtable,Entry ID) {
+		DATATYPES id_type = ID.IDDataType;
+		for (int i = 0; i < idtable.size; i++) {
+			Entry current = idtable.table[i];
+			if (current.IDType == L&&current.IDDataType==ID.IDDataType) {
+				if (id_type == INT) {
+					if (current.value.vint == ID.value.vint) {
+						return true;
+					}
+				}
+				else {
+					if (current.value.vstr.str == ID.value.vstr.str) {
+						return true;
+					}
+				}
+			}
+		}
+		return false;
+	}
 	                                 
 	void DeleteIdTable(IDTable& idtable) {
 		idtable.table = nullptr;

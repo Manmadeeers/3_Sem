@@ -20,6 +20,4 @@
 #include "LT.h"
 #include "FST.h"
 #include "IT.h"
-#include "Syntax.h"
-#include "MFST.h"
 using namespace std;

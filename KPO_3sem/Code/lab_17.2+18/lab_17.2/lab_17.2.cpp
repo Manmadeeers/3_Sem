@@ -92,29 +92,22 @@ int _tmain(int argc, _TCHAR* argv[])
 		IT::IDTable IDTable = IT::Create(in.words_size);
 
 		FST::GetLexem(LexTable, IDTable, in);
-		cout<<endl << ';' << in.words[0] << ';' << endl;
+		//cout<<endl << ';' << in.words[0] << ';' << endl;
 		cout << endl << endl << "<-----Lexem table----->" << endl;
-		
 		int store_prev=0;
 		cout<<"0" << store_prev<<" ";
 		for (int i = 0; i < LexTable.size; i++) {
 			LT::Entry current = LT::GetEntry(LexTable, i);
-			
-			if (current.src_str_num!=store_prev) {
-
+			if (current.src_str_num != store_prev) {
 				cout << endl;
 				if (current.src_str_num <= 9) {
-					cout<<'0' << current.src_str_num << ' ';
+					cout << '0' << current.src_str_num << ' ';
 				}
 				else {
 					cout << current.src_str_num << ' ';
 				}
-				
 			}
-			else {
-				
-				cout<< current.lexem;
-			}
+			cout << current.lexem;
 			store_prev = current.src_str_num;
 			
 		}
@@ -129,8 +122,13 @@ int _tmain(int argc, _TCHAR* argv[])
 		for (int i = 0; i < IDTable.size; i++) {
 			IT::Entry current = IDTable.table[i];
 			if (current.first_line_ID <= 9) {
-				if (FST::FiniteAutomats((unsigned char*)current.id) == LEX_LITERAL) {
-					cout << "0" << current.first_line_ID << "\t" << "Literal " << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType<<" ( "<<current.id<<" )" << endl;
+				if (current.IDType==IT::L) {
+					if (current.IDDataType == IT::INT) {
+						cout << "0" << current.first_line_ID << "\t" << current.id << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType << " ( " << current.value.vint<<"  length: " << current.value.vstr.len << " )" << endl;
+					}
+					else {
+						cout << "0" << current.first_line_ID << "\t" << current.id << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType << " ( " << current.value.vstr.str << " )" << endl;
+					}
 
 				}
 				else {
@@ -139,8 +137,14 @@ int _tmain(int argc, _TCHAR* argv[])
 				
 			}
 			else {
-				if (FST::FiniteAutomats((unsigned char*)current.id) == LEX_LITERAL) {
-					cout << current.first_line_ID << "\t" << "Literal " << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType << " ( " << current.id << " )" << endl;
+				if (current.IDType==IT::L) {
+					if (current.IDDataType == IT::INT) {
+						cout << current.first_line_ID << "\t" << current.id << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType << " ( " << current.value.vint << " )" << endl;
+					}
+					else {
+						cout << current.first_line_ID << "\t" << current.id << "\t\t" << current.IDDataType << "\t\t\t" << current.IDType << " ( " << current.value.vstr.str<<"  length: " << current.value.vstr.len << " )" << endl;
+					}
+					
 				}
 				else {
 					cout << current.first_line_ID << "\t" << current.id << "\t\t\t" << current.IDDataType << "\t\t\t" << current.IDType << endl;

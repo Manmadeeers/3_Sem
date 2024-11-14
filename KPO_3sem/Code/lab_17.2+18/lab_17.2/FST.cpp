@@ -5,7 +5,6 @@
 
 
 namespace FST
-
 {
 	
 	RELATION::RELATION(char c, short nn)
@@ -81,10 +80,12 @@ namespace FST
 
 	
 	char FiniteAutomats(unsigned char* word) {
-		//char lexem;
 
 		char special[] = { '(',')','{','}',';',',' };
 		char signs[] = { '+','-','/','*','=' };
+		if ((char*)word == (char*)STR_END) {
+			return STR_END;
+		}
 		const int spec_size = 11;
 		const int sign_size = 5;
 
@@ -462,29 +463,35 @@ namespace FST
 	}
 
 	void GetLexem(LT::LexTable& lextable, IT::IDTable& idtable, In::IN in) {
-		
+		const char* Literal = "Literal";
 		int count_lines = 0;
-
+		int count_literals = 0;
 		for (int i = 0; i < in.words_size; i++) {
 			LT::Entry NewLex;
 			IT::Entry NewId;
 			unsigned char* current_word = in.words[i];
-			if (current_word[0] == '\0') {
+			if (current_word[0] == '\0'||current_word[0]==' ') {
 				continue;
 			}
 			if (current_word[0] == '|') {
 				count_lines++;
 			}
 			char lexem = FiniteAutomats(current_word);
+
+			if (lexem == LEX_UNDEF) {
+				continue;
+			}
 			NewLex.lexem = lexem;
 			NewLex.src_str_num = count_lines;
 			LT::AddToLexTable(lextable, NewLex);
+		
+			
 			int gap_front = 1;
-			if (lexem == 't') {
+			if (lexem == LEX_DATATYPE) {
 				NewId.first_line_ID = count_lines;
 				bool done = false;
 				while (true) {
-					if (FiniteAutomats(in.words[i + gap_front]) == 'f') {
+					if (FiniteAutomats(in.words[i + gap_front]) == LEX_FUNCTION) {
 						NewId.IDType = IT::F;
 						if (check_int(in.words[i])) {
 							NewId.IDDataType = IT::INT;
@@ -494,7 +501,7 @@ namespace FST
 						}
 						break;
 					}
-					else if (FiniteAutomats(in.words[i + gap_front]) == 'i') {
+					else if (FiniteAutomats(in.words[i + gap_front]) == LEX_ID) {
 						NewId.IDType = IT::V;
 						for (int c = 1; c < 3; c++) {
 							if (FiniteAutomats(in.words[i + gap_front + c]) == ',' || FiniteAutomats(in.words[i + gap_front + c]) == ')') {
@@ -519,7 +526,7 @@ namespace FST
 				if (!done) {
 					gap_front++;
 					while (!done) {
-						if (FiniteAutomats(in.words[i + gap_front]) == 'i') {
+						if (FiniteAutomats(in.words[i + gap_front]) == LEX_ID) {
 							NewId.id = (char*)in.words[i + gap_front];
 							IT::AddToIDTable(idtable, NewId);
 							done = true;
@@ -530,11 +537,44 @@ namespace FST
 				continue;
 
 			}
-			//need to check all that's below
-			else if (lexem == 'l') {
+
+			else if (lexem == LEX_LITERAL) {
+
+				char* tmp_literal_name = new char[STR_MAXSIZE];
+				int g = 0;
+				while (Literal[g] != '\0') {
+					tmp_literal_name[g] = Literal[g];
+					g++;
+				}
+
+				tmp_literal_name[g++] = '_';
+
+				int tmp_lit_number = count_literals;
+				if (tmp_lit_number == 0) {
+					tmp_literal_name[g++] = '0';
+				}
+
+				else {
+					char* tmp_number = new char[10];
+					int h = 0;
+					while (tmp_lit_number > 0) {
+						tmp_number[h++] = tmp_lit_number % 10 + '0';
+						tmp_lit_number /= 10;
+					}
+					tmp_number[h] = '\0';
+					h--;
+					while (h >= 0) {
+
+						tmp_literal_name[g++] = tmp_number[h--];
+					}
+					delete[]tmp_number;
+				}
+
+				tmp_literal_name[g] = '\0';
+				
 				if (in.words[i][0] == '\'') {
 					NewId.first_line_ID = count_lines;
-					NewId.id = (char*)in.words[i];
+					NewId.id = tmp_literal_name;
 					NewId.IDDataType = IT::STR;
 					NewId.IDType = IT::L;
 					NewId.value.vstr.str = (char*)in.words[i];
@@ -543,16 +583,19 @@ namespace FST
 						length++;
 					}
 					NewId.value.vstr.len = length;
-
 				}
 				else {
 					NewId.first_line_ID = count_lines;
-					NewId.id = (char*)in.words[i];
+					NewId.id = tmp_literal_name;
 					NewId.IDDataType = IT::INT;
 					NewId.IDType = IT::L;
-					NewId.value.vint = (int)in.words[i];
+					NewId.value.vint = stoi((char*)in.words[i]);
 				}
-				IT::AddToIDTable(idtable, NewId);
+				if (IT::CheckLiteralPresense(idtable, NewId) == false) {
+					IT::AddToIDTable(idtable, NewId);
+					count_literals++;
+				}
+				
 			}
 		}
 	}

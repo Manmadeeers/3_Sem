@@ -34,4 +34,5 @@ namespace IT {
 	Entry GetEntry(IDTable& idtable, int str_num);
 	int IsId(IDTable& idtable, char id[ID_MAXSIZE]);
 	void DeleteIdTable(IDTable& idtable);
+	bool CheckLiteralPresense(IDTable idtable, Entry ID);
 }
