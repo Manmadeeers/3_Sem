@@ -1,6 +1,6 @@
 ﻿//<-------------------->
 //
-// finding a maximum subsequence from a sequence
+// finding the longest increasing subsequence (LIS) from a sequence
 // 
 //<-------------------->
 
@@ -40,6 +40,7 @@ void getSequence(string sequence,vector<int>&numbers) {
 		}
 	}
 }
+//end of utility functions
 
 void findMaxSubsequence(string sequence) {
 	vector<int>numbers;
@@ -49,8 +50,6 @@ void findMaxSubsequence(string sequence) {
 	sort(numbers.begin(), numbers.end(), sortSequence);
 	cout << "Sorted sequence: " << endl;
 	printSequence(numbers);
-	
-	
 }
 
 void main() {

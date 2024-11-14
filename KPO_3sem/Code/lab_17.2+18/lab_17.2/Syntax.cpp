@@ -7,7 +7,6 @@ namespace ST {
 			nt[i] = (ALPHABET)p[i];
 		}
 	}
-
 	Rule::Rule(ALPHABET pnn, int piderror, short psize, Chain c, ...) {
 		nn = pnn;
 		iderror = piderror;
@@ -26,19 +25,14 @@ namespace ST {
 			rules[i] = p[i];
 		}
 	}
-	//fix
-	Greibach getGreibach() {
-
-	}
-	//
-	short Greibach::getRule(ALPHABET pnn, Rule& rule) {
+	short Greibach::getRule(ALPHABET pnn, Rule& prule) {
 		short rc = -1;
 		short k = 0;
 		while (k < size && rules[k].nn != pnn) {
 			k++;
 		}
 		if (k < size) {
-			rule = rules[rc = k];
+			prule = rules[rc = k];
 		}
 		return rc;
 	}
@@ -49,7 +43,6 @@ namespace ST {
 		}
 		return rc;
 	}
-
 	char* Rule::getCRule(char* b, short nchain) {
 		char bchain[200];
 		b[0] = Chain::alph_to_char(nn);
@@ -58,26 +51,6 @@ namespace ST {
 		b[3] = 0x00;
 		chains[nchain].getCChain(bchain);
 		strcat_s(b, sizeof(bchain) + 5, bchain);
-	}
-
-	short Rule::getNextChain(ALPHABET t, Rule::Chain& pchain, short j) {
-		short rc = -1;
-		while (j < size && chains[j].nt[0] != t) {
-			++j;
-		}
-		rc = (j < size ? j : -1);
-		if (rc >= 0) {
-			pchain = chains[rc];
-		}
-		return rc;
-	}
-	char* Rule::Chain::getCChain(char* b) {
-		for (int i = 0; i < size; i++) {
-			b[i] = Chain::alph_to_char(nt[i]);
-			b[size] = 0x00;
-		}
 		return b;
 	}
-
-
 };
