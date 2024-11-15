@@ -22,7 +22,6 @@ void printSequence(vector<int>numbers) {
 
 
 	}
-	cout << endl<<endl;
 }
 bool isSorted(vector<int>sequence) {
 	for (int i = 0; i < sequence.size(); i++) {
@@ -31,6 +30,14 @@ bool isSorted(vector<int>sequence) {
 		}
 	}
 	return true;
+}
+bool inSubsequence(vector<int>subsequence,int number) {
+	for (int i = 0; i < subsequence.size(); i++) {
+		if (number == subsequence[i]) {
+			return true;
+		}
+	}
+	return false;
 }
 void getSequence(string sequence,vector<int>&numbers) {
 	string tmp = "";
@@ -61,13 +68,30 @@ void findMaxSubsequence(string sequence) {
 				cout << src_sequence[i];
 			}
 		}
-		cout << " }" << endl;
+		cout << "}" << endl;
 		cout << "Length of LIS: " << src_sequence.size() << endl;
 		return;
 	}
 	cout << "Given sequence: " << endl;
 	printSequence(src_sequence);
+	cout << endl;
 
+	vector<int>subsequence;
+	subsequence.push_back(src_sequence[0]);
+	int subsequence_iterator = 0;
+	for (int i = 1; i < src_sequence.size()-1; i++) {
+		if (src_sequence[i] < src_sequence[i] + 1 && !inSubsequence(subsequence, src_sequence[i]) && subsequence[subsequence_iterator] < src_sequence[i]) {
+			subsequence_iterator++;
+			subsequence.push_back(src_sequence[i]);
+		}
+	}
+	if (subsequence[subsequence_iterator] < src_sequence[src_sequence.size() - 1]) {
+		subsequence.push_back(src_sequence[src_sequence.size() - 1]);
+	}
+	cout << "LIS max length: " << subsequence.size() << endl;
+	cout << "LIS: {";
+	printSequence(subsequence);
+	cout << "}" << endl;
 }
 
 void main() {
