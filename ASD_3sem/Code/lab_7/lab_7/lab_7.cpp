@@ -24,8 +24,13 @@ void printSequence(vector<int>numbers) {
 	}
 	cout << endl<<endl;
 }
-bool sortSequence(int first, int second) {
-	return first < second;
+bool isSorted(vector<int>sequence) {
+	for (int i = 0; i < sequence.size(); i++) {
+		if (i<sequence.size() - 1 && sequence[i]>sequence[i + 1]) {
+			return false;
+		}
+	}
+	return true;
 }
 void getSequence(string sequence,vector<int>&numbers) {
 	string tmp = "";
@@ -43,13 +48,26 @@ void getSequence(string sequence,vector<int>&numbers) {
 //end of utility functions
 
 void findMaxSubsequence(string sequence) {
-	vector<int>numbers;
-	getSequence(sequence, numbers);
-	cout << "Sequence: " << endl;
-	printSequence(numbers);
-	sort(numbers.begin(), numbers.end(), sortSequence);
-	cout << "Sorted sequence: " << endl;
-	printSequence(numbers);
+	vector<int>src_sequence;
+	getSequence(sequence, src_sequence);
+	if (isSorted(src_sequence)) {
+		cout << "Given sequence is already sorted in increasing order.So LIS is the sequence itself" << endl;
+		cout << "LIS: {";
+		for (int i = 0; i < src_sequence.size(); i++) {
+			if (i < src_sequence.size() - 1) {
+				cout << src_sequence[i] << ',';
+			}
+			else {
+				cout << src_sequence[i];
+			}
+		}
+		cout << " }" << endl;
+		cout << "Length of LIS: " << src_sequence.size() << endl;
+		return;
+	}
+	cout << "Given sequence: " << endl;
+	printSequence(src_sequence);
+
 }
 
 void main() {
@@ -57,6 +75,10 @@ void main() {
 	string src_sequence;
 	cout << "Enter the source sequence(through coma): ";
 	getline(cin, src_sequence);
+	if (src_sequence.empty()) {
+		cout << "Given sequence is empty. Could not proceed further operations" << endl;
+		return;
+	}
 	findMaxSubsequence(src_sequence);
 
 }
