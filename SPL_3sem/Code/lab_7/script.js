@@ -45,6 +45,7 @@ function Book(title,author){
 }
 
 let B1 = new Book("The Lord of The Rings","J.W.Tolkien");
+B1.title = "pirnorn";
 console.group("Create an object using a constructor function");
 console.log(B1.getTitle());
 console.log(B1.getAuthor());
@@ -84,7 +85,6 @@ counter.decrement();
 counter.increment();
 console.log(counter.getCount());    
 console.groupEnd();
-
 //TASK 6
 console.group("Descriptors");
 let item = {
@@ -98,6 +98,7 @@ Object.defineProperty(item,"name",{
     writable:false,
     configurable:false
 });
+item.name = "odnon";
 console.log(item.name);
 Object.defineProperty(item,"price",{
     value:"20$",
@@ -166,14 +167,13 @@ console.groupEnd();
 
 //TASK 9
 let numbers = [1,2,3];
-let Summarize = {
-    numbers:numbers,
-    get sum(){
-        return this.numbers.reduce((acc,curr)=>acc+curr,0);
+Object.defineProperty(numbers,'summarize',{
+    get:function(){
+        return this.reduce((acc,curr)=>acc+curr,0);
     }
-};
+})
 console.group("Summarize all the elements of array");
-console.log(Summarize.sum);
+console.log(numbers.summarize);
 console.groupEnd();
 
 //TASK 10
