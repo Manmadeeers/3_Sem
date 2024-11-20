@@ -5,7 +5,7 @@ namespace GRB {
 		this->nt = new ALPHABET(this->size = psize);
 		int* p = (int*)&s;
 		for (short i = 0; i < psize; ++i) {
-			this->nt[i] = (ALPHABET)p[i];
+			nt[i] = (ALPHABET)p[i];
 		}
 	}
 	Rule::Rule(ALPHABET pnn, int piderror, short psize, Chain c, ...) {

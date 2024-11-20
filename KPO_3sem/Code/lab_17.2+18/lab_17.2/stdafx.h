@@ -1,4 +1,5 @@
 #pragma once
+#define GETERROR_TEST
 #include <string>
 #include <stdlib.h> 
 #include <cwchar>
@@ -22,5 +23,4 @@
 #include "IT.h"
 #include "GRB.h"
 #include "MFST.h"
-//#include "Rules.h"
 using namespace std;

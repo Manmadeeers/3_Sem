@@ -112,6 +112,8 @@ int _tmain(int argc, _TCHAR* argv[])
 			
 		}
 		cout << endl << endl;
+		
+
 
 		cout << "<-----Identifier table----->" << endl;
 		cout << "Identifier data types: " << "1 - INT   2 - STR" << endl;
@@ -154,13 +156,15 @@ int _tmain(int argc, _TCHAR* argv[])
 		}
 			
 		cout << endl << endl;
-		
+
+
 		MFST_TRACE_START;
 		MFST::Mfst mfst(LexTable, GRB::getGreibach());
 		mfst.start();
 		mfst.savededucation();
 		mfst.printrules();
-
+		LT::DeleteLexTable(LexTable);
+		IT::DeleteIdTable(IDTable);
 	}
 	catch (ERROR::ERROR exception) {
 		LOG::WriteERROR(log, exception);
