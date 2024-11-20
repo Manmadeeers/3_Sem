@@ -131,6 +131,7 @@ namespace FST
 		if (execute(string_au)) {
 			return LEX_DATATYPE;
 		}
+		
 
 		FST function_au(
 			word,

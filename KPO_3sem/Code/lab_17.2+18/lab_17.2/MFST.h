@@ -42,7 +42,7 @@ public:
 	using stack<short>::c;
 };
 static int FST_TRACE_n = -1;
-static char rbuf[205], sbuf[205], lbuf[1024];
+static char rbuf[1024], sbuf[1024], lbuf[1024];
 
 namespace MFST {
 	struct MfstState {

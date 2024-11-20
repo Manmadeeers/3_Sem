@@ -1,5 +1,5 @@
 #pragma once
-#define GETERROR_TEST
+//#define GETERROR_TEST
 #include <string>
 #include <stdlib.h> 
 #include <cwchar>
