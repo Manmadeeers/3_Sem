@@ -20,4 +20,7 @@
 #include "LT.h"
 #include "FST.h"
 #include "IT.h"
+#include "GRB.h"
+#include "MFST.h"
+//#include "Rules.h"
 using namespace std;

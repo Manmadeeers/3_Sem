@@ -155,7 +155,11 @@ int _tmain(int argc, _TCHAR* argv[])
 			
 		cout << endl << endl;
 		
-
+		MFST_TRACE_START;
+		MFST::Mfst mfst(LexTable, GRB::getGreibach());
+		mfst.start();
+		mfst.savededucation();
+		mfst.printrules();
 
 	}
 	catch (ERROR::ERROR exception) {
