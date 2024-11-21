@@ -34,5 +34,14 @@ namespace lab6
         public WrongElementException() : base("There is no such element") { }
         public WrongElementException(string message) : base("EmptyStorageException") { }
     }
-
+    public class WrongRangeException : ArgumentException
+    {
+        public WrongRangeException() : base("Wrong range entered. Operations could not be conducted") {
+            HelpLink = "https://learn.microsoft.com/en-us/dotnet/csharp/";
+        }
+        public WrongRangeException(string message):base(message) {
+            HelpLink = "https://learn.microsoft.com/en-us/dotnet/csharp/";
+        }
+        
+    }
 }

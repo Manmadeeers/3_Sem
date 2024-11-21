@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -250,6 +251,10 @@ namespace lab5
         }
         public override void Clear()
         {
+            if(elements.Count == 0)
+            {
+                throw new EmptyStorageException("Storage is already empty. Thus it could not be cleared once again");
+            }
             elements.Clear();
             Console.WriteLine("List is cleared");
         }
@@ -285,6 +290,12 @@ namespace lab5
 
         public static void printPriceRange(Storage container, int requiredPrice)
         {
+            //Debug.Assert(requiredPrice != 0, "Price range was 0");
+            
+            if(requiredPrice < 0)
+            {
+                throw new WrongRangeException();
+            }
             Console.WriteLine($"<----------Items in price range {requiredPrice}---------->");
             bool hasElement = false;
             foreach (var element in container.Get())
@@ -296,12 +307,16 @@ namespace lab5
                     Console.WriteLine($"{element.Name}");
                 }
             }
-            if (!hasElement) { Console.WriteLine("There are no elements in such a price range"); }
+            if (!hasElement) { throw new WrongElementException(); }
             Console.WriteLine($"<-------------------------------------------->");
         }
 
         public static void SortByPriceWeight(Storage storage)
         {
+            if(storage.Elems.Count == 0)
+            {
+                throw new EmptyStorageException();
+            }
             storage.Elems.Sort();
             Console.WriteLine("Ypue sorted by Price/Weight storage");
             foreach (var elem in storage.Elems)

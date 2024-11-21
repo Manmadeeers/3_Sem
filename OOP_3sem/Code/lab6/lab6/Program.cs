@@ -1,5 +1,6 @@
 ﻿
 using lab5;
+using System.Diagnostics;
 
 namespace lab6
 {
@@ -8,7 +9,6 @@ namespace lab6
         static void Main(string[] args)
         {
            
-          
             try
             {
                
@@ -42,8 +42,83 @@ namespace lab6
             {
                 Console.WriteLine("-----second-----");
             }
+            try
+            {
+                Storage stor = new Storage();
+                stor.Clear();
+            }
+            catch(EmptyStorageException ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.HelpLink);
 
+            }
+            finally
+            {
+                Console.WriteLine("-----third-----");
+            }
+            try
+            {
+                Storage stor = new Storage();
+                StorageController.printPriceRange(stor,-10);
+            }
+            catch (WrongRangeException ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.HelpLink);
+            }
+            finally
+            {
+                Console.WriteLine("-----fourth-----");
+            }
+            try
+            {
+                Storage store = new Storage();
+                StorageController.SortByPriceWeight(store);
+            }
+            catch(EmptyStorageException ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.HelpLink);
 
+            }
+            finally
+            {
+                Console.WriteLine("-----fivth-----");
+            }
+
+            try
+            {
+                try
+                {
+                    Storage store = new Storage();
+                    Sofa sof = new Sofa("Sofa", "200", 100);
+                    Chair chair = new Chair("Chair", "200", 10);
+                    store.AddNew(sof);
+                    store.AddNew(chair);
+                    StorageController.printPriceRange(store,10);
+                }
+                catch 
+                {
+                    Console.WriteLine("Exception was called");
+                    throw;
+                }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.HelpLink);
+            }
+            finally
+            {
+                Console.WriteLine("-----Throw up-----");
+            }
+            //Storage storr = new Storage();
+            //Sofa sofr = new Sofa("Sofa", "200", 100);
+            //Chair chaur = new Chair("Chair", "200", 10);
+            //storr.AddNew(sofr);
+            //storr.AddNew(chaur);
+            //StorageController.printPriceRange(storr, 0);
         }
     }
 }
