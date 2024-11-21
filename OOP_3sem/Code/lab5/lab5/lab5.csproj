@@ -7,4 +7,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="lab6">
+      <HintPath>..\..\lab6\lab6\bin\Debug\net8.0\lab6.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

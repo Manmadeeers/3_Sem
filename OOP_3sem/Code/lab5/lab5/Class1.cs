@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using lab6;
 
 namespace lab5
 {
@@ -203,7 +204,7 @@ namespace lab5
 
     }
 
-    public class Storage : ContainerClass<Product>
+    public partial class Storage : ContainerClass<Product>
     {
         public List<Product> Elems
         {
@@ -254,6 +255,10 @@ namespace lab5
         }
         public override void Print()
         {
+            if (Elems.Count==0)
+            {
+                throw new EmptyStorageException("EXXXX");
+            }
             Console.WriteLine("Your storage:");
             foreach(var element in elements)
             {

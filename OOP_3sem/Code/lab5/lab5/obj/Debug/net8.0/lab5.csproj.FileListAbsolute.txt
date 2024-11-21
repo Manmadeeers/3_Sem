@@ -13,3 +13,7 @@ C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab5\lab5\obj\Debug\net8.0\refint\l
 C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab5\lab5\obj\Debug\net8.0\lab5.pdb
 C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab5\lab5\obj\Debug\net8.0\lab5.genruntimeconfig.cache
 C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab5\lab5\obj\Debug\net8.0\ref\lab5.dll
+C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab5\lab5\bin\Debug\net8.0\lab6.dll
+C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab5\lab5\bin\Debug\net8.0\lab6.pdb
+C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab5\lab5\obj\Debug\net8.0\lab5.csproj.AssemblyReference.cache
+C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab5\lab5\obj\Debug\net8.0\lab5.csproj.Up2Date
