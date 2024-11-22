@@ -4,7 +4,10 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Text.Json;
 using lab3;
+using System.Text.Json.Serialization;
 
 namespace lab7
 {
@@ -69,6 +72,18 @@ namespace lab7
                     Console.WriteLine(item);
                 }
                 Console.WriteLine("<----------End---------->");
+            }
+        }
+
+        public void WriteToFIle()
+        {
+
+            using (FileStream file = File.Create("Collection.Json"))
+            {
+                foreach (var item in _collection)
+                {
+                    JsonSerializer.Serialize(file, item);
+                }
             }
         }
     }

@@ -11,16 +11,16 @@
       "RelativeMoniker": "D:0:0:{D1EC2627-C156-4FF9-A801-DCA30E86F767}|lab7\\lab7.csproj|solutionrelative:lab7\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D1EC2627-C156-4FF9-A801-DCA30E86F767}|lab7\\lab7.csproj|c:\\users\\manmade\\desktop\\3_sem\\oop_3sem\\code\\lab7\\lab7\\lab3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1EC2627-C156-4FF9-A801-DCA30E86F767}|lab7\\lab7.csproj|solutionrelative:lab7\\lab3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D1EC2627-C156-4FF9-A801-DCA30E86F767}|lab7\\lab7.csproj|c:\\users\\manmade\\desktop\\3_sem\\oop_3sem\\code\\lab7\\lab7\\exceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D1EC2627-C156-4FF9-A801-DCA30E86F767}|lab7\\lab7.csproj|solutionrelative:lab7\\exceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D1EC2627-C156-4FF9-A801-DCA30E86F767}|lab7\\lab7.csproj|c:\\users\\manmade\\desktop\\3_sem\\oop_3sem\\code\\lab7\\lab7\\lab4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D1EC2627-C156-4FF9-A801-DCA30E86F767}|lab7\\lab7.csproj|solutionrelative:lab7\\lab4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D1EC2627-C156-4FF9-A801-DCA30E86F767}|lab7\\lab7.csproj|c:\\users\\manmade\\desktop\\3_sem\\oop_3sem\\code\\lab7\\lab7\\lab3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D1EC2627-C156-4FF9-A801-DCA30E86F767}|lab7\\lab7.csproj|solutionrelative:lab7\\lab3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "lab7\\Class1.cs",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\OOP_3sem\\Code\\lab7\\lab7\\Class1.cs",
               "RelativeToolTip": "lab7\\Class1.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAwwDIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAywFoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T12:31:51.221Z",
               "IsPinned": true,
@@ -48,7 +48,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "lab4.cs",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\OOP_3sem\\Code\\lab7\\lab7\\lab4.cs",
               "RelativeDocumentMoniker": "lab7\\lab4.cs",
@@ -56,12 +56,11 @@
               "RelativeToolTip": "lab7\\lab4.cs",
               "ViewState": "AgIAAEYAAAAAAAAAAAAqwBkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T12:25:36.856Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T12:25:36.856Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Exceptions.cs",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\OOP_3sem\\Code\\lab7\\lab7\\Exceptions.cs",
               "RelativeDocumentMoniker": "lab7\\Exceptions.cs",
@@ -69,18 +68,17 @@
               "RelativeToolTip": "lab7\\Exceptions.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAAwA0AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T10:30:25.855Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T10:30:25.855Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "lab3.cs",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\OOP_3sem\\Code\\lab7\\lab7\\lab3.cs",
               "RelativeDocumentMoniker": "lab7\\lab3.cs",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\OOP_3sem\\Code\\lab7\\lab7\\lab3.cs",
               "RelativeToolTip": "lab7\\lab3.cs",
-              "ViewState": "AgIAAM0AAAAAAAAAAAAcwOAAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOAAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T12:32:41.74Z",
               "EditorCaption": ""
@@ -93,7 +91,7 @@
               "RelativeDocumentMoniker": "lab7\\Program.cs",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\OOP_3sem\\Code\\lab7\\lab7\\Program.cs",
               "RelativeToolTip": "lab7\\Program.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAswDQAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAADgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T12:30:48.456Z",
               "EditorCaption": ""
