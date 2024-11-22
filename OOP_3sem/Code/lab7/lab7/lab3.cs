@@ -219,6 +219,11 @@ namespace lab3
             pass._password = modifiedPassword;
             return pass;
         }
+
+        public override string ToString()
+        {
+            return Pass;
+        }
     }
 
     internal static class StaticOperation

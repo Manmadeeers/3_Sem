@@ -11,5 +11,17 @@ namespace lab7
         public AddElementException() : base() { }
         public AddElementException(string message) : base("Collection overflow. could not add an element") { }
     }
+    public class RemoveElementException : Exception
+    {
+        public RemoveElementException() : base() { }
+        public RemoveElementException(string message) : base(message) { }
+    }
+
+    public class EmptyCollectionException : Exception
+    {
+       
+        public EmptyCollectionException() : base() { }
+        public EmptyCollectionException(string message) : base("collection is empty. Thus no elements can be printed") { }
+    }
 
 }
