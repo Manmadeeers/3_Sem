@@ -76,22 +76,25 @@ void findMaxSubsequence(string sequence) {
 	printSequence(src_sequence);
 	cout << endl;
 
-	vector<int>subsequence;
-	subsequence.push_back(src_sequence[0]);
-	int subsequence_iterator = 0;
-	for (int i = 1; i < src_sequence.size()-1; i++) {
-		if (src_sequence[i] < src_sequence[i] + 1 && !inSubsequence(subsequence, src_sequence[i]) && subsequence[subsequence_iterator] < src_sequence[i]) {
-			subsequence_iterator++;
-			subsequence.push_back(src_sequence[i]);
+	vector<int>subsequence(src_sequence.size(),1);
+	vector<int>store_LIS;
+	int MaxLength = 1;
+	for (int i = 0; i < src_sequence.size(); i++) {
+		for (int j = 0; j < i; j++) {
+			if (src_sequence[i] > src_sequence[j]) {
+				subsequence[i] = max(subsequence[i], subsequence[j] + 1);
+				store_LIS.push_back(j);
+			}
+			MaxLength = max(MaxLength, subsequence[i]);
 		}
 	}
-	if (subsequence[subsequence_iterator] < src_sequence[src_sequence.size() - 1]) {
-		subsequence.push_back(src_sequence[src_sequence.size() - 1]);
+	//FIX
+	cout << "Max length: " << MaxLength;
+	cout << "Sequence" << endl;
+	for (int i = 0; i < store_LIS.size(); i++) {
+		cout << src_sequence[store_LIS[i]] << " ";
 	}
-	cout << "LIS max length: " << subsequence.size() << endl;
-	cout << "LIS: {";
-	printSequence(subsequence);
-	cout << "}" << endl;
+	cout << endl;
 }
 
 void main() {

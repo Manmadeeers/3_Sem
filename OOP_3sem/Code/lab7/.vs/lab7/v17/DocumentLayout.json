@@ -43,8 +43,7 @@
               "ViewState": "AgIAAD8AAAAAAAAAAAAywFoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T12:31:51.221Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -80,8 +79,7 @@
               "RelativeToolTip": "lab7\\lab3.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAOAAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T12:32:41.74Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T12:32:41.74Z"
             },
             {
               "$type": "Document",
@@ -93,8 +91,7 @@
               "RelativeToolTip": "lab7\\Program.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAAADgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T12:30:48.456Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T12:30:48.456Z"
             }
           ]
         }
