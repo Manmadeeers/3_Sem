@@ -97,13 +97,13 @@ class Human{
 let human = new Human("Vaclov","Kachinskas",2006,"Skripnikova 14");
 console.log(human.age);
 
-class Student{
-    constructor(name, surname, birthYear, address, faculty, course, group, enrollmentNumber) {
+class Student extends Human{
+    constructor(name, surname, birthYear, address, faculty, course, group,id) {
         super(name, surname, birthYear, address);
         this.faculty = faculty;
         this.course = course;
         this.group = group;
-        this.enrollmentNumber = enrollmentNumber;
+        this.id=id;
     };
 
     setCourse(NewCourse){
@@ -118,6 +118,73 @@ class Student{
         }
         this.group = NewGroup;
     }
+    getFullName(){
+        return `Full name: ${this.name} ${this.surname}`;
+    }
 }
 
+
+
+class Faculty{
+    constructor(name,group_count,students_count){
+        if(!(typeof name=="string")){
+            throw new Error("Faculty constructor type exception");
+        }
+        this.name = name;
+        if(!(typeof group_count==="number"||typeof students_count==="number")){
+            throw new Error("Faculty constructor type exception");
+        }
+        this.group_count = group_count;
+        this.students_count = students_count;
+        this.students = [];
+    }
+    setGroups(NewGroups){
+        if(!(typeof NewGroups==="number")){
+            throw new Error("Group set type exceptiion");
+        }
+        this.group_count = NewGroups;
+    }
+    setStudents(NewStudents){
+        if(!(typeof NewStudents==="number")){
+            throw new Error("Students set type exception");
+        }
+        this.students_count = NewStudents;
+    }
+    getDev(){
+        let dev_count = 0;
+        this.students.forEach(element => {
+            let str_id = element.id.toString();
+            if(str_id[1]==3){
+                dev_count++;
+            }
+        });
+        return dev_count;
+    }
+    getGroup(num){
+        if(!(typeof num ==="number")){
+            throw new Error("getGroup type exception");
+        }
+        let gruop_list = [];
+        this.students.forEach(element => {
+            if(element.group==num){
+                gruop_list.push(element);
+            }
+        });
+        return gruop_list;
+    }
+
+}
+let student = new Student("Egor","korobov",2006,"Umanskaya 25","FIT",2,6,71232723);
+console.log(student.getFullName());
+let student1 = new Student("Ilia","Filipiuk",2006,"Miastrovskaya 31","FIT",2,6,7123125);
+let student2 = new Student("Vaclovas","Kachinskas",2006,"Skripnikova 14","FIT",2,6,71233226);
+let student3 = new Student("Ilia","Vishnevsky",2005,"Ezhi Gedroitsa 20","FIT",2,4,7323127);
+
+let FIT = new Faculty("FIT",10,1000);
+FIT.students.push(student);
+FIT.students.push(student1);
+FIT.students.push(student2);
+FIT.students.push(student3);
+console.log(FIT.getDev());
+console.log(FIT.getGroup(6));
 console.groupEnd();
