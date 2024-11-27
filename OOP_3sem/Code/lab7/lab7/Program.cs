@@ -50,7 +50,6 @@ namespace lab7
             ProductCollection.Add(chair);
             ProductCollection.Add(closet);
             ProductCollection.View();
-            PassCollection.WriteToFIle();
         }
     }
 }

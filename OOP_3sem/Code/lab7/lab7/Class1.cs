@@ -5,8 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-using System.Text.Json;
 using lab3;
+using System.Text.Json;
 using System.Text.Json.Serialization;
 
 namespace lab7
@@ -22,7 +22,7 @@ namespace lab7
     public class CollectionType<T> : IGenericOperations<T> where T : class
     {
         private List<T> _collection = new List<T>();
-      
+
         private const int MaxCount = 20;
         public void Add(T elem)
         {
@@ -30,7 +30,7 @@ namespace lab7
             {
                 throw new AddElementException("Collection is full.No more elements can be added");
             }
-            
+
             _collection.Add(elem);
         }
         public void Delete(T elem)
@@ -47,16 +47,16 @@ namespace lab7
         }
         public void View()
         {
-            if(_collection.Count == 0)
+            if (_collection.Count == 0)
             {
                 throw new EmptyCollectionException("The collection is empty thus it could not be viewed");
             }
 
             Console.WriteLine("<----------Items---------->");
-            foreach(var item in _collection)
+            foreach (var item in _collection)
             {
                 Console.WriteLine(item.ToString());
-            
+
             }
             Console.WriteLine("<-------------------->");
         }
@@ -75,16 +75,6 @@ namespace lab7
             }
         }
 
-        public void WriteToFIle()
-        {
 
-            using (FileStream file = File.Create("Collection.Json"))
-            {
-                foreach (var item in _collection)
-                {
-                    JsonSerializer.Serialize(file, item);
-                }
-            }
-        }
     }
 }

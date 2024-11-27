@@ -155,8 +155,13 @@ int _tmain(int argc, _TCHAR* argv[])
 			
 		cout << endl << endl;
 		
+		for (int i = 0; i < LexTable.size; i++) {
+			LT::Entry current = LexTable.table[i];
+			cout << current.src_str_num << ':' << current.lexem;
+		}
 
 
+		FST::Analyser(LexTable);
 	}
 	catch (ERROR::ERROR exception) {
 		LOG::WriteERROR(log, exception);
