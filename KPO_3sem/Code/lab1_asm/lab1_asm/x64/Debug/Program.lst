@@ -1,0 +1,82 @@
+Microsoft (R) Macro Assembler (x64) Version 14.41.34123.0   11/28/24 17:50:25
+Program.asm						     Page 1 - 1
+
+
+				.586P
+Program.asm(1) : error A2008:syntax error : .
+				.MODEL FLAT, STDCALL
+Program.asm(2) : error A2008:syntax error : .
+				includelib kernel32.lib
+
+				ExitProcess PROTO:DWORD
+				MessageBoxA PROTO:DWORD,:DWORD,:DWORD,:DWORD
+
+				.STACK 4096
+Program.asm(8) : error A2008:syntax error : .
+
+ 00000000			.CONST
+
+ 00000000			.DATA
+ = 00000000			MB_OK EQU 0
+ 00000000 4D 79 20 66 69	STR1 DB "My first ASM program",0
+	   72 73 74 20 41
+	   53 4D 20 70 72
+	   6F 67 72 61 6D
+	   00
+ 00000015 48 69 20 65 76	STR2 DB "Hi everyone!",0
+	   65 72 79 6F 6E
+	   65 21 00
+				HW DD?
+Program.asm(16) : error A2008:syntax error : HW
+
+ 00000000			.CODE
+
+ 00000000			main PROC
+ 00000000			START:
+ 00000000  6A 00				PUSH MB_OK
+						PUSH OFFSET STR1
+Program.asm(23) : error A2070:invalid instruction operands
+						PUSH OFFSET SET2
+Program.asm(24) : error A2006:undefined symbol : SET2
+						PUSH HW
+Program.asm(25) : error A2006:undefined symbol : HW
+ 00000002  E8 00000000 E			CALL MessageBoxA
+
+ 00000007  6A FF			push -1
+ 00000009  E8 00000000 E		call ExitProcess
+ 0000000E			main ENDP
+
+				end main
+Microsoft (R) Macro Assembler (x64) Version 14.41.34123.0   11/28/24 17:50:25
+Program.asm						     Symbols 2 - 1
+
+
+
+
+Segments:
+
+                N a m e                  Length   Align   Class
+
+CONST  . . . . . . . . . . . . .	 00000000 16	  'CONST'	 ReadOnly
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+ExitProcess  . . . . . . . . . .	P 	 00000000 Length= 00000000 External
+MessageBoxA  . . . . . . . . . .	P 	 00000000 Length= 00000000 External
+main . . . . . . . . . . . . . .	P 	 00000000 _TEXT	Length= 00000022 Public
+  START  . . . . . . . . . . . .	L 	 00000000 _TEXT	
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+MB_OK  . . . . . . . . . . . . .	Number	 00000000h   
+STR1 . . . . . . . . . . . . . .	Byte	 00000000 _DATA	
+STR2 . . . . . . . . . . . . . .	Byte	 00000015 _DATA	
+
+	   0 Warnings
+	   9 Errors
