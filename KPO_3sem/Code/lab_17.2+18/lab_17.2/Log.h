@@ -1,6 +1,6 @@
 #pragma once
 #include "stdafx.h"
-#include "Log.h"
+#include "Error.h"
 
 namespace LOG {
 	struct Log {
@@ -14,6 +14,6 @@ namespace LOG {
 	void WriteLog(Log log);
 	void WriteParm(Log log, PARM::PARM Parm);
 	void WriteIN(Log log, In::IN in);
-	void WriteERROR(Log log, ERROR::ERROR error);
+	void WriteERROR(Log log, ERROR::Error error);
 	void Close(Log log);
 };

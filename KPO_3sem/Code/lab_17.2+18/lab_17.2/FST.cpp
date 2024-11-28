@@ -82,12 +82,12 @@ namespace FST
 	char FiniteAutomats(unsigned char* word) {
 
 		char special[] = { '(',')','{','}',';',',' };
-		char signs[] = { '+','-','/','*','=' };
+		char signs[] = { '+','-','/','*'};
 		if ((char*)word == (char*)STR_END) {
 			return STR_END;
 		}
 		const int spec_size = 11;
-		const int sign_size = 5;
+		const int sign_size = 4;
 
 		for (int j = 0; j < spec_size; j++) {
 			if (word[0] == special[j]) {
@@ -99,6 +99,9 @@ namespace FST
 			if (word[0] == signs[k]) {
 				return LEX_MATH;
 			}
+		}
+		if (word[0] == '=') {
+			return LEX_EQUALS;
 		}
 
 		FST integer_au(

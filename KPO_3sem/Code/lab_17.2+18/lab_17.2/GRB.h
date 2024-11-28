@@ -1,42 +1,53 @@
 #pragma once
-#include "stdafx.h"
-typedef short ALPHABET;
-#define GRB_ERROR_SERIES 600
-#define NS(n) GRB::Rule::Chain::N(n)
-#define TS(n) GRB::Rule::Chain::T(n)
-#define ISNS(n)	GRB::Rule::Chain::isN(n)
-namespace GRB {
-	struct Rule {
-		ALPHABET nn;
-		int iderror;
-		short size;
-		struct Chain {
-			short size;
-			ALPHABET* nt;
-			Chain() { this->size = 0; this->nt = 0; };
-			Chain(short psize, ALPHABET s, ...);
-			char* getCChain(char* b0);
-			static ALPHABET T(char t) { return ALPHABET(t); };
-			static ALPHABET N(char n) { return -ALPHABET(n); };
-			static bool isT(ALPHABET s) { return s > 0; };
-			static bool isN(ALPHABET s) { return !isT(s); };
-			static char alph_to_char(ALPHABET s) { return isT(s) ? char(s) : char(-s); };
-		}*chains;
-		Rule() { this->nn = 0x00; this->size = 0; };
-		Rule(ALPHABET pnn, int iderror, short psize, Chain c, ...);
-		char* getCRule(char* b, short nchain);
-		short getNextChain(ALPHABET t, Rule::Chain& pchain, short j);
 
+typedef short GRBALPHABET;
+namespace GRB
+{
+	struct Rule							//правило в грамматике √рейбах
+	{
+		GRBALPHABET nn;							//нетерминалы (левый символ правила) < 0
+		int iderror;							//идентификатор диагностического сообщени€
+		short size;								//количество цепочек - правых частей правила
+		struct Chain							//цепочка(права€ часть правила)
+		{
+			short size;						//длина цепочки
+			GRBALPHABET* nt;				//цепочка терминалов (>0) и нетермеминалов (<0) 
+			Chain()
+			{
+				this->size = 0; 				//количество символов в цепочке
+				this->nt = 0;					//символы (терминал или нетерминал)
+			};
+			Chain(short psize, GRBALPHABET s, ...);						//кол-во символов в цепочке/символы(терминалы и нетерминалы)
+			char* getCChain(char* b);									//получить правую сторону правила
+			static GRBALPHABET T(char t) { return GRBALPHABET(t); };	//терминал
+			static GRBALPHABET N(char n) { return -GRBALPHABET(n); };	//не терминал
+			static bool isT(GRBALPHABET s) { return s > 0; };			//терминал?
+			static bool isN(GRBALPHABET s) { return !isT(s); };			//не терминал?
+			static char alphabet_to_char(GRBALPHABET s)					//GRBALPHABET->char (обращение по указателю к полю символа)
+			{
+				return isT(s) ? char(s) : char(-s);
+			};
+		}*chains;			//массив цепочек - правых частей правила
+		Rule()
+		{
+			this->nn = 0x00;
+			this->size = 0;
+		}
+		Rule(GRBALPHABET pnn, int iderroe, short psize, Chain c, ...);
+		//(нетерминал(< 0); идентификатор диагностического сообщ - €; кол - во цепочек - правых частей правила; множество цепочек - правых частей правила)
+		char* getCRule(char* b, short nchain); //получить парвило в виде N->цепочка (дл€ распечатки) (буфер;номер цепочки(правой части) в правиле)
+		short getNextChain(GRBALPHABET t, Rule::Chain& pchain, short j); //получить следующую за j подход€щую цепочку, вернуть еЄ номер или -1 (первый символ цепочки;возвращаема€ цепочка; номер цепочки)
 	};
-	struct Greibach {
-		short size;
-		ALPHABET startN;
-		ALPHABET stbottomT;
-		Rule* rules;
+	struct Greibach			//грамматика √рейбах
+	{
+		short size;						//количество правил
+		GRBALPHABET startN;				//стартовый символ
+		GRBALPHABET stbottomT;			//дно стека
+		Rule* rules;					//множество правил
 		Greibach() { this->size = 0; this->startN = 0; this->stbottomT = 0; this->rules = 0; };
-		Greibach(ALPHABET pstartN, ALPHABET pstbottomT, short psize, Rule r, ...);
-		short getRule(ALPHABET pnn, Rule& prule);
-		Rule getRule(short n);
+		Greibach(GRBALPHABET pstartN, GRBALPHABET pstbottomT, short psize, Rule r, ...);
+		short getRule(GRBALPHABET pnn, Rule& prule);
+		Rule getRule(short n); //получить правиль по номеру
 	};
-	Greibach getGreibach();
+	Greibach getGreibach(); //получить граматику
 }

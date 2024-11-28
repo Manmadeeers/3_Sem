@@ -1,5 +1,4 @@
 ﻿#pragma once
-#include "stdafx.h"
 
 #define ERROR_THROW(id) ERROR::geterror(id);
 #define ERROR_THROW_IN(id, l, c,ft) ERROR::geterrorin(id, l, c,ft); //l - line, c - column, ft- faied text
@@ -22,7 +21,7 @@
 
 namespace ERROR
 {
-	struct ERROR {
+	struct Error {
 		int id;
 		char message[ERROR_MAXSIZE_MESSAGE];
 		struct IN
@@ -33,6 +32,6 @@ namespace ERROR
 		}err_spec;
 	};
 
-	ERROR geterror(int id);
-	ERROR geterrorin(int id, int line, int col, unsigned char* FailedText);
+	Error geterror(int id);
+	Error geterrorin(int id, int line, int col, unsigned char* FailedText);
 }

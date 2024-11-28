@@ -1,7 +1,6 @@
 
 #include "stdafx.h"
 
-
 namespace IT {
 	IDTable Create(int size) {
 		if (size > IT_MAXSIZE) {

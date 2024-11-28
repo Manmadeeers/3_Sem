@@ -75,7 +75,7 @@ namespace LOG {
 
 	
 
-	void WriteERROR(Log log, ERROR::ERROR error) {
+	void WriteERROR(Log log, ERROR::Error error) {
 		*log.stream << "----------Errors----------" << endl;
 		*log.stream << "Error " << error.id << " " << error.message << endl;
 		if (error.err_spec.line != -1) {

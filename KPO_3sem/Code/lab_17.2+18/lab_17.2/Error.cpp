@@ -5,7 +5,7 @@ namespace ERROR
 	// 100 - 109 - ошибки параметров//parameter erors
 	// 110 - 119 - ошибки открытия и чтения файлов/file open and read erors
 
-	ERROR errors[ERROR_MAX_ENTRY] = //list of errors
+	Error errors[ERROR_MAX_ENTRY] = //list of errors
 	{//system errors
 		ERROR_ENTRY(0, "Недопустимый код ошибки"),
 		ERROR_ENTRY(1, "Системный сбой"),
@@ -53,7 +53,7 @@ namespace ERROR
 		ERROR_ENTRY_NODEF10(180),ERROR_ENTRY_NODEF10(190),
 		ERROR_ENTRY_NODEF100(200), ERROR_ENTRY_NODEF100(300), ERROR_ENTRY_NODEF100(400), ERROR_ENTRY_NODEF100(500),
 		ERROR_ENTRY(600,"Incorrect program structure"),
-		ERROR_ENTRY(601,"Incorrect operator"),
+		ERROR_ENTRY(601,"Incorrect identifier"),
 		ERROR_ENTRY(602,"Error occeured in parametres of the function"),
 		ERROR_ENTRY(603,"Error occured in parametres of a function that's beeing currently called"),
 		ERROR_ENTRY_NODEF10(610),ERROR_ENTRY_NODEF10(620),ERROR_ENTRY_NODEF10(630),ERROR_ENTRY_NODEF10(640),
@@ -62,14 +62,14 @@ namespace ERROR
 		ERROR_ENTRY_NODEF100(700),ERROR_ENTRY_NODEF100(800)
 	};
 
-	ERROR geterror(int id) //function for common general errors
+	Error geterror(int id) //function for common general errors
 	{
 		if (id < 1 || id >= ERROR_MAX_ENTRY) {//if there is an unexpected error
 			return errors[0];//throw an error for an unexpected error
 		}
 		return errors[id];//if an eror in expected throw an eror suitable for a situation
 	}
-	ERROR geterrorin(int id, int line = -1, int col = -1, unsigned char* FailedText = (unsigned char*)"")//function to throw a specified error
+	Error geterrorin(int id, int line = -1, int col = -1, unsigned char* FailedText = (unsigned char*)"")//function to throw a specified error
 	{
 		if (id < 1 || id >= ERROR_MAX_ENTRY) {
 			return errors[0];

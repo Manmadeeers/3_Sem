@@ -1,4 +1,6 @@
 ﻿#include "stdafx.h"
+#include "MFST.h"
+#include "GRB.h"
 //#include "Windows.h"
 
 
@@ -12,7 +14,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//test geteror function
 	cout << "<----------testing geterror---------->" << endl << endl;
 	try { throw ERROR_THROW(100); }
-	catch (ERROR::ERROR exception) {//catching exceptions
+	catch (ERROR::Error exception) {//catching exceptions
 		cout << "Error " << exception.id << "  " << exception.message << endl << endl;
 	}
 #endif
@@ -20,13 +22,13 @@ int _tmain(int argc, _TCHAR* argv[])
 	//testing geterrorin function
 	cout << "<----------testing geterrorin---------->" << endl << endl;
 	try { throw ERROR_THROW_IN(111, 7, 7, (unsigned char*)"text"); }//throw a typical error in line 7 column 7 for example
-	catch (ERROR::ERROR exception) {
+	catch (ERROR::Error exception) {
 		cout << "Error " << exception.id << "  " << exception.message << " in line " << exception.err_spec.line << " column " << exception.err_spec.col << endl << endl;
 	}
 #endif
 #ifdef GETPARM_TEST
 	cout << "<----------testing getparm---------->" << endl << endl;
-	try { throw ERROR_THROW(104) }
+	try { throw Error_THROW(104) }
 	catch (ERROR::ERROR exception) {
 		cout << "Error " << exception.id << " " << exception.message << endl << endl;
 	}
@@ -41,7 +43,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		cout << "Amount of lines: " << in.lines << endl;
 		cout << "Amount of ignored symbols: " << in.ignore << endl;
 	}
-	catch (ERROR::ERROR exception) {
+	catch (ERROR::Error exception) {
 		cout << "Error " << " " << exception.id << " " << exception.message << endl << endl;
 	};
 #endif
@@ -54,7 +56,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		cout << "Amount of lines: " << in.lines << endl;
 		cout << "Amount of ignored symbols: " << in.ignore << endl;
 	}
-	catch (ERROR::ERROR exception) {
+	catch (ERROR::Error exception) {
 		cout << "Error " << " " << exception.id << " " << exception.message << endl << endl;
 	};
 #endif
@@ -155,15 +157,17 @@ int _tmain(int argc, _TCHAR* argv[])
 			
 		cout << endl << endl;
 		
-		for (int i = 0; i < LexTable.size; i++) {
-			LT::Entry current = LexTable.table[i];
-			cout << current.src_str_num << ':' << current.lexem;
-		}
 
+		MFST_TRACE_START
+		MFST::Mfst mfst(LexTable, GRB::getGreibach());
+		mfst.start();
 
-		FST::Analyser(LexTable);
+		mfst.savededucation();
+
+		mfst.printrules();
+
 	}
-	catch (ERROR::ERROR exception) {
+	catch (ERROR::Error exception) {
 		LOG::WriteERROR(log, exception);
 		OUT::WriteERROR(exception, out);
 		LOG::Close(log);

@@ -1,4 +1,5 @@
 #pragma once
+#include "stdafx.h"
 #define IN_MAX_LEN_TEXT 1024*1024//max length of text in the file	
 #define MAX_WORD_LENGTH 255
 #define IN_CODE_ENDL '\n'

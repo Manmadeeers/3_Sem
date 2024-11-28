@@ -1,5 +1,5 @@
 #include "stdafx.h"
-
+#include "Out.h"
 namespace OUT {
 
 	Out getout(wchar_t outfile[]) {
@@ -31,7 +31,7 @@ namespace OUT {
 		file_out.close();
 	}
 
-	void WriteERROR(ERROR::ERROR error, Out out) {
+	void WriteERROR(ERROR::Error error, Out out) {
 		//*out.stream << in.text << endl;
 		*out.stream << "Error " << error.id << " " << error.message << endl;
 		if (error.err_spec.line != -1) {
