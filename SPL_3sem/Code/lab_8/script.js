@@ -95,11 +95,15 @@ let user5 = {
 let user5_copy = {
     ...user5, studies: {
         ...user5.studies, department: { ...user5.studies.department, group: 12 },
-        exams: user5.studies.exams.map(exams => ({ ...exams, mark: 10 }))
+       exams:[
+        {...user5.studies.exams[0],maths:user5.studies.exams[0].maths,mark:user5.studies.exams[0].mark},
+        {...user5.studies.exams[1],programming:user5.studies.exams[1].programming,mark:user5.studies.exams[1].mark}
+       ]
     }
 };
 console.group("user5");
 console.log(user5);
+user5.studies.exams[0].mark = 0;
 console.log(user5_copy);
 console.groupEnd();
 
@@ -191,16 +195,22 @@ let user7Copy = {
     ...user7,
     studies: {
       ...user7.studies,
-      exams: user7.studies.exams.map(exam => ({
-        ...exam,
-        professor: {
-          ...exam.professor,
-          articles: exam.professor.articles.map(article => ({
-            ...article,
-            pagesNumber: article.title === "About CSS" ? 3 : article.pagesNumber
-          }))
+      exams:[
+        {...user7.studies.exams[0],
+            professor:{...user7.studies.exams[0].professor,articles:[
+                {...user7.studies.exams[0].professor.articles[0]},
+                {...user7.studies.exams[0].professor.articles[1]},
+                {...user7.studies.exams[0].professor.articles[2]}
+            ]}
+        },
+        {...user7.studies.exams[1],
+            professor:{...user7.studies.exams[1].professor,articles:[
+                {...user7.studies.exams[1].professor.articles[0]},
+                {...user7.studies.exams[1].professor.articles[1],pagesNumber:3},
+                {...user7.studies.exams[1].professor.articles[2]},
+            ]}
         }
-      }))
+      ]
     }
 };
 
