@@ -1,0 +1,74 @@
+Microsoft (R) Macro Assembler (x64) Version 14.41.34123.0   12/04/24 16:20:58
+lab3.asm						     Page 1 - 1
+
+
+				.586P
+lab3.asm(1) : error A2008:syntax error : .
+				.MODEL FLAT, STDCALL
+lab3.asm(2) : error A2008:syntax error : .
+				includelib kernel32.lib
+
+				ExitProcess PROTO : DWORD
+				MessageBoxA PROTO : DWORD,:DWORD,:DWORD,:DWORD
+
+				.STACK 4096
+lab3.asm(8) : error A2008:syntax error : .
+
+
+ 00000000			.DATA
+
+
+ 00000000 00000001		NUM1 DD 1
+ 00000004 00000006		NUM2 DD 6
+
+
+ 00000008 4D 79 20 73 65	STR1 DB "My second program",0
+	   63 6F 6E 64 20
+	   70 72 6F 67 72
+	   61 6D 00
+ 0000001A 53 75 6D 3A 00	STR2 DB "Sum:", 0
+
+ 00000000			.CODE
+
+ 00000000			main PROC
+ 00000000			START:
+				    
+ 00000000  8B 05 00000000 R	    MOV EAX, NUM1
+ 00000006  03 05 00000004 R	    ADD EAX ,NUM2
+ 0000000C  83 C0 30		    ADD EAX,48
+ 0000000F  88 05 0000001E R	    MOV STR2+4,AL
+
+				    INVOKE MessageBoxA,0,OFFSET STR2,OFFSET STR1,0 
+lab3.asm(31) : error A2008:syntax error : MessageBoxA
+
+ 00000015  6A 00		    push 0
+ 00000017  E8 00000000 E	    call ExitProcess
+ 0000001C			main ENDP
+				END main
+Microsoft (R) Macro Assembler (x64) Version 14.41.34123.0   12/04/24 16:20:58
+lab3.asm						     Symbols 2 - 1
+
+
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+ExitProcess  . . . . . . . . . .	P 	 00000000 Length= 00000000 External
+MessageBoxA  . . . . . . . . . .	P 	 00000000 Length= 00000000 External
+main . . . . . . . . . . . . . .	P 	 00000000 _TEXT	Length= 0000001C Public
+  START  . . . . . . . . . . . .	L 	 00000000 _TEXT	
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+NUM1 . . . . . . . . . . . . . .	DWord	 00000000 _DATA	
+NUM2 . . . . . . . . . . . . . .	DWord	 00000004 _DATA	
+STR1 . . . . . . . . . . . . . .	Byte	 00000008 _DATA	
+STR2 . . . . . . . . . . . . . .	Byte	 0000001A _DATA	
+
+	   0 Warnings
+	   6 Errors

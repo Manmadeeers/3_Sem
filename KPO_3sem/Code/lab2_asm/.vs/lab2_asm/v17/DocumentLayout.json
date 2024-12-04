@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab2_asm\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{11919921-A376-4D0A-A936-B6147D16FB9D}|lab2_asm\\lab2_asm.vcxproj|C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab2_asm\\lab2_asm\\lab2.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{11919921-A376-4D0A-A936-B6147D16FB9D}|lab2_asm\\lab2_asm.vcxproj|solutionrelative:lab2_asm\\lab2.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "lab2.asm",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab2_asm\\lab2_asm\\lab2.asm",
+              "RelativeDocumentMoniker": "lab2_asm\\lab2.asm",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab2_asm\\lab2_asm\\lab2.asm",
+              "RelativeToolTip": "lab2_asm\\lab2.asm",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAUwBoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-04T10:16:36.589Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

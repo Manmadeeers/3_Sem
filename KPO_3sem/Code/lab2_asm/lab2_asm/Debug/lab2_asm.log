@@ -1,0 +1,23 @@
+﻿Сборка начата 04.12.2024 18:34:29.
+Уровень детализации журнала: Normal.     1>Проект "C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab2_asm\lab2_asm\lab2_asm.vcxproj" в узле 2 (целевые объекты Build).
+     1>PrepareForBuild:
+         Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+       InitializeBuildStatus:
+         Обращение к "Debug\lab2_asm.tlog\unsuccessfulbuild".
+       _MASM:
+         Assembling lab2.asm...
+         cmd.exe /C "C:\Users\Manmade\AppData\Local\Temp\tmp71e4b58a20714c9ea4dc5724bb0a5219.cmd"
+         ml.exe /c /nologo /Zi /Fo"Debug\lab2.obj" /W3 /errorReport:prompt  /Talab2.asm
+       Link:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab2_asm\Debug\lab2_asm.exe" /INCREMENTAL /ILK:"Debug\lab2_asm.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab2_asm\Debug\lab2_asm.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab2_asm\Debug\lab2_asm.lib" /MACHINE:X86 Debug\lab2.obj
+         lab2_asm.vcxproj -> C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab2_asm\Debug\lab2_asm.exe
+       FinalizeBuildStatus:
+         Файл "Debug\lab2_asm.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "Debug\lab2_asm.tlog\lab2_asm.lastbuildstate".
+     1>Сборка проекта "C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab2_asm\lab2_asm\lab2_asm.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+    Предупреждений: 0
+    Ошибок: 0
+
+Прошло времени 00:00:00.43

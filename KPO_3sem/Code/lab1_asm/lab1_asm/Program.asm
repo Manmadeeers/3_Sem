@@ -1,30 +1,30 @@
-.586P
-.MODEL FLAT, STDCALL
-includelib kernel32.lib
+	.586P
+	.MODEL FLAT, STDCALL
+	includelib kernel32.lib
 
-ExitProcess PROTO:DWORD
-MessageBoxA PROTO:DWORD,:DWORD,:DWORD,:DWORD
+	ExitProcess PROTO:DWORD
+	MessageBoxA PROTO:DWORD,:DWORD,:DWORD,:DWORD
 
-.STACK 4096
+	.STACK 4096
 
-.CONST
+	.CONST
 
-.DATA
+	.DATA
 
-MB_OK EQU 0
-STR1 DB "My first ASM program",0
-STR2 DB "Hi everyone!",0
-HW DD ?
+	MB_OK EQU 0
+	STR1 DB "My first ASM program",0
+	STR2 DB "Hi everyone!",0
+	HW DD ?
 
-.CODE
+	.CODE
 
-main PROC
-START:
+	main PROC
+	START:
 		
-	INVOKE MessageBoxA, HW, OFFSET STR2, OFFSET STR1, MB_OK
+		INVOKE MessageBoxA, HW, OFFSET STR2, OFFSET STR1, MB_OK
 
-	push 0
-	call ExitProcess
-main ENDP
+		push 0
+		call ExitProcess
+	main ENDP
 
-end main
+	end main
