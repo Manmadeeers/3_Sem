@@ -92,7 +92,7 @@ void packBag(int MAX_bag_weight, int number_of_things) {
 		if (matrix[current_row][current_column] != matrix[current_row - 1][current_column]) {
 			itemsInBackpack.push_back(current_row - 1);
 			current_column -= weights[current_row - 1];
-		}
+		} 
 		current_row--;
 	}
 	cout << "<-----Elements in a backpack----->" << endl;
