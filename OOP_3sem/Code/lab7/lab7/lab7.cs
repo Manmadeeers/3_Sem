@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using lab3;
-using System.Text.Json;
-using System.Text.Json.Serialization;
+﻿
+using System.Xml.Serialization;
+using lab_4;
 
 namespace lab7
 {
+    [XmlInclude(typeof(Sofa))]
     public interface IGenericOperations<T>
     {
         void Add(T elem);
@@ -21,7 +15,13 @@ namespace lab7
     }
     public class CollectionType<T> : IGenericOperations<T> where T : class
     {
-        private List<T> _collection = new List<T>();
+       
+        public List<T> _collection = new List<T>();
+
+        //public List<T> coll
+        //{
+        //    get { return _collection; }
+        //}
 
         private const int MaxCount = 20;
         public void Add(T elem)
@@ -74,7 +74,5 @@ namespace lab7
                 Console.WriteLine("<----------End---------->");
             }
         }
-
-
     }
 }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfProduct xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Product xsi:type="Sofa">
+    <name>Sofa</name>
+    <clean>false</clean>
+    <price>200</price>
+  </Product>
+  <Product xsi:type="Chair">
+    <name>Chair</name>
+    <clean>false</clean>
+    <price>300</price>
+  </Product>
+  <Product xsi:type="Closet">
+    <name>Closet</name>
+    <clean>false</clean>
+    <price>1000</price>
+  </Product>
+    <Product xsi:type="Closet">
+    <name>Pipidastr</name>
+    <clean>false</clean>
+    <price>1000</price>
+  </Product>
+</ArrayOfProduct>

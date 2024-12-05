@@ -24,4 +24,10 @@ namespace lab7
         public EmptyCollectionException(string message) : base("collection is empty. Thus no elements can be printed") { }
     }
 
+    public class UnexistingFileException : Exception
+    {
+        public UnexistingFileException() : base() { }
+        public UnexistingFileException(string message) : base("Such a file does not exist. Please doublechek it") { }
+    }
+
 }

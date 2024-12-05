@@ -1,29 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using System.Xml.Serialization;
 
 namespace lab_4
 {
+   
     interface IFurniture
     {
         void isClean();
     }
+    [XmlInclude(typeof(Sofa))]
+    [XmlInclude(typeof(Furniture))]
+    [XmlInclude(typeof(Chair))]
+    [XmlInclude(typeof(Woredrobe))]
+    [XmlInclude(typeof(Closet))]
+    [XmlInclude(typeof(Hanger))]
+    [XmlInclude(typeof(Chair))]
     public abstract class Product
     {
-        protected string name;
-        protected bool clean = false;
-        public string Name
-        {
-            get { return name; }
-        }
+        public string name;
+        public bool clean = false;
+        //public string Name
+        //{
+        //    get { return name; }
+        //}
 
-        protected string price;
-        public string Price
-        {
-            get { return price; }
-        }
+        public string price;
+        //public string Price
+        //{
+        //    get { return price; }
+        //}
 
         protected Product(string Nname, string Nprice)
         {
@@ -33,6 +38,10 @@ namespace lab_4
             }
             name = Nname;
             price = Nprice;
+        }
+        protected Product()
+        {
+
         }
 
         public virtual void Clean()
@@ -61,6 +70,7 @@ namespace lab_4
         {
 
         }
+        public Furniture() { }
         public override string ToString()
         {
             return name + " costs  " + price;
@@ -71,9 +81,12 @@ namespace lab_4
         }
 
     }
+  
     public class Sofa : Furniture, IChair, IFurniture
     {
+
         public Sofa(string name, string price) : base(name, price) { }
+        public Sofa() : base() { }
         public void Sit()
         {
             Console.WriteLine("You're sitting on a sofa");
@@ -95,25 +108,30 @@ namespace lab_4
     public class Bed : Furniture
     {
         public Bed(string name, string price) : base(name, price) { }
+        public Bed():base() { }
     }
     public class Woredrobe : Furniture
     {
         public Woredrobe(string name, string price) : base(name, price) { }
+        public Woredrobe() : base() { }
     }
     public class Closet : Furniture
     {
         public Closet(string name, string price) : base(name, price) { }
+        public Closet() : base() { }
     }
 
-    sealed class Hanger : Furniture
+    public sealed class Hanger : Furniture
     {
         public Hanger(string name, string price) : base(name, price) { }
+        public Hanger() : base() { }
 
     }
 
     public class NightStand : Furniture
     {
         public NightStand(string name, string price) : base(name, price) { }
+        public NightStand() : base() { }
 
         public override int GetHashCode()
         {
@@ -128,6 +146,7 @@ namespace lab_4
     public class Chair : Furniture, IChair
     {
         public Chair(string name, string price) : base(name, price) { }
+        public Chair() : base() { } 
 
         public void Sit()
         {

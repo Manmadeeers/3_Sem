@@ -50,6 +50,9 @@ namespace lab7
             ProductCollection.Add(chair);
             ProductCollection.Add(closet);
             ProductCollection.View();
+            //FileProcessor.SaveToFile("data.xml", ProductCollection);
+            CollectionType<Product> NewProdCollection = new CollectionType<Product>();
+            FileProcessor.LoadFromFile("data.xml", NewProdCollection);
         }
     }
 }
