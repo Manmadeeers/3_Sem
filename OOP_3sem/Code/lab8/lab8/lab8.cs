@@ -2,98 +2,108 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
 namespace lab8
 {
-    public class Game
-    {
-        public Game() { }
-        public delegate void MovementDelegate(int movement_rate);
-        public event MovementDelegate? OnMove;
-        public delegate void CompressionDelegate(double compression_rate);
-        public event CompressionDelegate? OnCompressed;
 
-        public void MoveUser(int movement, char axis)
-        {
-            if (movement == 0 || movement < 0)
-            {
-                Console.WriteLine("User wasn't moved");
-            }
-            if (axis == 'X' || axis == 'x')
-            {
+    //public class Admin
+    //{
+    //    public Admin() { }
+    //    public delegate void MovementDelegate(int offset, char axis);
+    //    public event MovementDelegate? Moved;
+    //    public delegate void CompressionDelegate(double comprassion_rate);
+    //    public event CompressionDelegate? Compressed;
 
-                Console.WriteLine($"User was moved on {movement} by axis {axis}");
-                OnMove?.Invoke(movement);
-            }
-            else if (axis == 'Y' || axis == 'y')
-            {
-                Console.WriteLine($"User was moved on {movement} by axis {axis}");
-                OnMove?.Invoke(movement);
-            }
-            else
-            {
-                throw new ArgumentException("Invalid axis exception was called");
-            }
-        }
-    }
+    //    public void MoveUser(int offset,char axis)
+    //    {
+
+    //        Moved?.Invoke(offset,axis);
+    //    }
+
+    //}
     public class User
     {
-        private string _name;
+
         private int _positionX = 0;
         private int _positionY = 0;
-        private double _comprassion_rate = 0;
+        private string _name;
+        private double _compression_rate;
         public string Name
         {
             get { return _name; }
         }
-
         public User() { }
-        public User(string name)
+        public User(string Nname)
         {
-            _name = name;
+            _name = Nname;
         }
 
+        public delegate void MovementDelegate(int offset, char axis);
+        public event MovementDelegate? Moved;
+        public delegate void CompressionDelegate(double comprassion_rate);
+        public event CompressionDelegate? Compressed;
 
-        public delegate void MovementDelegate(int movement_rate);
-        public event MovementDelegate ? OnMove;
-        public delegate void CompressionDelegate(double compression_rate);
-        public event CompressionDelegate ? OnCompressed;
-
-        public void HandleMove(int movement,char axis)
+        public void HandleMovement(int offset, char axis)
         {
-            if (axis == 'X' || axis == 'x')
+            if(offset < 0)
             {
-                _positionX += movement;
-                Console.WriteLine($"User named {Name} was moved on {movement} by axis {axis}");
-                Console.WriteLine($"Now {Name} position is X:{_positionX},Y:{_positionY}");
+                throw new ArgumentException("Offset coud not be negative");
             }
-            else if (axis == 'Y' || axis == 'y')
+            else if (offset == 0)
             {
-                _positionY += movement;
-                Console.WriteLine($"User named {Name} was moved on {movement} by axis {axis}");
-                Console.WriteLine($"Now {Name} position is X:{_positionX},Y:{_positionY}");
+                Console.WriteLine($"User {Name} wasn't moved");
+                Moved?.Invoke(offset, axis);
             }
             else
             {
-                throw new ArgumentException("Invalid axis exception was called");
-            }
-        }
-        public void HandleCompression(double compression_rate)
-        {
-            if(compression_rate < 0)
-            {
-                throw new ArgumentException("Compression rate below zero");
-            }
-            else
-            {
-                _comprassion_rate = compression_rate;
-                Console.WriteLine($"User {Name} was compressed by compression rate {compression_rate}");
+                if (axis == 'X' || axis == 'x')
+                {
+                    _positionX += offset;
+                    Console.WriteLine($"User {Name} was moved on {offset} by {axis} axis");
+                    Moved?.Invoke(offset,axis);
+                }
+                else if(axis == 'Y' || axis == 'y')
+                {
+                    _positionY += offset;
+                    Console.WriteLine($"User {Name} was moved on {offset} by {axis} axis");
+                    Moved?.Invoke(offset,axis);
+
+                }
+                else
+                {
+                    throw new ArgumentException("Invalid axis name");
+                }
             }
         }
 
+        public void HandleCompression(double Ncomprassion_rate)
+        {
+            if(Ncomprassion_rate < 0)
+            {
+                throw new ArgumentException("Compression rate could not be negative");
+            }
+            else if(Ncomprassion_rate==0)
+            {
+               
+                Console.WriteLine($"User {Name} was not compressed");
+                Compressed?.Invoke(Ncomprassion_rate);
+            }
+            else
+            {
+                _compression_rate = Ncomprassion_rate;
+                Console.WriteLine($"User {Name} was compressed by {Ncomprassion_rate} rate");
+                Compressed?.Invoke(Ncomprassion_rate);
+            }
+        }
+
+        public override string ToString()
+        {
+            return $"Name: {Name}, PositionX:{_positionX}, PositionY:{_positionY}, CompressionRate: {_compression_rate}";
+        }
 
     }
 

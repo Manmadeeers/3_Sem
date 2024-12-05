@@ -45,9 +45,6 @@ START:
         jz FoundZero
 
         loop SearchingForZero
-    
-       
-        
     FoundZero:
         MOV EBX,0
         
