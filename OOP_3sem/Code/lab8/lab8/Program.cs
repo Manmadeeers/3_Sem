@@ -28,15 +28,27 @@ namespace lab8
             Console.WriteLine(user2.ToString());
 
 
-            Master master = new Master();
-            Slave slave1 = new Slave("Van");
-            master.Moved += slave1.HandleMovement;
-            slave1.HandleMovement(10, 'X');
-            
-            Console.WriteLine(slave1.ToString());
+            //Master master = new Master();
+            //Slave slave1 = new Slave("Van");
+            //master.Moved += slave1.HandleMovement;
+            //slave1.HandleMovement(10, 'X');
 
-            slave1.HandleMovement(20, 'Y');
-            Console.WriteLine(slave1.ToString());
+            //Console.WriteLine(slave1.ToString());
+
+            //slave1.HandleMovement(20, 'Y');
+            //Console.WriteLine(slave1.ToString());
+
+
+            string StrToProcess1 = "inonr,podnvi!!,PDZNEEFNE";
+            string ProcessedString1 = StringProcessor.DeletePunktuation(StrToProcess1);
+            Console.WriteLine(ProcessedString1);
+
+            string StrToProcess2 = "I love C#      and trim extra spaces";
+            string ProcessedString2 = StringProcessor.TrimExtraSpaces(StrToProcess2);
+            Console.WriteLine(ProcessedString2);
+
+            string StrToProcess3 = "abcdef";
+            Console.WriteLine(StringProcessor.Reverse(StrToProcess3));
 
         }
 

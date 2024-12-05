@@ -9,22 +9,6 @@ using System.Xml.Linq;
 
 namespace lab8
 {
-
-    //public class Admin
-    //{
-    //    public Admin() { }
-    //    public delegate void MovementDelegate(int offset, char axis);
-    //    public event MovementDelegate? Moved;
-    //    public delegate void CompressionDelegate(double comprassion_rate);
-    //    public event CompressionDelegate? Compressed;
-
-    //    public void MoveUser(int offset,char axis)
-    //    {
-
-    //        Moved?.Invoke(offset,axis);
-    //    }
-
-    //}
     public class User
     {
 
