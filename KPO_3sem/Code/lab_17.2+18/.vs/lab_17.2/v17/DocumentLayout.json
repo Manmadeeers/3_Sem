@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E7426E24-6435-4191-B570-23B24481309C}|lab_17.2\\lab_17.2.vcxproj|C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\Rules.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E7426E24-6435-4191-B570-23B24481309C}|lab_17.2\\lab_17.2.vcxproj|solutionrelative:lab_17.2\\Rules.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{E7426E24-6435-4191-B570-23B24481309C}|lab_17.2\\lab_17.2.vcxproj|C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E7426E24-6435-4191-B570-23B24481309C}|lab_17.2\\lab_17.2.vcxproj|solutionrelative:lab_17.2\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7426E24-6435-4191-B570-23B24481309C}|lab_17.2\\lab_17.2.vcxproj|C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\In.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E7426E24-6435-4191-B570-23B24481309C}|lab_17.2\\lab_17.2.vcxproj|solutionrelative:lab_17.2\\In.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7426E24-6435-4191-B570-23B24481309C}|lab_17.2\\lab_17.2.vcxproj|C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\In.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E7426E24-6435-4191-B570-23B24481309C}|lab_17.2\\lab_17.2.vcxproj|solutionrelative:lab_17.2\\In.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E7426E24-6435-4191-B570-23B24481309C}|lab_17.2\\lab_17.2.vcxproj|C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\Error.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E7426E24-6435-4191-B570-23B24481309C}|lab_17.2\\lab_17.2.vcxproj|solutionrelative:lab_17.2\\Error.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7426E24-6435-4191-B570-23B24481309C}|lab_17.2\\lab_17.2.vcxproj|C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\Rules.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E7426E24-6435-4191-B570-23B24481309C}|lab_17.2\\lab_17.2.vcxproj|solutionrelative:lab_17.2\\Rules.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E7426E24-6435-4191-B570-23B24481309C}|lab_17.2\\lab_17.2.vcxproj|C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\FST.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -39,10 +51,6 @@
       "RelativeMoniker": "D:0:0:{E7426E24-6435-4191-B570-23B24481309C}|lab_17.2\\lab_17.2.vcxproj|solutionrelative:lab_17.2\\GRB.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7426E24-6435-4191-B570-23B24481309C}|lab_17.2\\lab_17.2.vcxproj|C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E7426E24-6435-4191-B570-23B24481309C}|lab_17.2\\lab_17.2.vcxproj|solutionrelative:lab_17.2\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E7426E24-6435-4191-B570-23B24481309C}|lab_17.2\\lab_17.2.vcxproj|C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\Error.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E7426E24-6435-4191-B570-23B24481309C}|lab_17.2\\lab_17.2.vcxproj|solutionrelative:lab_17.2\\Error.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -63,10 +71,6 @@
       "RelativeMoniker": "D:0:0:{E7426E24-6435-4191-B570-23B24481309C}|lab_17.2\\lab_17.2.vcxproj|solutionrelative:lab_17.2\\Log.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7426E24-6435-4191-B570-23B24481309C}|lab_17.2\\lab_17.2.vcxproj|C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\In.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E7426E24-6435-4191-B570-23B24481309C}|lab_17.2\\lab_17.2.vcxproj|solutionrelative:lab_17.2\\In.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E7426E24-6435-4191-B570-23B24481309C}|lab_17.2\\lab_17.2.vcxproj|C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\IT.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E7426E24-6435-4191-B570-23B24481309C}|lab_17.2\\lab_17.2.vcxproj|solutionrelative:lab_17.2\\IT.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -81,10 +85,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E7426E24-6435-4191-B570-23B24481309C}|lab_17.2\\lab_17.2.vcxproj|C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\FST.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E7426E24-6435-4191-B570-23B24481309C}|lab_17.2\\lab_17.2.vcxproj|solutionrelative:lab_17.2\\FST.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7426E24-6435-4191-B570-23B24481309C}|lab_17.2\\lab_17.2.vcxproj|C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\In.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E7426E24-6435-4191-B570-23B24481309C}|lab_17.2\\lab_17.2.vcxproj|solutionrelative:lab_17.2\\In.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E7426E24-6435-4191-B570-23B24481309C}|lab_17.2\\lab_17.2.vcxproj|C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\IT.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -102,17 +102,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 0,
               "Title": "stdafx.h",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\stdafx.h",
               "RelativeDocumentMoniker": "lab_17.2\\stdafx.h",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\stdafx.h",
               "RelativeToolTip": "lab_17.2\\stdafx.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-10-17T07:37:43.111Z",
               "IsPinned": true,
@@ -120,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "lab_17.2.cpp",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\lab_17.2.cpp",
               "RelativeDocumentMoniker": "lab_17.2\\lab_17.2.cpp",
@@ -129,12 +129,11 @@
               "ViewState": "AgIAAJAAAAAAAAAAAAAAALMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-17T07:36:01.857Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "LT.h",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\LT.h",
               "RelativeDocumentMoniker": "lab_17.2\\LT.h",
@@ -143,8 +142,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-10-17T12:28:15.175Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -157,12 +155,11 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-10-17T12:50:28.106Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "IT.cpp",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\IT.cpp",
               "RelativeDocumentMoniker": "lab_17.2\\IT.cpp",
@@ -171,57 +168,30 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-17T12:51:06.774Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MFST.h",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\MFST.h",
-              "RelativeDocumentMoniker": "lab_17.2\\MFST.h",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\MFST.h",
-              "RelativeToolTip": "lab_17.2\\MFST.h",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAAIAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-28T12:09:41.246Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MFST.cpp",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\MFST.cpp",
-              "RelativeDocumentMoniker": "lab_17.2\\MFST.cpp",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\MFST.cpp",
-              "RelativeToolTip": "lab_17.2\\MFST.cpp",
-              "ViewState": "AgIAAMYAAAAAAAAAAAAAANgAAABmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-28T12:10:18.407Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Rules.h",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\Rules.h",
               "RelativeDocumentMoniker": "lab_17.2\\Rules.h",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\Rules.h",
               "RelativeToolTip": "lab_17.2\\Rules.h",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-11-28T12:08:46.797Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Error.cpp",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\Error.cpp",
               "RelativeDocumentMoniker": "lab_17.2\\Error.cpp",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\Error.cpp",
               "RelativeToolTip": "lab_17.2\\Error.cpp",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAEYAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-23T14:04:33.979Z",
               "EditorCaption": ""
@@ -229,6 +199,56 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "In.cpp",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\In.cpp",
+              "RelativeDocumentMoniker": "lab_17.2\\In.cpp",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\In.cpp",
+              "RelativeToolTip": "lab_17.2\\In.cpp",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAIwKgAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-17T07:38:53.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "In.h",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\In.h",
+              "RelativeDocumentMoniker": "lab_17.2\\In.h",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\In.h",
+              "RelativeToolTip": "lab_17.2\\In.h",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAIwCsAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-17T07:38:25.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MFST.cpp",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\MFST.cpp",
+              "RelativeDocumentMoniker": "lab_17.2\\MFST.cpp",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\MFST.cpp",
+              "RelativeToolTip": "lab_17.2\\MFST.cpp",
+              "ViewState": "AgIAAMYAAAAAAAAAAAAAANgAAABmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-28T12:10:18.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MFST.h",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\MFST.h",
+              "RelativeDocumentMoniker": "lab_17.2\\MFST.h",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\MFST.h",
+              "RelativeToolTip": "lab_17.2\\MFST.h",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAAIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-28T12:09:41.246Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "FST.cpp",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\FST.cpp",
               "RelativeDocumentMoniker": "lab_17.2\\FST.cpp",
@@ -236,12 +256,11 @@
               "RelativeToolTip": "lab_17.2\\FST.cpp",
               "ViewState": "AgIAAD8AAAAAAAAAAAAAAFUAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-28T12:26:07.547Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T12:26:07.547Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "GRB.h",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\GRB.h",
               "RelativeDocumentMoniker": "lab_17.2\\GRB.h",
@@ -249,12 +268,11 @@
               "RelativeToolTip": "lab_17.2\\GRB.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-28T12:06:58.471Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T12:06:58.471Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "GRB.cpp",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\GRB.cpp",
               "RelativeDocumentMoniker": "lab_17.2\\GRB.cpp",
@@ -262,12 +280,11 @@
               "RelativeToolTip": "lab_17.2\\GRB.cpp",
               "ViewState": "AgIAAFcAAAAAAAAAAAAAAAEAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-28T12:07:52.801Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T12:07:52.801Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Error.h",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\Error.h",
               "RelativeDocumentMoniker": "lab_17.2\\Error.h",
@@ -275,12 +292,11 @@
               "RelativeToolTip": "lab_17.2\\Error.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-17T07:39:34.759Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T07:39:34.759Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Out.h",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\Out.h",
               "RelativeDocumentMoniker": "lab_17.2\\Out.h",
@@ -288,12 +304,11 @@
               "RelativeToolTip": "lab_17.2\\Out.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-17T07:56:49.2Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T07:56:49.2Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Log.h",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\Log.h",
               "RelativeDocumentMoniker": "lab_17.2\\Log.h",
@@ -301,12 +316,11 @@
               "RelativeToolTip": "lab_17.2\\Log.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-17T07:54:00.91Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T07:54:00.91Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Out.cpp",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\Out.cpp",
               "RelativeDocumentMoniker": "lab_17.2\\Out.cpp",
@@ -314,12 +328,11 @@
               "RelativeToolTip": "lab_17.2\\Out.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-17T07:57:14.212Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T07:57:14.212Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "Log.cpp",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\Log.cpp",
               "RelativeDocumentMoniker": "lab_17.2\\Log.cpp",
@@ -327,25 +340,11 @@
               "RelativeToolTip": "lab_17.2\\Log.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-28T12:27:28.628Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T12:27:28.628Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "In.cpp",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\In.cpp",
-              "RelativeDocumentMoniker": "lab_17.2\\In.cpp",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\In.cpp",
-              "RelativeToolTip": "lab_17.2\\In.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHgAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-17T07:38:53.963Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "LT.cpp",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\LT.cpp",
               "RelativeDocumentMoniker": "lab_17.2\\LT.cpp",
@@ -353,12 +352,11 @@
               "RelativeToolTip": "lab_17.2\\LT.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-17T12:31:07.913Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T12:31:07.913Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Parm.cpp",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\Parm.cpp",
               "RelativeDocumentMoniker": "lab_17.2\\Parm.cpp",
@@ -366,12 +364,11 @@
               "RelativeToolTip": "lab_17.2\\Parm.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-17T08:00:21.817Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T08:00:21.817Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "FST.h",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\FST.h",
               "RelativeDocumentMoniker": "lab_17.2\\FST.h",
@@ -379,21 +376,7 @@
               "RelativeToolTip": "lab_17.2\\FST.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-17T12:32:54.081Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "In.h",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\In.h",
-              "RelativeDocumentMoniker": "lab_17.2\\In.h",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab_17.2\u002B18\\lab_17.2\\In.h",
-              "RelativeToolTip": "lab_17.2\\In.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-17T07:38:25.351Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T12:32:54.081Z"
             },
             {
               "$type": "Document",
@@ -405,8 +388,7 @@
               "RelativeToolTip": "lab_17.2\\Parm.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-17T08:00:00.691Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T08:00:00.691Z"
             }
           ]
         }
