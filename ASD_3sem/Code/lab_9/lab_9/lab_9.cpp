@@ -62,116 +62,57 @@ void deleteEdge(int from, int to, vector<vector<int>>& graph) {
 	graph[from-1][to-1] = INF;
 }
 
-int calculateDistance(vector<int>path,vector<vector<int>>graph ) {
+int calculateDistance(vector<int>& path,vector<vector<int>>graph) {
 	int distance = 0;
-	
-	for (int i = 0; i <CITIES-1; i++) {
-		distance += graph[path[i]][path[i + 1]];
+	for (int i = 0; i < path.size()-1; ++i) {
+		int from = path[i];
+		int to = path[i + 1];
+		distance += graph[from][to];
 	}
-
-	distance += graph[CITIES - 1][path[0]];
 	return distance;
 }
+vector<int>generateRandomPath(std::mt19937 rdm) {
+	vector<int>random_path(CITIES);
+	for (int i = 0; i < CITIES; i++) {
+		random_path[i] = i;
+	}
+	shuffle(random_path.begin(), random_path.end(), rdm);
+	return random_path;
+}
 
-vector<int>crossover(vector<int>parent1, vector<int>parent2) {
+vector<int> corssover(vector<int>parent1, vector<int>parent2,int crossover_num) {
 	vector<int>child(CITIES);
-	int crossover_rate = rand() % CITIES;
-	for (int i = 0; i <= crossover_rate; i++) {
+
+	int crossover_point = rand() % (CITIES - 1) + 1;
+	for (int i = 0; i < crossover_point; ++i) {
 		child[i] = parent1[i];
 	}
-	for (int i = crossover_rate + 1; i < CITIES; i++) {
+	for (int i = crossover_point + 1; i < CITIES; ++i) {
 		child[i] = parent2[i];
 	}
 
 	return child;
 }
-vector<int>generateRandomPath(std::mt19937& rng) {
-	vector<int>path(CITIES);
-	for (int i = 0; i < CITIES; i++) {
-		path[i] = i;
+
+void mutate(vector<int>& individual,std::mt19937 rnd,int mutation_rate) {
+	if (rand() % 100< mutation_rate) {
+		int index1 = rnd() % CITIES;
+		int index2 = rnd() % CITIES;
+		swap(individual[index1], individual[index2]);
 	}
-	std::shuffle(path.begin(), path.end(), rng);
-	return path;
-}
-
-void mutate(vector<int>& path, std::mt19937& rng) {
-	int index1 = rng() % CITIES;
-	int index2 = rng() % CITIES;
-	swap(path[index1], path[index2]);
-}
-
-pair<vector<int>, int>selection(vector<pair<vector<int>, int>>& evaluated_population,int population_size) {
-
-	int index1 = rand() % population_size;
-	int index2 = rand() % population_size;
-	return (evaluated_population[index1].second < evaluated_population[index2].second) ? evaluated_population[index1] : evaluated_population[index2];
-}
-
-bool sortPopulation(const pair<vector<int>, int>& a, const pair<vector<int>, int>& b) {
-	return a.second < b.second;
 }
 
 
-
-vector<int>runGenetics(vector<vector<int>>graph,int population_size,int evolutions,int crossovers_amount) {
-	//randomization
-	std::random_device randD;
-	std::mt19937 rng(randD());
-
-	//initializing a new population
-	vector<pair<vector<int>, int>>population(population_size);
-	for (int i = 0; i < population_size; ++i) {
-		population[i].first = generateRandomPath(rng);
-		population[i].second = calculateDistance(population[i].first,graph);
-	}
-
-	for (int curr_gen = 0; curr_gen < evolutions; ++curr_gen) {
-		sort(population.begin(), population.end(), sortPopulation);
-
-		cout << "Generetion " << curr_gen+1 << ": " << endl;
-		cout << "Minimum route: ";
-		for (auto& city : population[0].first) {
-			cout << city << " ";
-		}
-		cout << endl;
-		cout << "Minimum route length: " << population[0].second << endl;
-
-		//generate an offspring
-
-		vector<pair<vector<int>, int>>offspring;
-		for (int i = 0; i < crossovers_amount; ++i) {
-			auto parent1 = selection(population,population_size).first;
-			auto parent2 = selection(population, population_size).first;
-
-		
-			vector<int>child1 = crossover(parent1, parent2);
-			mutate(child1, rng);
-			vector<int>child2 = crossover(parent1, parent2);
-			mutate(child2, rng);
-
-			offspring.push_back({ child1,calculateDistance(child1,graph) });
-			offspring.push_back({ child2,calculateDistance(child2,graph) });
-		}
-
-		//replacing the least fittest individuals of a population with the fittest ones from the new offspring
-
-		for (int i = 0; i < offspring.size(); ++i) {
-			population.pop_back();
-			population.back() = offspring[i];
-
-		}
-	}
-	return population[0].first;
-}
-
-//<-----end of util functions----->
+	//<-----end of util functions----->
 
 
 void main() {
+	srand(time(nullptr));
+
 	int population_size;
 	cout << "Enter the population size: ";
 	cin >> population_size;
-	int mutation;
+	float mutation;
 	cout << "Enter the mutation rate(between 0 and 1): ";
 	cin >> mutation;
 	int crossovers_amount;
@@ -268,11 +209,7 @@ void main() {
 	addEdge(9, 8, 18, graph);
 
 	printGrph(graph);
-	vector<int>shortest_path = runGenetics(graph, population_size, evolutions, crossovers_amount);
-	cout << "The shortest path for a given graph: ";
-	for (int i = 0; i < shortest_path.size(); ++i) {
-		cout << shortest_path[i]+1 << " ";
-	}
-	cout << endl;
+
+
 	
 }

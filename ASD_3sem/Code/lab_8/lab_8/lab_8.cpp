@@ -45,7 +45,7 @@ void packBag(int MAX_bag_weight, int number_of_things) {
 		cin >> weights[i];
 		cout << "Enter the item's price: ";
 		cin >> profits[i];
-		system("cls");
+		//system("cls");
 	}
 	for (int i = 0; i < number_of_things; i++) {
 		cout << "{" << names[i] << ',' << weights[i] << ',' << profits[i] << '}';
@@ -95,6 +95,8 @@ void packBag(int MAX_bag_weight, int number_of_things) {
 		} 
 		current_row--;
 	}
+	
+
 	cout << "<-----Elements in a backpack----->" << endl;
 	for (int i = 0; i < itemsInBackpack.size(); i++) {
 		cout << "Element number " << i + 1 << ": ";
