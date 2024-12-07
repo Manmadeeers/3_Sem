@@ -80,7 +80,7 @@ class Human{
         if(!typeof NewAge==="number"){
             throw new Error("Invalid age data type");
         }
-        this.age = NewAge;
+        this.birthYear= NewAge;
     }
     get age(){
         let current_year = new Date().getFullYear();
@@ -95,6 +95,8 @@ class Human{
 };
 
 let human = new Human("Vaclov","Kachinskas",2006,"Skripnikova 14");
+console.log(human.age);
+human.setAge(2000);
 console.log(human.age);
 
 class Student extends Human{
@@ -123,6 +125,7 @@ class Student extends Human{
     }
 }
 
+console.log(human);
 
 
 class Faculty{

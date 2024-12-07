@@ -14,9 +14,10 @@ console.groupEnd();
 
 //TASK4
 const numbers = [1,2,3,4,5];
-const[y] = numbers;
+const[y,,,,x] = numbers;
 console.group("Fourth task");
 console.log(y);
+console.log(x);
 console.groupEnd();
 
 //TASK5
@@ -31,7 +32,8 @@ console.groupEnd();
 
 const person = {name:"Lydia"};
 Object.defineProperty(person,"age",{
-    value:21
+    value:21,
+    enumerable:true
 });
 console.group("Sixth task");
 console.log(person);
@@ -76,5 +78,5 @@ console.groupEnd();
 
 //TASK 10
 console.group("Tenth task");
-[1,2,3,4].reduce((x,y)=>console.log(x,y));
+[1,2,3,4].reduce((x,y)=>{console.log(x,y);return y});
 console.groupEnd();
