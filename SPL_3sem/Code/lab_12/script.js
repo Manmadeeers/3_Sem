@@ -7,70 +7,87 @@ submit_button.addEventListener('click',()=>{
     sud1.addValue(form_row.value,form_col.value,form_val.value);
 })
 
+var generate_button = document.getElementById('generate-button');
+generate_button.addEventListener('click',()=>{
+    alert('Button pressed');
+});
 class Sudoku{
     constructor(){
-        this.board =this.initilaizeBoard();
-    }
-    initilaizeBoard(){
-        return Array(9).fill(null).map(()=>Array(9).fill(null));
-    }
-    printBoard(){
-        console.group("Sudoku board");
-        console.table(this.board);
-        console.groupEnd();
+        this.board = Array(9).fill(null).map(()=>Array(9).fill(null));
     }
 
-    resetBoard(){
-        this.board = this.initilaizeBoard();
+    wipeBoard(){
+        this.board = Array(9).fill(null).map(()=>Array(9).fill(null));
     }
-
+    
     checkRow(row){
         let current_row = new Set();
         for(let i=0;i<9;i++){
-            let current_num = this.board[row][i];
-            if(current_num!=null&&current_row.has(current_num)){
-                console.log(`Error occured in row ${row} and column ${i}`);
-                return false;
+            if(this.board[row][i]!=null&&current_row.has(this.board[row][i])){
+                alert(`Fail in column ${i}, row ${row}\n Read the rules and try again`);
+                console.clear();
+                this.wipeBoard();
             }
-            current_row.add(current_num);
+            current_row.add(this.board[row][i]);
         }
-        return true;
+       
     }
 
     checkColumn(column){
         let current_column = new Set();
         for(let i=0;i<9;i++){
-            let current_num = this.board[i][column];
-            if(current_column!=null&&current_column.has(current_num)){
-                console.log(`Error occured in column ${column} and row ${i}`);
-                return false;
+            if(this.board[i][column]!=null&&current_column.has(this.board[i][column])){
+                alert(`Fail in column ${column}, row ${i}\n Read the rules and try again`);
+                console.clear();
+                this.wipeBoard();
             }
-            current_column.add(current_num);
+            current_column.add(this.board[i][column]);
         }
-        return true;
-    }
-
-    checkBox(startRow,startColumn){
-
+       
     }
 
     checkBoard(){
         for(let i=0;i<9;i++){
-            if(!this.checkRow(i)) return false;
-            if(!this.checkColumn(i)) return false;
+            this.checkRow(i);
+            this.checkColumn(i);
         }
         return true;
     }
-    
-    addValue(row,column,value){
-        // if(value<=0||value>9){
-        //     throw new Error("Invalid value");
-        // }
-       this.board[row][column] = value;
-    console.clear();
-       this.printBoard();
+
+    isValidBox(rowIndex, colIndex) {
+        let seen = new Set();
+        let startRow = Math.floor(rowIndex / 3) * 3;
+        let startCol = Math.floor(colIndex / 3) * 3;
+        for (let i = 0; i < 3; i++) {
+          for (let j = 0; j < 3; j++) {
+            let num = this.board[startRow + i][startCol + j];
+            if (num !== 0 && seen.has(num)) {
+              alert(`Fail in box (${Math.floor(rowIndex / 3) + 1},${Math.floor(colIndex / 3) + 1})\n Read the rules and try again`);
+              console.clear();
+              this.wipeBoard();
+              return false;
+            }
+            seen.add(num);
+          }
+        }
+        return true;
+      }
+
+    printBoard(){
+        console.clear();
+        console.group("Sudoku board");
+        console.table(this.board);
+        console.groupEnd();
     }
+
+    addValue(row, column,value){
+        this.board[row][column] = value;
+        this.checkBoard();
+        this.printBoard();
+    }
+
     
 }
 
 sud1 = new Sudoku();
+sud1.printBoard();
