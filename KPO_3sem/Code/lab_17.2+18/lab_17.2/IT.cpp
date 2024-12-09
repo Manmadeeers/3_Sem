@@ -1,4 +1,3 @@
-
 #include "stdafx.h"
 
 namespace IT {
@@ -10,6 +9,10 @@ namespace IT {
 		newIDTable.size = 0;
 		newIDTable.table = new Entry[size];
 		newIDTable.maxsize = ID_MAXSIZE;
+		newIDTable.lits = new char* [LT_MAXSIZE];
+		for (int i = 0; i < LT_MAXSIZE; i++) {
+			newIDTable.lits[i] = new char[MAX_WORD_LENGTH];
+		}
 		return newIDTable;
 	}
 
@@ -35,23 +38,22 @@ namespace IT {
 		return NULL_INDEX;
 	}
 	bool CheckLiteralPresense(IDTable idtable,Entry ID) {
-		DATATYPES id_type = ID.IDDataType;
-		for (int i = 0; i < idtable.size; i++) {
-			Entry current = idtable.table[i];
-			if (current.IDType == L&&current.IDDataType==ID.IDDataType) {
-				if (id_type == INT) {
-					if (current.value.vint == ID.value.vint) {
-						return true;
-					}
-				}
-				else {
-					if (current.value.vstr.str == ID.value.vstr.str) {
-						return true;
-					}
+		if (ID.IDDataType == IT::STR) {
+			for (int i = 0; i < LT_MAXSIZE; i++) {
+				if (ID.value.vint = (int)idtable.lits[i]) {
+					return true;
 				}
 			}
+			return false;
 		}
-		return false;
+		else {
+			for (int i = 0; i < LT_MAXSIZE; i++) {
+				if (ID.value.vstr.str == idtable.lits[i]) {
+					return true;
+				}
+			}
+			return false;
+		}
 	}
 	                                 
 	void DeleteIdTable(IDTable& idtable) {

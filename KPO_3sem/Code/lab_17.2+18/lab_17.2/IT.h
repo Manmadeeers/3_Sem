@@ -25,6 +25,7 @@ namespace IT {
 	};
 
 	struct IDTable {
+		char** lits;
 		int maxsize;
 		int size;
 		Entry* table;

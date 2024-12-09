@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lab4_asm", "lab4_asm\lab4_asm.vcxproj", "{9E430F98-9F91-4FAE-84CD-E52B5EF611A1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Serializer", "Serializer\Serializer.vcxproj", "{13C26D77-52E1-4B0B-9998-FEE835946642}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{9E430F98-9F91-4FAE-84CD-E52B5EF611A1}.Release|x64.Build.0 = Release|x64
 		{9E430F98-9F91-4FAE-84CD-E52B5EF611A1}.Release|x86.ActiveCfg = Release|Win32
 		{9E430F98-9F91-4FAE-84CD-E52B5EF611A1}.Release|x86.Build.0 = Release|Win32
+		{13C26D77-52E1-4B0B-9998-FEE835946642}.Debug|x64.ActiveCfg = Debug|x64
+		{13C26D77-52E1-4B0B-9998-FEE835946642}.Debug|x64.Build.0 = Debug|x64
+		{13C26D77-52E1-4B0B-9998-FEE835946642}.Debug|x86.ActiveCfg = Debug|Win32
+		{13C26D77-52E1-4B0B-9998-FEE835946642}.Debug|x86.Build.0 = Debug|Win32
+		{13C26D77-52E1-4B0B-9998-FEE835946642}.Release|x64.ActiveCfg = Release|x64
+		{13C26D77-52E1-4B0B-9998-FEE835946642}.Release|x64.Build.0 = Release|x64
+		{13C26D77-52E1-4B0B-9998-FEE835946642}.Release|x86.ActiveCfg = Release|Win32
+		{13C26D77-52E1-4B0B-9998-FEE835946642}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

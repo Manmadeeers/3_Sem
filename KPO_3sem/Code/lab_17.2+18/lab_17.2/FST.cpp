@@ -469,6 +469,7 @@ namespace FST
 		const char* Literal = "Literal";
 		int count_lines = 0;
 		int count_literals = 0;
+		int literal_count = 0;
 		for (int i = 0; i < in.words_size; i++) {
 			LT::Entry NewLex;
 			IT::Entry NewId;
@@ -598,6 +599,7 @@ namespace FST
 					IT::AddToIDTable(idtable, NewId);
 					count_literals++;
 				}
+				idtable.lits[literal_count++] = (char*)in.words[i];
 				
 			}
 		}

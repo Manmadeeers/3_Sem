@@ -37,7 +37,5 @@ namespace FST
 	void GetLexem(LT::LexTable& lextable, IT::IDTable& idtable, In::IN in);
 	char FiniteAutomats(unsigned char* word);
 	bool check_int(unsigned char*word);
-	void Analyser(LT::LexTable lex_table);
-	bool SAnaliser(unsigned char* line);
 
 }

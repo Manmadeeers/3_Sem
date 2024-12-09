@@ -20,7 +20,7 @@
 
 	main PROC
 	START:
-
+	
 		
 		INVOKE MessageBoxA, 0, OFFSET STR2, OFFSET STR1, MB_OK
 
