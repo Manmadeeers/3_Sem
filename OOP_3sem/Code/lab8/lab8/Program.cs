@@ -14,6 +14,7 @@ namespace lab8
             User user4 = new User("Iouabfoaebf");
 
 
+
             user1.HandleMovement(1, 'X');
             user1.HandleCompression(0.1);
             user2.HandleMovement(2, 'Y');
@@ -50,6 +51,12 @@ namespace lab8
             string StrToProcess3 = "abcdef";
             Console.WriteLine(StringProcessor.Reverse(StrToProcess3));
 
+            Class1 cl1 = new Class1();
+
+            cl1.SomeEvent += cl1.HandleEvent;
+            cl1.doSomething();
+
+           
         }
 
     }
