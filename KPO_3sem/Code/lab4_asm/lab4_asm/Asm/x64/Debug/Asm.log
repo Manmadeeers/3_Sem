@@ -1,0 +1,35 @@
+﻿Сборка начата 12.12.2024 17:11:42.
+Уровень детализации журнала: Normal.     1>Проект "C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab4_asm\lab4_asm\Asm\Asm.vcxproj" в узле 2 (целевые объекты Build).
+     1>PrepareForBuild:
+         Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+         Создание каталога "x64\Debug\Asm.tlog\".
+       InitializeBuildStatus:
+         Создание "x64\Debug\Asm.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+         Обращение к "x64\Debug\Asm.tlog\unsuccessfulbuild".
+       _MASM:
+         Assembling asm_04.asm...
+         cmd.exe /C "C:\Users\Manmade\AppData\Local\Temp\tmp551372309eef456b8394e70c72fdc642.cmd"
+         ml64.exe /c /nologo /Zi /Fo"x64\Debug\asm_04.obj" /Fl"x64\Debug\\" /W3 /errorReport:prompt  /Taasm_04.asm
+     1>asm_04.asm(1): error A2008: syntax error : .
+     1>asm_04.asm(2): error A2008: syntax error : .
+     1>asm_04.asm(8): error A2008: syntax error : .
+     1>asm_04.asm(24): error A2008: syntax error : main
+     1>asm_04.asm(24): error A2088: END directive required at end of file
+     1>C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: выход из команды "ml64.exe /c /nologo /Zi /Fo"x64\Debug\asm_04.obj" /Fl"x64\Debug\\" /W3 /errorReport:prompt  /Taasm_04.asm" с кодом "1".
+     1>Сборка проекта "C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab4_asm\lab4_asm\Asm\Asm.vcxproj" завершена (целевые объекты Build) с ошибкой.
+
+Ошибка сборки.
+
+       "C:\Users\Manmade\Desktop\3_Sem\KPO_3sem\Code\lab4_asm\lab4_asm\Asm\Asm.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект _MASM) -> 
+         asm_04.asm(1): error A2008: syntax error : .
+         asm_04.asm(2): error A2008: syntax error : .
+         asm_04.asm(8): error A2008: syntax error : .
+         asm_04.asm(24): error A2008: syntax error : main
+         asm_04.asm(24): error A2088: END directive required at end of file
+         C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: выход из команды "ml64.exe /c /nologo /Zi /Fo"x64\Debug\asm_04.obj" /Fl"x64\Debug\\" /W3 /errorReport:prompt  /Taasm_04.asm" с кодом "1".
+
+    Предупреждений: 0
+    Ошибок: 6
+
+Прошло времени 00:00:00.42

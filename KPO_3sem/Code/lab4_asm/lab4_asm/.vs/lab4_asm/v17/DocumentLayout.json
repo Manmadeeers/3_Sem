@@ -1,0 +1,154 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab4_asm\\lab4_asm\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{ABF44070-260C-4358-A9A9-BAA0486BD487}|Asm\\Asm.vcxproj|C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab4_asm\\lab4_asm\\Asm\\asm_04.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{ABF44070-260C-4358-A9A9-BAA0486BD487}|Asm\\Asm.vcxproj|solutionrelative:Asm\\asm_04.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFEB7E03-3DF5-4088-AAD4-371086414E16}|deserializer\\deserializer.vcxproj|C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab4_asm\\lab4_asm\\deserializer\\deserializator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CFEB7E03-3DF5-4088-AAD4-371086414E16}|deserializer\\deserializer.vcxproj|solutionrelative:deserializer\\deserializator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFEB7E03-3DF5-4088-AAD4-371086414E16}|deserializer\\deserializer.vcxproj|C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab4_asm\\lab4_asm\\deserializer\\generateAsm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CFEB7E03-3DF5-4088-AAD4-371086414E16}|deserializer\\deserializer.vcxproj|solutionrelative:deserializer\\generateAsm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEBB6F15-F040-4033-9A20-7CE816D52441}|lab4_asm\\lab4_asm.vcxproj|C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab4_asm\\lab4_asm\\lab4_asm\\serialization.bin||{25834150-CD7E-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{BEBB6F15-F040-4033-9A20-7CE816D52441}|lab4_asm\\lab4_asm.vcxproj|solutionrelative:lab4_asm\\serialization.bin||{25834150-CD7E-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEBB6F15-F040-4033-9A20-7CE816D52441}|lab4_asm\\lab4_asm.vcxproj|C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab4_asm\\lab4_asm\\lab4_asm\\lab4_asm.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BEBB6F15-F040-4033-9A20-7CE816D52441}|lab4_asm\\lab4_asm.vcxproj|solutionrelative:lab4_asm\\lab4_asm.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEBB6F15-F040-4033-9A20-7CE816D52441}|lab4_asm\\lab4_asm.vcxproj|C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab4_asm\\lab4_asm\\lab4_asm\\serializer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BEBB6F15-F040-4033-9A20-7CE816D52441}|lab4_asm\\lab4_asm.vcxproj|solutionrelative:lab4_asm\\serializer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFEB7E03-3DF5-4088-AAD4-371086414E16}|deserializer\\deserializer.vcxproj|C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab4_asm\\lab4_asm\\deserializer\\deserializer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CFEB7E03-3DF5-4088-AAD4-371086414E16}|deserializer\\deserializer.vcxproj|solutionrelative:deserializer\\deserializer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEBB6F15-F040-4033-9A20-7CE816D52441}|lab4_asm\\lab4_asm.vcxproj|C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab4_asm\\lab4_asm\\lab4_asm\\serializer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BEBB6F15-F040-4033-9A20-7CE816D52441}|lab4_asm\\lab4_asm.vcxproj|solutionrelative:lab4_asm\\serializer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "serialization.bin",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab4_asm\\lab4_asm\\lab4_asm\\serialization.bin",
+              "RelativeDocumentMoniker": "lab4_asm\\serialization.bin",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab4_asm\\lab4_asm\\lab4_asm\\serialization.bin",
+              "RelativeToolTip": "lab4_asm\\serialization.bin",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-12T14:18:18.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "lab4_asm.cpp",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab4_asm\\lab4_asm\\lab4_asm\\lab4_asm.cpp",
+              "RelativeDocumentMoniker": "lab4_asm\\lab4_asm.cpp",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab4_asm\\lab4_asm\\lab4_asm\\lab4_asm.cpp",
+              "RelativeToolTip": "lab4_asm\\lab4_asm.cpp",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-12T14:09:51.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "serializer.h",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab4_asm\\lab4_asm\\lab4_asm\\serializer.h",
+              "RelativeDocumentMoniker": "lab4_asm\\serializer.h",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab4_asm\\lab4_asm\\lab4_asm\\serializer.h",
+              "RelativeToolTip": "lab4_asm\\serializer.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-12T14:08:38.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "serializer.cpp",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab4_asm\\lab4_asm\\lab4_asm\\serializer.cpp",
+              "RelativeDocumentMoniker": "lab4_asm\\serializer.cpp",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab4_asm\\lab4_asm\\lab4_asm\\serializer.cpp",
+              "RelativeToolTip": "lab4_asm\\serializer.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-12T14:07:44.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "asm_04.asm",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab4_asm\\lab4_asm\\Asm\\asm_04.asm",
+              "RelativeDocumentMoniker": "Asm\\asm_04.asm",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab4_asm\\lab4_asm\\Asm\\asm_04.asm",
+              "RelativeToolTip": "Asm\\asm_04.asm",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-12T14:05:15.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "generateAsm.h",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab4_asm\\lab4_asm\\deserializer\\generateAsm.h",
+              "RelativeDocumentMoniker": "deserializer\\generateAsm.h",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab4_asm\\lab4_asm\\deserializer\\generateAsm.h",
+              "RelativeToolTip": "deserializer\\generateAsm.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-12T14:04:34.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "deserializer.h",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab4_asm\\lab4_asm\\deserializer\\deserializer.h",
+              "RelativeDocumentMoniker": "deserializer\\deserializer.h",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab4_asm\\lab4_asm\\deserializer\\deserializer.h",
+              "RelativeToolTip": "deserializer\\deserializer.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-12T14:04:32.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "deserializator.cpp",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab4_asm\\lab4_asm\\deserializer\\deserializator.cpp",
+              "RelativeDocumentMoniker": "deserializer\\deserializator.cpp",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\KPO_3sem\\Code\\lab4_asm\\lab4_asm\\deserializer\\deserializator.cpp",
+              "RelativeToolTip": "deserializer\\deserializator.cpp",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADwAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-12T13:57:23.026Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
