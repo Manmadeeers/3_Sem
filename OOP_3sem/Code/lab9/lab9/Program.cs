@@ -12,14 +12,57 @@ namespace Lab9
             Service service2 = new Service("Coding", 20);
             Service service3 = new Service("Code review", 1000);
             Service service4 = new Service("Sdelat' kursach", 5000);
-
+            Customer John = new Customer("John");
+            Customer Mathew = new Customer("Mathew");
+            Customer Alice = new Customer("Alice");
+            Customer Julie = new Customer("Julie");
             ServiceCollection collection1 = new ServiceCollection();
-            collection1.Add(service1,service1);
-            collection1.Add(service2,service2);
-            collection1.Add(service3,service3);
-            collection1.Add(service4,service4);
+
+            collection1.Add(John, service1);
+            collection1.Add(Mathew,service2);
+            collection1.Add( Alice, service3);
+            collection1.Add(Julie, service4);
             collection1.Print();
-            
+            collection1.Clear();
+
+            UniverCollection<object>UnivCollection = new UniverCollection<object>();
+
+            for(int i = 0; i < 20; i++)
+            {
+                UnivCollection.AddElement(i * 25);
+            }
+
+            UnivCollection.PrintCollection();
+
+            for(int i = 5; i < 14; i++)
+            {
+                UnivCollection.DeleteElem(i * 25);
+            }
+            UnivCollection.PrintCollection();
+
+            UnivCollection.AddElement(John);
+            UnivCollection.AddElement(Alice);
+            UnivCollection.AddElement(Julie);
+
+            UnivCollection.AddElement(service1);
+            UnivCollection.AddElement(service2);
+            UnivCollection.AddElement(service3);
+
+            UnivCollection.PrintCollection();
+
+            OneMorecollection sec_coll = new OneMorecollection();
+            foreach(var item in UnivCollection.Items)
+            {
+                sec_coll.PushElem(item);
+            }
+            sec_coll.PrintCollection();
+            sec_coll.findValue(service1);
+
+
+            AmWatchingYou<Service>Obs= new AmWatchingYou<Service>();
+
+            Obs.OnCollectionChanged += Obs.HandleEvent();
         }
+     
     }
 }

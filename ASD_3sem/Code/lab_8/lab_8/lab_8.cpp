@@ -106,6 +106,7 @@ void packBag(int MAX_bag_weight, int number_of_things) {
 		cout << "Price: " << profits[itemsInBackpack[i]] << "}";
 		cout << endl;
 	}
+
 }
 
 
