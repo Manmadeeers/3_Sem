@@ -1,0 +1,28 @@
+*{
+    border:1px solid black;
+}
+.container{
+    display: flex;
+    flex-flow: row,wrap;
+    /* justify-content: center;
+    align-items: center; */
+    border: 1px solid black;
+    width: 100%;
+}
+.container #name{
+    display: inline-block;
+    flex: 1 1 100%;
+    color:rgb(0, 167, 84);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100%;
+}
+.container #textlabel{
+    display: flex;
+    flex: 1 1 100%;
+    width: 100%;
+}
+
+#textlable input{
+    width: 20%;
+    border-radius: 15px;
+}
