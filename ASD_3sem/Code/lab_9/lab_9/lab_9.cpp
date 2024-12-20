@@ -1,215 +1,312 @@
-﻿//<-------------------->
-//
-// Implementing genetic algorithm for a graph
-// 
-//<-------------------->
-
-
-
-#include <iostream>
+﻿#include <iostream>
 #include <vector>
-#include <random>
 #include <algorithm>
-using namespace std;
-#define INF INT_MAX
-#define CITIES 9
+#include <limits.h>
+#include <Windows.h>
+#include <time.h>
 
-struct Individual {
-	vector<int>route;
-	int fitness;
+using namespace std;
+
+int V = 5;
+#define GENES ABCDE
+#define START 0
+
+int child = 0;
+int populationSize = 0;
+int evoCount = 0;
+double mutationChance = 0;
+
+typedef vector<vector<int>> Matrix;
+Matrix cities = {
+    { INT_MAX, 25, 40, 31, 27 },
+    { 5, INT_MAX, 17, 30, 25 },
+    { 19, 15, INT_MAX, 6, 1 },
+    { 9, 50, 24, INT_MAX, 6 },
+    { 22, 8, 7, 10, INT_MAX }
 };
 
-//<-----util functions----->
-void implementGraph(vector<vector<int>>&graph,int size) {
-	for (int i = 0; i < size; i++) {
-		for (int j = 0; j < size; j++) {
-			if (i == j) {
-				graph[i][j] = 0;
-			}
-			else {
-				graph[i][j] = INF;
-			}
-		}
-	}
-}
-void printGrph(vector<vector<int>>graph) {
-	int size = graph.size();
-	for (int l = 0; l < size; l++) {
-		cout << l + 1 << '\t';
-	}
-	cout <<endl<< endl;
+// Distance between 8 cities
+//int cities[V][V] = { { INT_MAX, 25, 40, 31, 27, 10, 5, 9},
+//					 { 5, INT_MAX, 17, 30, 25, 15, 20, 10},
+//					 { 19, 15, INT_MAX, 6, 1, 20, 30, 25},
+//					 { 9, 50, 24, INT_MAX, 6, 10, 5, 9 },
+//					 { 22, 8, 7, 10, INT_MAX, 15, 20, 10 },
+//					 { 10, 15, 20, 10, 15, INT_MAX, 17, 30 },
+//					 { 5, 20, 30, 5, 20, 17, INT_MAX, 6 },
+//					 { 9, 10, 25, 9, 10, 30, 6, INT_MAX } };
 
-	for (int i = 0; i < size; i++) {
-		for (int j = 0; j < size; j++) {
-			if (graph[i][j] == INF) {
-				cout << "INF"<<'\t';
-			}
-			else {
-				cout << graph[i][j]<<'\t';
-			}
-			
-		}
-		cout<<i+1 << endl;
-	}
-	cout << endl << endl;
+struct marshrut {
+    string path;
+    int length;
+};
+
+int rand_num(int start, int end)
+{
+    int r = end - start;
+    int rnum = start + rand() % r;
+    return rnum;
 }
 
-void addEdge(int from, int to, int weight,vector<vector<int>>&graph) {
-	graph[from-1][to-1] = weight;
+bool contains(string s, char ch)
+{
+    for (int i = 0; i < s.size(); i++) {
+        if (s[i] == ch)
+            return true;
+    }
+    return false;
 }
 
-void deleteEdge(int from, int to, vector<vector<int>>& graph) {
-	graph[from-1][to-1] = INF;
+string mutatedGene(string path)
+{
+    while (true) {
+        int r = rand_num(1, V);
+        int r1 = rand_num(1, V);
+        if (r1 != r) {
+            char temp = path[r];
+            path[r] = path[r1];
+            path[r1] = temp;
+            break;
+        }
+    }
+    return path;
 }
 
-int calculateDistance(vector<int>& path,vector<vector<int>>graph) {
-	int distance = 0;
-	for (int i = 0; i < path.size()-1; ++i) {
-		int from = path[i];
-		int to = path[i + 1];
-		distance += graph[from][to];
-	}
-	return distance;
-}
-vector<int>generateRandomPath(std::mt19937 rdm) {
-	vector<int>random_path(CITIES);
-	for (int i = 0; i < CITIES; i++) {
-		random_path[i] = i;
-	}
-	shuffle(random_path.begin(), random_path.end(), rdm);
-	return random_path;
+string create_path()
+{
+    string path = "0";
+    while (true) {
+        if (path.size() == V) {
+            path += path[0];
+            break;
+        }
+        int temp = rand_num(1, V);
+        if (!contains(path, (char)(temp + 48)))
+            path += (char)(temp + 48);
+    }
+    return path;
 }
 
-vector<int> corssover(vector<int>parent1, vector<int>parent2,int crossover_num) {
-	vector<int>child(CITIES);
-
-	int crossover_point = rand() % (CITIES - 1) + 1;
-	for (int i = 0; i < crossover_point; ++i) {
-		child[i] = parent1[i];
-	}
-	for (int i = crossover_point + 1; i < CITIES; ++i) {
-		child[i] = parent2[i];
-	}
-
-	return child;
+int calculate_length(string path)
+{
+    int f = 0;
+    for (int i = 0; i < path.size() - 1; i++) {
+        if (cities[path[i] - 48][path[i + 1] - 48] == INT_MAX)
+            return INT_MAX;
+        f += cities[path[i] - 48][path[i + 1] - 48];
+    }
+    return f;
 }
 
-void mutate(vector<int>& individual,std::mt19937 rnd,int mutation_rate) {
-	if (rand() % 100< mutation_rate) {
-		int index1 = rnd() % CITIES;
-		int index2 = rnd() % CITIES;
-		swap(individual[index1], individual[index2]);
-	}
+bool less_than(struct marshrut t1,
+    struct marshrut t2)
+{
+    return t1.length < t2.length;
 }
 
+marshrut childGene(marshrut dad, marshrut mom)
+{
+    marshrut child;
+    int r = rand_num(1, V);
+    child.path = dad.path.substr(0, r);
+    string mom_path = mom.path.substr(r + 1);
+    for (char ch : mom_path)
+    {
+        if (!contains(child.path, ch)) {
+            child.path += ch;
+        }
+    }
 
-	//<-----end of util functions----->
+    if (child.path.size() != V) {
+        for (int i = r; i < dad.path.size(); i++) {
+            if (!contains(child.path, dad.path[i])) {
+                child.path += dad.path[i];
+            }
+        }
+    }
 
+    child.path += child.path[0];
+    child.length = calculate_length(child.path);
+    return child;
+}
 
-void main() {
-	srand(time(nullptr));
+void addCity() {
+    vector<int> newDistances(V, INT_MAX);
+    vector<int> newDistances2(V, INT_MAX);
 
-	int population_size;
-	cout << "Enter the population size: ";
-	cin >> population_size;
-	float mutation;
-	cout << "Enter the mutation rate(between 0 and 1): ";
-	cin >> mutation;
-	int crossovers_amount;
-	cout << "Enter the crossovers amount: ";
-	cin >> crossovers_amount;
-	int evolutions;
-	cout << "Enter the amount of evolutions(not less then 50): ";
-	cin >> evolutions;
-	system("cls");
+    for (int i = 0; i < V; ++i) {
+        cout << "Distance to city " << i + 1 << " : ";
+        cin >> newDistances[i];
+    }
+    for (int i = 0; i < V; ++i) {
+        cout << "Distance from city " << i + 1 << " : ";
+        cin >> newDistances2[i];
+    }
+    for (int i = 0; i < V; ++i) {
+        cities[i].push_back(newDistances2[i]);
+    }
 
-	vector<vector<int>>graph(CITIES, vector<int>(CITIES));
+    newDistances.push_back(INT_MAX);
+    cities.push_back(newDistances);
+    V++;
+}
 
-	implementGraph(graph, CITIES);
-	printGrph(graph);
+void deleteCity(int cityIndex) {
+    for (int i = 0; i < V; ++i) {
+        cities[i].erase(cities[i].begin() + cityIndex);
+    }
+    cities.erase(cities.begin() + cityIndex);
 
-	addEdge(1, 2, 10, graph);
-	addEdge(2, 1, 8, graph);
-	addEdge(1, 3, 15, graph);
-	addEdge(3, 1, 7, graph);
-	addEdge(1, 4, 32, graph);
-	addEdge(4, 1, 16, graph);
-	addEdge(1, 5, 16, graph);
-	addEdge(5, 1, 10, graph);
-	addEdge(1, 6, 31, graph);
-	addEdge(6, 1, 32, graph);
-	addEdge(1, 7, 5, graph);
-	addEdge(7, 1, 13, graph);
-	addEdge(1, 8, 6, graph);
-	addEdge(8, 1, 11, graph);
-	addEdge(1, 9, 4, graph);
-	addEdge(9, 1, 12, graph);
+    V--;
+}
 
-	addEdge(2, 3, 4, graph);
-	addEdge(3, 2, 6, graph);
-	addEdge(2, 4, 21, graph);
-	addEdge(4, 2, 17, graph);
-	addEdge(2, 5, 16, graph);
-	addEdge(5, 2, 19, graph);
-	addEdge(2, 6, 36, graph);
-	addEdge(6, 2, 40, graph);
-	addEdge(2, 7, 8, graph);
-	addEdge(7, 2, 17, graph);
-	addEdge(2, 8, 12, graph);
-	addEdge(8, 2, 8, graph);
-	addEdge(2, 9, 9, graph);
-	addEdge(9, 2, 3, graph);
+void print(Matrix matrix)
+{
+    for (auto i : matrix)
+    {
+        for (auto el : i)
+        {
+            if (el != INT_MAX)cout << el << "\t";
+            else cout << "INF" << "\t";
+        }
+        cout << endl;
+    }
+}
 
-	addEdge(3, 4, 4, graph);
-	addEdge(4, 3, 6, graph);
-	addEdge(3, 5, 11, graph);
-	addEdge(5, 3, 8, graph);
-	addEdge(3, 6, 20, graph);
-	addEdge(6, 3, 17,graph);
-	addEdge(3, 7, 12, graph);
-	addEdge(7, 3, 10, graph);
-	addEdge(3, 8, 41, graph);
-	addEdge(8, 3, 40, graph);
-	addEdge(3, 9, 30, graph);
-	addEdge(9, 3, 33, graph);
+int main()
+{
+    setlocale(LC_ALL, "ru");
+    srand(time(0));
+    int input = 0;
+    cout << "\n Starting city matrix: \n";
+    print(cities);
+    cout << endl;
+    while (true) {
+        cout << "1 - edit city matrix\n";
+        cout << "2 - run genetic algorithm\n";
+        cin >> input;
+        switch (input) {
+        case 1: {
+            cout << "1 - add city\n";
+            cout << "2 - remove city\n";
+            cin >> input;
+            switch (input) {
+            case 1: {
+                addCity();
+                cout << "\n New city matrix: \n";
+                print(cities);
+                break;
+            }
+            case 2: {
+                std::cout << "\n City index to remove (from 0 to " << V << "): \n";
+                cin >> input;
+                deleteCity(input - 1);
+                cout << "\n New city matrix: \n";
+                print(cities);
+                break;
+            }
+            }
+            break;
+        }
+        case 2: {
+            cout << "Population size: ";
+            cin >> populationSize;
+            cout << "Mutation probability (in percent, with decimal point): ";
+            cin >> mutationChance;
+            cout << "Number of crossovers in one population: ";
+            cin >> child;
+            cout << "Number of generations: ";
+            cin >> evoCount;
 
-	addEdge(4, 5, 8, graph);
-	addEdge(5, 4, 11, graph);
-	addEdge(4, 6, 21, graph);
-	addEdge(6, 4, 7, graph);
-	addEdge(4, 7, 42, graph);
-	addEdge(7, 4, 36, graph);
-	addEdge(4, 8, 12, graph);
-	addEdge(8, 4, 20, graph);
-	addEdge(4, 9, 11, graph);
-	addEdge(9, 4, 5, graph);
+            int gen = 1;
+            int mutated_counter = 0;
 
-	addEdge(5, 6, 3, graph);
-	addEdge(6, 5, 11, graph);
-	addEdge(5, 7, 16, graph);
-	addEdge(7, 5, 10, graph);
-	addEdge(5, 8, 31, graph);
-	addEdge(8, 5, 20, graph);
-	addEdge(5, 9, 10, graph);
-	addEdge(9, 5, 11, graph);
+            vector<struct marshrut> population;
+            struct marshrut temp;
 
-	addEdge(6, 7, 10, graph);
-	addEdge(7, 6, 4, graph);
-	addEdge(6, 8, 21, graph);
-	addEdge(8, 6, 15, graph);
-	addEdge(6, 9, 18, graph);
-	addEdge(9, 6, 10, graph);
+            for (int i = 0; i < populationSize; i++) {
+                temp.path = create_path();
+                temp.length = calculate_length(temp.path);
+                population.push_back(temp);
+            }
 
-	addEdge(7, 8, 2, graph);
-	addEdge(8, 7, 10, graph);
-	addEdge(7, 9, 31, graph);
-	addEdge(9, 7, 20, graph);
+            cout << "\n Initial population: \n";
+            cout << "Population path \t\t|| Path length\n";
 
-	addEdge(8, 9, 9, graph);
-	addEdge(9, 8, 18, graph);
+            for (int i = 0; i < populationSize; i++)
+                cout << population[i].path << "\t\t\t"
+                << population[i].length << endl;
+            cout << "\n";
 
-	printGrph(graph);
+            sort(population.begin(), population.end(), less_than);
 
+            while (gen <= evoCount) {
+                mutated_counter = 0;
+                cout << endl << "Best path: " << population[0].path;
+                cout << " its length: " << population[0].length << "\n\n";
 
-	
+                vector<struct marshrut> new_population;
+
+                for (int i = 0; i < child; i++) {
+                    struct marshrut p1 = population[i];
+                    while (true) {
+                        int dad_id = rand_num(0, populationSize - 1);
+                        int mom_id = rand_num(0, populationSize - 1);
+                        if (dad_id != mom_id) {
+                            marshrut new_marshrut = childGene(population[dad_id], population[mom_id]);
+                            new_population.push_back(new_marshrut);
+                            new_marshrut = childGene(population[mom_id], population[dad_id]);
+                            new_population.push_back(new_marshrut);
+                            break;
+                        }
+                    }
+                }
+
+                for (int i = 0; i < populationSize - 1; i++) {
+                    struct marshrut p1 = population[i];
+                    if (rand_num(0, 100) > mutationChance) {
+                        mutated_counter++;
+                        while (true) {
+                            string new_path = mutatedGene(p1.path);
+                            struct marshrut new_marshrut;
+                            new_marshrut.path = new_path;
+                            new_marshrut.length = calculate_length(new_marshrut.path);
+                            if (new_marshrut.length <= population[i].length) {
+                                new_population.push_back(new_marshrut);
+                                break;
+                            }
+                            else {
+                                new_marshrut.length = INT_MAX;
+                                new_population.push_back(new_marshrut);
+                                break;
+                            }
+                        }
+                    }
+                }
+
+                for (int i = 0; i < child + mutated_counter; i++)
+                {
+                    population.push_back(new_population[i]);
+                }
+                sort(population.begin(), population.end(), less_than);
+
+                for (int i = 0; i < child + mutated_counter; i++)
+                {
+                    population.pop_back();
+                }
+
+                cout << "Generation " << gen << " \n";
+                cout << "Population path \t\t|| Path length\n";
+
+                for (int i = 0; i < populationSize; i++)
+                    cout << population[i].path << "\t\t\t"
+                    << population[i].length << endl;
+                gen++;
+            }
+            cout << "\n\nThe most optimal route: ";
+            cout << population[0].path;
+            cout << "\n\n";
+            return 0;
+        }
+        }
+    }
 }
