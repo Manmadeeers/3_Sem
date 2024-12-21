@@ -1,28 +1,72 @@
-*{
-    border:1px solid black;
-}
-.container{
+main{
     display: flex;
-    flex-flow: row,wrap;
-    /* justify-content: center;
-    align-items: center; */
-    border: 1px solid black;
+    flex-flow: row wrap;
     width: 100%;
-}
-.container #name{
-    display: inline-block;
-    flex: 1 1 100%;
-    color:rgb(0, 167, 84);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    border:0.5px solid;
     width: 100%;
+    overflow: hidden;
 }
-.container #textlabel{
+header{
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    display:  flex;
+    flex-flow: row wrap;
+    flex: auto;
+    /* height: 100px; */
+}
+header h1{
+    color:rgb(5, 173, 140);
+    display: inline-block;
+    text-align: center;
+    flex:1 1 100%;
+}
+header #adder{
+    /* flex:1 1 20%; */
+    /* margin-left: 5%; */
+    margin-right: 50px;
+    width:500px;
+    height: 30px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 4px;
+}
+header #submit{
+    font-size: 15px;
+    /* flex: 1 1 10%; */
+    margin-right: 5%;
+    width: 100px;
+    border:1px solid grey;
+    background-color:rgb(5, 173, 140);
+    color: white;
+    height: 40px;
+    border-radius: 10px;
+}
+header #submit:hover{
+    cursor: pointer;
+    background-color: rgb(119, 230, 193);
+}
+.buttons{
+    flex:1 1 100%;
     display: flex;
-    flex: 1 1 100%;
-    width: 100%;
+    flex-flow: row wrap;
+    margin-top: 3%;
 }
-
-#textlable input{
-    width: 20%;
-    border-radius: 15px;
+.buttons #show-all{
+    margin-left: 13%;
+}
+.buttons button{
+    font-size: 15px;
+    width: 250px;
+    border:1px solid grey;
+    background-color:rgb(5, 173, 140);
+    color: white;
+    height: 40px;
+    border-radius: 10px;
+    margin-right: 10%;
+}
+.buttons button:hover{
+    cursor: pointer;
+    background-color: rgb(119, 230, 193);
 }

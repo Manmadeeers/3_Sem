@@ -7,15 +7,21 @@
     <title>Lab 13</title>
 </head>
 <body>
-<div class="container">
-    <h1 id="name">ToDo List</h1>
-    <form id="textlabel">
-        <label>
-            <input type="text" placeholder="Enter the task's name...">
-        </label>
-        <label></label>
-    </form>
-</div>
+    <main>
+        <header>
+            <h1>ToDo List</h1>
+            <input type="text" placeholder="Add a new task..." id="adder" name="adder-field">
+            <button id="submit">Add</button>
+        </header>
+        <section class="buttons">
+            <button id="show-all">Show all</button>
+            <button id="show-completed">Show all completed tasks</button>
+            <button id="show-incompleted">Show all incompleted tasks</button>
+        </section>
+        <div class="tasks">
+            
+        </div>
+    </main>
 <script src="script.js"></script>
 </body>
 </html>

@@ -50,7 +50,6 @@ class ToDoList{
         console.groupEnd();
     }
     changeTaskState(task,state){
-
         for(let i=0;i<this.ToDoList.length;i++){
             if(this.ToDoList[i].name.toLowerCase===task.toLowerCase){
                 this.ToDoList[i].state = state;
@@ -63,6 +62,7 @@ class ToDoList{
 let List1 = new ToDoList(1,"My domestic list");
 List1.addTask(1,"Clean the kitchen");
 List1.addTask(2,"Cook dinner");
+List1.ToDoList[0].changeName("CHANGED");
 List1.printList();
 List1.changeTaskState("Clean the Kitchen","done");
 List1.printList();
