@@ -1,8 +1,45 @@
+var adder = document.getElementById('adder');
+var add_but = document.getElementById('submit');
+var sh_all_but = document.getElementById('show-all');
+var sh_comp_but = document.getElementById('show-completed');
+var sh_incomp_but = document.getElementById('show-incompleted');
+var task_container = document.getElementsByClassName('tasks');
+var all_showed = false;
+
+var task_counter = 0;
+add_but.addEventListener('click',()=>{
+    if(adder.value!=''){
+        currentList.addTask(task_counter,adder.value);
+        console.clear();
+        currentList.printList();
+    }   
+    adder.value = '';
+});
+
+sh_all_but.addEventListener('click',()=>{
+    currentList.printList();
+    if(!all_showed){
+        currentList.ToDoList.forEach(element => {
+            var newTask = document.createElement('div');
+            newTask.className = "NTask";
+            var tskName = document.createElement('h1');
+            tskName.textContent = element.name;
+            newTask.appendChild(tskName);
+            var statusbar = document.createElement('h3');
+            statusbar.textContent = "Status";
+            document.getElementById('tsk').appendChild(newTask);
+            document.getElementById('tsk').appendChild(statusbar);
+        });
+        all_showed = true;
+    }
+   
+});
+
 class Task{
     constructor(id,name){
         this.id = id;
         this.name = name;
-        this.state = "not done";
+        this.state = "Incomplete";
     }
 
     changeName(value){
@@ -33,13 +70,13 @@ class ToDoList{
     }
 
     filterTask(state){
-        console.group(this.name+" filtered by "+state);
-        this.ToDoList.forEach(task => {
-            if(task.state==state){
-                console.log(task);
+        let filteredTasks = [];
+        this.ToDoList.forEach(element => {
+            if(element.state==state){
+                filteredTasks.push(element);
             }
         });
-        console.groupEnd();
+        return filteredTasks;
     }
 
     printList(){
@@ -49,6 +86,8 @@ class ToDoList{
         });
         console.groupEnd();
     }
+
+    
     changeTaskState(task,state){
         for(let i=0;i<this.ToDoList.length;i++){
             if(this.ToDoList[i].name.toLowerCase===task.toLowerCase){
@@ -59,22 +98,5 @@ class ToDoList{
     }
 };
 
-let List1 = new ToDoList(1,"My domestic list");
-List1.addTask(1,"Clean the kitchen");
-List1.addTask(2,"Cook dinner");
-List1.ToDoList[0].changeName("CHANGED");
-List1.printList();
-List1.changeTaskState("Clean the Kitchen","done");
-List1.printList();
-List1.filterTask("not done");
-
-let List2 = new ToDoList(2,"My work list");
-List2.addTask(1,"Finish final build development");
-List2.addTask(2,"Start new app development");
-List2.addTask(3,"Sell new app idea");
-List2.printList();
-List2.changeTaskState("start new app development","done");
-List2.printList();
-List2.filterTask("not done");
-List2.changeName("My programming list");
-List2.printList();
+const currentList = new ToDoList(1234567890,"Current List");
+currentList.addTask(1,"taska");
