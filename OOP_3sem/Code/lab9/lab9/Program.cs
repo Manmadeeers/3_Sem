@@ -60,8 +60,13 @@ namespace Lab9
 
 
             AmWatchingYou<Service>Obs= new AmWatchingYou<Service>();
-
-            Obs.OnCollectionChanged += Obs.HandleEvent();
+            Obs.OnCollectionChanged += Obs.HandleEvent;
+            Obs.AddElem(service1);
+            Obs.AddElem(service2);
+            Obs.AddElem(service3);
+            Obs.AddElem(service4);
+            Obs.DelElem(service1);
+            
         }
      
     }
