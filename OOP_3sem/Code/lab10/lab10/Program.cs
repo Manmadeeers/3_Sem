@@ -39,7 +39,7 @@ namespace lab10
             }
             Console.WriteLine("<---------->");
             Console.WriteLine("Months in alphabetical order");
-            var alphMonth = string.Concat(months.OrderBy(m => m));
+            var alphMonth = months.OrderBy(m => m);
             foreach (var item in alphMonth)
             {
                 Console.WriteLine(item);
