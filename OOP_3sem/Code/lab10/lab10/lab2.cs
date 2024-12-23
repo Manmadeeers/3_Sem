@@ -7,7 +7,7 @@ using lab10;
 
 namespace lab2
 {
-    public class Mno
+    public class Mno:IComparable<Mno>
     {
         private string _name;
         private int size;
@@ -76,6 +76,17 @@ namespace lab2
             items.Add(value);
 
         }
+
+        public int getSum()
+        {
+            int sum = 0;
+            foreach(int item in Items)
+            {
+                sum += item;
+            }
+            return sum;
+        }
+       
 
         public void DeleteElement(int value)
         {
@@ -202,13 +213,26 @@ namespace lab2
         }
         public override string ToString()
         {
-            return base.ToString() + " " + id;
+            return $"Size: {Size} & Sum: {this.getSum()} & Name: {this.Name}";
         }
 
         public override int GetHashCode()
         {
             return base.GetHashCode() ^ items.GetHashCode();
         }
+
+        public int CompareTo(Mno? other)
+        {
+            if(other==null)
+            {
+                return 1;
+            }
+            else
+            {
+                return this.Size.CompareTo(other.Size);
+            }
+        }
+
     }
 
     public class MnoArray
