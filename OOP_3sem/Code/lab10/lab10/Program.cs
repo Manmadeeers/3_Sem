@@ -131,6 +131,37 @@ namespace lab10
             }
             Console.WriteLine("<---------->");
 
+            Console.WriteLine("My own LINQ request");
+
+            var myRequest = coll.Where(c => c.getSum() < 500).OrderBy(sub => sub.Items.Last()).Reverse().SelectMany(sub=>sub.Items.Where(i=>i>10));
+           foreach(var item in myRequest)
+            {
+                Console.WriteLine(item);
+            }   
+            Console.WriteLine("<---------->");
+
+            Console.WriteLine("Request with Join operator");
+
+            List<Person> people = new List<Person>{
+            new Person { Id = 1, Name = "Alice" },
+            new Person { Id = 2, Name = "Bob" },
+            new Person { Id = 3, Name = "Charlie" }};
+
+            List<Address> addresses = new List<Address>{
+            new Address { Id = 1, Street = "Main St" },
+            new Address { Id = 2, Street = "Park Ave" },
+            new Address { Id = 3, Street = "College Rd" }};
+
+
+            var result = people.Join(addresses, p => p.Id, a => a.Id, (p, a) => new { PersonName = p.Name, PersonAddress = a.Street });
+          
+            foreach (var item in result)
+            {
+                Console.WriteLine($"{item.PersonName} lives at {item.PersonAddress}");
+            }
+
+            Console.WriteLine("<---------->");
+
         }
     }
 }

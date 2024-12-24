@@ -9,10 +9,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F156D136-5D3E-48A8-ACF9-CB7FC80A1591}|lab10\\lab10.csproj|c:\\users\\manmade\\desktop\\3_sem\\oop_3sem\\code\\lab10\\lab10\\lab2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F156D136-5D3E-48A8-ACF9-CB7FC80A1591}|lab10\\lab10.csproj|solutionrelative:lab10\\lab2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F156D136-5D3E-48A8-ACF9-CB7FC80A1591}|lab10\\lab10.csproj|c:\\users\\manmade\\desktop\\3_sem\\oop_3sem\\code\\lab10\\lab10\\lab10.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F156D136-5D3E-48A8-ACF9-CB7FC80A1591}|lab10\\lab10.csproj|solutionrelative:lab10\\lab10.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -32,22 +28,9 @@
               "RelativeDocumentMoniker": "lab10\\lab2.cs",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\OOP_3sem\\Code\\lab10\\lab10\\lab2.cs",
               "RelativeToolTip": "lab10\\lab2.cs",
-              "ViewState": "AgIAANAAAAAAAAAAAAAQwNcAAABLAAAAAAAAAA==",
+              "ViewState": "AgIAAFYBAAAAAAAAAAAiwHgBAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-23T12:48:53.02Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "lab10.cs",
-              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\OOP_3sem\\Code\\lab10\\lab10\\lab10.cs",
-              "RelativeDocumentMoniker": "lab10\\lab10.cs",
-              "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\OOP_3sem\\Code\\lab10\\lab10\\lab10.cs",
-              "RelativeToolTip": "lab10\\lab10.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T12:32:27.415Z",
               "EditorCaption": ""
             },
             {
@@ -58,7 +41,7 @@
               "RelativeDocumentMoniker": "lab10\\Program.cs",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\OOP_3sem\\Code\\lab10\\lab10\\Program.cs",
               "RelativeToolTip": "lab10\\Program.cs",
-              "ViewState": "AgIAAHIAAAAAAAAAAAAqwIMAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAUwJgAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-23T12:25:34.576Z",
               "EditorCaption": ""
