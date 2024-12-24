@@ -1,4 +1,5 @@
 ﻿
+
 namespace lab12
 {
     internal class Program
