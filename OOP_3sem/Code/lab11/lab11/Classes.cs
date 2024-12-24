@@ -23,9 +23,14 @@ namespace lab11
         {
             Console.WriteLine(Name);
         }
-        public string SayHello(string message)
+        public void SayHello(string message)
         {
-            return $"Hello {message}";
+            Console.WriteLine( $"Message:  {message}");
+        }
+
+        public override string ToString()
+        {
+            return "Class1";
         }
     }
 }

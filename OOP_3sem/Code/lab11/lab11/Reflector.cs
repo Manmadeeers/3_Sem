@@ -6,7 +6,7 @@ namespace lab11
     public static class Reflector
     {
       
-       public static void CollectInfo(string className, string parametrTypeName,string InvokeFilePath)
+       public static void CollectInfo(string className, string parametrTypeName)
         {
             Type? currentType = Type.GetType("lab11." + className);
             string? currentAssemblyName = currentType.Assembly.FullName;
@@ -100,24 +100,65 @@ namespace lab11
             Type ? paramType = Type.GetType(parametrTypeName);
 
             return type.GetMethods().Where(m => m.GetParameters().Any(param => param.ParameterType == paramType)).Select(m => m.Name);
+
         }
 
-        public static object InvokeFromfile(string filepath,object currentClass,string MethodName, object[]param)
+        public static void InvokeFromFile(object invokedClass,string methodName, object[]paramets)
         {
-            Type ? type = currentClass.GetType();
-            MethodInfo ? method = type.GetMethod(MethodName);
-            return method.Invoke(currentClass, param);
+          if (invokedClass == null)
+            {
+                throw new ArgumentNullException("Invoked class was null");
+            }
+
+            Type type = invokedClass.GetType();
+            var method = type.GetMethod(methodName);
+            if(method == null)
+            {
+                throw new ArgumentException("There's no such method");
+            }
+
+            var lines = File.ReadAllLines("Params.txt");
+            ParameterInfo[] parametersInf = method.GetParameters();
+            object[]parametres = new object[parametersInf.Length];
+            for(int i = 0; i< parametersInf.Length; i++)
+            {
+                if(i<lines.Length)
+                {
+                    parametres[i] = Convert.ChangeType(lines[i], parametersInf[i].ParameterType);
+                }
+                else
+                {
+                    parametres[i] = GenerateParmValue(parametersInf[i].ParameterType);
+                }
+            }
+            object  classInstane = Activator.CreateInstance(type);
+            object InvokeMeth = method.Invoke(classInstane, parametres);
+
         }
-        public static object GenerateParams()
+        public static object GenerateParmValue(Type type)
         {
-            string fileCont = File.ReadAllText("filecontent.Json");
-
+            if (type.IsValueType)
+            {
+                return Activator.CreateInstance(type);
+            }
+            return null;
         }
-
-        //public T Create<T>() where T : class
-        //{
-
-        //}
         
+        public static T Create<T>() where T: class 
+        {
+            var constructor = typeof(T).GetConstructors().FirstOrDefault();
+
+            if (constructor == null)
+            {
+                Console.WriteLine($"Не найден ни один конструктор для типа {typeof(T).Name}");
+                return null;
+            }
+
+            var parameters = constructor.GetParameters()
+                                        .Select(p => Activator.CreateInstance(p.ParameterType))
+                                        .ToArray();
+
+            return constructor.Invoke(parameters) as T;
+        }
     }
 }
