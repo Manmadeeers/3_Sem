@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,18 +14,35 @@ namespace lab12
             if (Directory.Exists(dirPath))
             {
                 DirectoryInfo dirInfo = new DirectoryInfo(dirPath);
-
-                string[] dirs = Directory.GetDirectories(dirPath);
-                string[] files = Directory.GetFiles(dirPath);
-                string inspectDirName = "FIAinspect";
-                Directory.CreateDirectory(inspectDirName);
-                string infoFileName = "fiadirinfo.txt";
-                File.Create($"{inspectDirName}/fiadirinfo.txt");
-                File.AppendAllLines(infoFileName, dirs);
-                File.AppendAllLines(infoFileName, files);
-                File.Copy($"{inspectDirName}/fiadirinfo.txt", "fiadirinfoNEW.txt", true);
-                File.Delete($"{inspectDirName}/fiadirinfo.txt");
                 
+                DirectoryInfo inspectDirectory = Directory.CreateDirectory("FIAInspect");
+                string infoFilePath = Path.Combine(inspectDirectory.FullName, "fiaDirInfo.txt");
+                //Console.WriteLine("<---------->");
+                using (StreamWriter writer = new StreamWriter(infoFilePath))
+                {
+                    writer.WriteLine("All files: ");
+                    //Console.WriteLine("All files:");
+
+                    foreach(var file in dirInfo.GetFiles())
+                    {
+                        writer.WriteLine(file.Name);
+                        //Console.WriteLine(file.Name);
+                    }
+                    writer.WriteLine("All subfolders: ");
+                    //Console.WriteLine("All subdirectories: ");
+                    foreach(var sub in dirInfo.GetDirectories())
+                    {
+                        writer.WriteLine(sub.Name);
+                        //Console.WriteLine(sub.Name);
+                    }
+                }
+                //Console.WriteLine("<---------->");
+                Console.WriteLine("All files and subdirectories were written down to a file");
+
+                string copyFilePath = Path.Combine(inspectDirectory.FullName, "fiaDirinfoCopy.txt");
+                File.Copy(infoFilePath, copyFilePath,true);
+                File.Delete(infoFilePath);
+                Console.WriteLine($"{infoFilePath} was copied to {copyFilePath}");
             }
             else
             {
@@ -36,9 +54,16 @@ namespace lab12
         {
             if (Directory.Exists(dirPath))
             {
-                string filedirName = "FIAfiles";
-                Directory.CreateDirectory(filedirName);
-
+                DirectoryInfo dirInfo = Directory.CreateDirectory("FIAFiles");
+                DirectoryInfo srcDirInfo = new DirectoryInfo(dirPath);
+                foreach(var file in Directory.GetFiles(dirPath,ext))
+                {
+                    string fileName = Path.GetFileName(file);
+                    string CopyTo = Path.Combine(dirInfo.FullName, fileName);
+                    File.Copy(file,CopyTo, true);
+                    
+                }
+                Console.WriteLine($"All files with required extention {ext} were copied to {dirPath}");
             }
             else
             {

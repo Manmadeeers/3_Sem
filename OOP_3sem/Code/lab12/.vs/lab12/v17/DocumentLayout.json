@@ -11,20 +11,20 @@
       "RelativeMoniker": "D:0:0:{A13CC361-743E-4A4C-83E0-4827CB9B8182}|lab12\\lab12.csproj|solutionrelative:lab12\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A13CC361-743E-4A4C-83E0-4827CB9B8182}|lab12\\lab12.csproj|c:\\users\\manmade\\desktop\\3_sem\\oop_3sem\\code\\lab12\\lab12\\fiadirinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A13CC361-743E-4A4C-83E0-4827CB9B8182}|lab12\\lab12.csproj|solutionrelative:lab12\\fiadirinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A13CC361-743E-4A4C-83E0-4827CB9B8182}|lab12\\lab12.csproj|c:\\users\\manmade\\desktop\\3_sem\\oop_3sem\\code\\lab12\\lab12\\fiafileinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A13CC361-743E-4A4C-83E0-4827CB9B8182}|lab12\\lab12.csproj|solutionrelative:lab12\\fiafileinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A13CC361-743E-4A4C-83E0-4827CB9B8182}|lab12\\lab12.csproj|c:\\users\\manmade\\desktop\\3_sem\\oop_3sem\\code\\lab12\\lab12\\fiadiskinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A13CC361-743E-4A4C-83E0-4827CB9B8182}|lab12\\lab12.csproj|solutionrelative:lab12\\fiadiskinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A13CC361-743E-4A4C-83E0-4827CB9B8182}|lab12\\lab12.csproj|c:\\users\\manmade\\desktop\\3_sem\\oop_3sem\\code\\lab12\\lab12\\fiadirinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A13CC361-743E-4A4C-83E0-4827CB9B8182}|lab12\\lab12.csproj|solutionrelative:lab12\\fiadirinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A13CC361-743E-4A4C-83E0-4827CB9B8182}|lab12\\lab12.csproj|c:\\users\\manmade\\desktop\\3_sem\\oop_3sem\\code\\lab12\\lab12\\fialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A13CC361-743E-4A4C-83E0-4827CB9B8182}|lab12\\lab12.csproj|solutionrelative:lab12\\fialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A13CC361-743E-4A4C-83E0-4827CB9B8182}|lab12\\lab12.csproj|c:\\users\\manmade\\desktop\\3_sem\\oop_3sem\\code\\lab12\\lab12\\fiadiskinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A13CC361-743E-4A4C-83E0-4827CB9B8182}|lab12\\lab12.csproj|solutionrelative:lab12\\fiadiskinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,14 +44,14 @@
               "RelativeDocumentMoniker": "lab12\\FIAFileManager.cs",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\OOP_3sem\\Code\\lab12\\lab12\\FIAFileManager.cs",
               "RelativeToolTip": "lab12\\FIAFileManager.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAzwCgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAwwDoAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-24T14:32:14.559Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "FIADirInfo.cs",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\OOP_3sem\\Code\\lab12\\lab12\\FIADirInfo.cs",
               "RelativeDocumentMoniker": "lab12\\FIADirInfo.cs",
@@ -59,25 +59,23 @@
               "RelativeToolTip": "lab12\\FIADirInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T14:24:25.375Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-24T14:24:25.375Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "FIAFileInfo.cs",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\OOP_3sem\\Code\\lab12\\lab12\\FIAFileInfo.cs",
               "RelativeDocumentMoniker": "lab12\\FIAFileInfo.cs",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\OOP_3sem\\Code\\lab12\\lab12\\FIAFileInfo.cs",
               "RelativeToolTip": "lab12\\FIAFileInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAowBcAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T14:14:24.706Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-24T14:14:24.706Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "FIADiskInfo.cs",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\OOP_3sem\\Code\\lab12\\lab12\\FIADiskInfo.cs",
               "RelativeDocumentMoniker": "lab12\\FIADiskInfo.cs",
@@ -85,12 +83,11 @@
               "RelativeToolTip": "lab12\\FIADiskInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T14:09:26.606Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-24T14:09:26.606Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "FIALog.cs",
               "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\OOP_3sem\\Code\\lab12\\lab12\\FIALog.cs",
               "RelativeDocumentMoniker": "lab12\\FIALog.cs",
@@ -98,8 +95,7 @@
               "RelativeToolTip": "lab12\\FIALog.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T12:49:05.082Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-24T12:49:05.082Z"
             },
             {
               "$type": "Document",
@@ -109,7 +105,7 @@
               "RelativeDocumentMoniker": "lab12\\Program.cs",
               "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\OOP_3sem\\Code\\lab12\\lab12\\Program.cs",
               "RelativeToolTip": "lab12\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-24T12:48:12.991Z",
               "EditorCaption": ""

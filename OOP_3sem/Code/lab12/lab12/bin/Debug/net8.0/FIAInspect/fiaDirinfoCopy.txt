@@ -1,0 +1,9 @@
+All files: 
+AllBankPasswords.txt
+BitcoinHashKeys.txt
+data.xml
+info.json
+All subfolders: 
+photos
+secret
+vids

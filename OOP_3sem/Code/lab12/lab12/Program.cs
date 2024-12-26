@@ -6,7 +6,11 @@ namespace lab12
     {
         public static void Main(string[] args)
         {
-
+            FIADiskInfo.GetDriveInfo();
+            FIAFileInfo.GetFileInfo("file.txt");
+            FIADirInfo.GetDirInfo("info");
+            FIAFileManager.GetDirsAndFiles("Dir1");
+            FIAFileManager.CopyByRequiredExtenction(".txt", "Dir1");
         }
     }
 }
