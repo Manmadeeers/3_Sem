@@ -10,7 +10,8 @@ namespace lab12
             FIAFileInfo.GetFileInfo("file.txt");
             FIADirInfo.GetDirInfo("info");
             FIAFileManager.GetDirsAndFiles("Dir1");
-            FIAFileManager.CopyByRequiredExtenction(".txt", "Dir1");
+            FIAFileManager.CopyByRequiredExtenction("*.txt", "Dir2");
+            //FIAFileManager.ArchiveDirectory("Dir2");
         }
     }
 }
