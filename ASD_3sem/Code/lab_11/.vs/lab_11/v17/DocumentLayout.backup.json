@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Manmade\\Desktop\\3_Sem\\ASD_3sem\\Code\\lab_11\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2F35DBAD-5F7B-4B87-A699-058FF4CE36A1}|lab_11\\lab_11.vcxproj|C:\\Users\\Manmade\\Desktop\\3_Sem\\ASD_3sem\\Code\\lab_11\\lab_11\\lab_11.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2F35DBAD-5F7B-4B87-A699-058FF4CE36A1}|lab_11\\lab_11.vcxproj|solutionrelative:lab_11\\lab_11.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "lab_11.cpp",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\ASD_3sem\\Code\\lab_11\\lab_11\\lab_11.cpp",
+              "RelativeDocumentMoniker": "lab_11\\lab_11.cpp",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\ASD_3sem\\Code\\lab_11\\lab_11\\lab_11.cpp",
+              "RelativeToolTip": "lab_11\\lab_11.cpp",
+              "ViewState": "AgIAACoAAAAAAAAAAAAUwFgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-27T06:11:17.249Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
