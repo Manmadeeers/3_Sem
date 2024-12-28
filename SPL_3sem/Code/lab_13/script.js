@@ -48,6 +48,14 @@ class ToDoList{
         this.name = value;
     }
 
+    chengeTaskName(tsk,name){
+        this.ToDoList.forEach(element => {
+            if(element.name==tsk){
+                element.name = name;    
+            }
+        });
+    }
+
     addTask(){
         let current_task = new Task(arguments[0],arguments[1]);
         if(this.checkIfExists(current_task.name)==false){
@@ -57,7 +65,7 @@ class ToDoList{
     }
     checkIfExists(name){
         this.ToDoList.forEach(element => {
-            if(element.name===name){
+            if(element.name==name){
                 return true;
             }
         });
@@ -83,7 +91,7 @@ class ToDoList{
 
     delByName(name){
         this.ToDoList.forEach(element => {
-            if(element.name===name){
+            if(element.name==name){
                 this.ToDoList.pop(element);
             }
         });
@@ -91,7 +99,7 @@ class ToDoList{
     
     changeTaskState(name,state){
        this.ToDoList.forEach(element => {
-            if(element.name===name){
+            if(element.name==name){
                 element.state = state;
             }
        });
@@ -169,21 +177,23 @@ function createDiv(name,status,id){
     newTask.appendChild(del);
 
     del.addEventListener('click',()=>{
-        currentList.ToDoList = currentList.ToDoList.filter(t=>t!==newTask);
-        newTask.parentElement.removeChild(newTask);
         currentList.delByName(name);
+        newTask.parentElement.removeChild(newTask);
+        
     })
 
-    // var change = document.createElement('button');
-    // change.textContent = "Incomplete task";
-    // change.id = "chn";
+    var change = document.createElement('button');
+    change.textContent = "Change task";
+    change.id = "chn";
 
-    // change.addEventListener('click',()=>{
-    //     tskStatus = "Incomplete";
-    //     tskStatus.style.color = "red";
-    //     currentList.changeTaskState(name,"Incomplete");
-    // })
-    // newTask.appendChild(change);
+    change.addEventListener('click',()=>{
+        var input = prompt("Enter the new task name: ");
+        tskName.textContent = input.toString();
+        currentList.chengeTaskName(name,input.toString());
+        currentList.printList();
+    })
+    newTask.appendChild(change);
+
     document.getElementById('tsk').appendChild(newTask);
 }
 
