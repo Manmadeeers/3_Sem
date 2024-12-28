@@ -113,8 +113,7 @@ void fillPheromones(MatrixP& pheromones, vector<Way> ways)
 }
 
 void main()
-{
-    setlocale(LC_ALL, "Russian");
+{   
     int nIterations = 100;
     double alpha;
     double beta;

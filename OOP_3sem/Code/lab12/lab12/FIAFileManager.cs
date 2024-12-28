@@ -13,32 +13,33 @@ namespace lab12
 
                 DirectoryInfo inspectDirectory = Directory.CreateDirectory("FIAInspect");
                 string infoFilePath = Path.Combine(inspectDirectory.FullName, "fiaDirInfo.txt");
-                //Console.WriteLine("<---------->");
+              
                 using (StreamWriter writer = new StreamWriter(infoFilePath))
                 {
                     writer.WriteLine("All files: ");
-                    //Console.WriteLine("All files:");
+                    
 
                     foreach (var file in dirInfo.GetFiles())
                     {
                         writer.WriteLine(file.Name);
-                        //Console.WriteLine(file.Name);
+                        
                     }
                     writer.WriteLine("All subfolders: ");
-                    //Console.WriteLine("All subdirectories: ");
+                   
                     foreach (var sub in dirInfo.GetDirectories())
                     {
                         writer.WriteLine(sub.Name);
-                        //Console.WriteLine(sub.Name);
+                      
                     }
                 }
-                //Console.WriteLine("<---------->");
+                FIALog.WriteLog("List of files and directories was written down to a file","fiaDirInfo.txt",infoFilePath);
                 Console.WriteLine("All files and subdirectories were written down to a file");
 
                 string copyFilePath = Path.Combine(inspectDirectory.FullName, "fiaDirinfoCopy.txt");
                 File.Copy(infoFilePath, copyFilePath, true);
                 File.Delete(infoFilePath);
                 Console.WriteLine($"{infoFilePath} was copied to {copyFilePath}");
+                FIALog.WriteLog("File was copied to another folder and deleted", copyFilePath.Split('\\').Last(), copyFilePath);
             }
             else
             {
@@ -53,13 +54,14 @@ namespace lab12
                 DirectoryInfo srcDirInfo = new DirectoryInfo(dirPath);
                 DirectoryInfo inspectInfo = new DirectoryInfo("FIAinspect");
                 DirectoryInfo destDirInfo = inspectInfo.CreateSubdirectory("FIAFiles");
+                FIALog.WriteLog("Subdirectory created",destDirInfo.Name,destDirInfo.FullName);
                 Console.WriteLine("<---------->");
                 foreach(string file in Directory.GetFiles(srcDirInfo.FullName, ext))
                 {
-                    //Console.WriteLine(file);
+                   
                     string destFilePath = Path.Combine(destDirInfo.FullName, file.Split('\\').Last());
                     File.Copy(file, destFilePath,true);
-                    //Console.WriteLine(destFilePath);    
+                    FIALog.WriteLog($"Files with {ext} extension were copied",destDirInfo.Name,destDirInfo.FullName);  
                 }
                 Console.WriteLine($"All files were copied from {dirPath} to {destDirInfo.Name}");
                 Console.WriteLine($"{destDirInfo.Name} was moved to FIAinspect");

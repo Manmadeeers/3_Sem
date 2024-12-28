@@ -15,6 +15,7 @@ namespace lab12
                 Console.WriteLine($"Free size: {drive.TotalFreeSpace}");
                 Console.WriteLine($"Label: {drive.VolumeLabel}");
                 Console.WriteLine("<---------->");
+                FIALog.WriteLog("Get drive info", "NONE", "NONE");
             }
         }
     }

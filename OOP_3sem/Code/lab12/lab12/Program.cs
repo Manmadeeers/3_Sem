@@ -6,6 +6,7 @@ namespace lab12
     {
         public static void Main(string[] args)
         {
+            FIALog.StartLogging();
             FIADiskInfo.GetDriveInfo();
             FIAFileInfo.GetFileInfo("file.txt");
             FIADirInfo.GetDirInfo("info");

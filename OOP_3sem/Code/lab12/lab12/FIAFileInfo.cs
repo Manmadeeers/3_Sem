@@ -22,6 +22,7 @@ namespace lab12
                 Console.WriteLine($"Creation date: {fileInfo.CreationTime}");
                 Console.WriteLine($"Last changes: {fileInfo.LastWriteTime}");
                 Console.WriteLine("<---------->");
+                FIALog.WriteLog("Get file info",filePath,fileInfo.FullName);   
             }
             else
             {

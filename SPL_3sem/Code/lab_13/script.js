@@ -4,6 +4,7 @@ var sh_all_but = document.getElementById('show-all');
 var sh_comp_but = document.getElementById('show-completed');
 var sh_incomp_but = document.getElementById('show-incompleted');
 var task_container = document.getElementsByClassName('tasks');
+// var cmp_but = document.getElementById('cmp');
 var all_showed = false;
 
 var task_counter = 0;
@@ -16,24 +17,7 @@ add_but.addEventListener('click',()=>{
     adder.value = '';
 });
 
-sh_all_but.addEventListener('click',()=>{
-    currentList.printList();
-    if(!all_showed){
-        currentList.ToDoList.forEach(element => {
-            var newTask = document.createElement('div');
-            newTask.className = "NTask";
-            var tskName = document.createElement('h1');
-            tskName.textContent = element.name;
-            newTask.appendChild(tskName);
-            var statusbar = document.createElement('h3');
-            statusbar.textContent = "Status";
-            document.getElementById('tsk').appendChild(newTask);
-            document.getElementById('tsk').appendChild(statusbar);
-        });
-        all_showed = true;
-    }
-   
-});
+
 
 class Task{
     constructor(id,name){
@@ -66,9 +50,19 @@ class ToDoList{
 
     addTask(){
         let current_task = new Task(arguments[0],arguments[1]);
-        this.ToDoList.push(current_task);
+        if(this.checkIfExists(current_task.name)==false){
+            this.ToDoList.push(current_task);
+           createDiv(current_task.name,current_task.state,current_task.id);
+        }
     }
-
+    checkIfExists(name){
+        this.ToDoList.forEach(element => {
+            if(element.name===name){
+                return true;
+            }
+        });
+        return false;
+    }
     filterTask(state){
         let filteredTasks = [];
         this.ToDoList.forEach(element => {
@@ -87,16 +81,112 @@ class ToDoList{
         console.groupEnd();
     }
 
-    
-    changeTaskState(task,state){
-        for(let i=0;i<this.ToDoList.length;i++){
-            if(this.ToDoList[i].name.toLowerCase===task.toLowerCase){
-                this.ToDoList[i].state = state;
-                break;
+    delByName(name){
+        this.ToDoList.forEach(element => {
+            if(element.name===name){
+                this.ToDoList.pop(element);
             }
-        }
+        });
+    }
+    
+    changeTaskState(name,state){
+       this.ToDoList.forEach(element => {
+            if(element.name===name){
+                element.state = state;
+            }
+       });
     }
 };
 
 const currentList = new ToDoList(1234567890,"Current List");
-currentList.addTask(1,"taska");
+
+//event listeners
+sh_all_but.addEventListener('click',()=>{
+    console.clear();
+    currentList.printList();
+    clearContainer();
+    currentList.ToDoList.forEach(element => {
+        createDiv(element.name,element.state,element.id);
+    });
+
+});
+
+sh_incomp_but.addEventListener('click',()=>{
+    console.clear();
+    currentList.printList();
+    clearContainer();
+    currentList.ToDoList.forEach(element => {
+        if(element.state==="Incomplete"){
+            createDiv(element.name,element.state,element.id);
+        }
+    });
+})
+sh_comp_but.addEventListener('click',()=>{
+    console.clear();
+    currentList.printList();
+    clearContainer();
+    currentList.ToDoList.forEach(element => {
+        if(element.state==="Complete"){
+            createDiv(element.name,element.state,element.id);
+        }
+    });
+})
+
+
+
+//functions
+function createDiv(name,status,id){
+    var newTask = document.createElement('div');
+    newTask.className = "NTask";
+    var tskName = document.createElement('h1');
+    tskName.textContent = name;
+    newTask.appendChild(tskName);
+    var tskStatus = document.createElement('p');
+    tskStatus.textContent = status;
+    if(status=="Incomplete"){
+        tskStatus.style.color = "red";
+    }
+    else if(status=="Complete"){
+        tskStatus.style.color = "green";
+    }
+    newTask.appendChild(tskStatus);
+
+    var complete = document.createElement('button');
+    complete.textContent = "Complete task";
+    complete.id = `cmp`;
+    newTask.appendChild(complete);
+
+    complete.addEventListener('click',()=>{
+        tskStatus.textContent = "Complete";
+        tskStatus.style.color = "green";
+        currentList.changeTaskState(name,"Complete");
+    })
+   
+
+    var del = document.createElement('button');
+    del.textContent = "Delete task";
+    del.id = "del";
+    newTask.appendChild(del);
+
+    del.addEventListener('click',()=>{
+        currentList.ToDoList = currentList.ToDoList.filter(t=>t!==newTask);
+        newTask.parentElement.removeChild(newTask);
+        currentList.delByName(name);
+    })
+
+    // var change = document.createElement('button');
+    // change.textContent = "Incomplete task";
+    // change.id = "chn";
+
+    // change.addEventListener('click',()=>{
+    //     tskStatus = "Incomplete";
+    //     tskStatus.style.color = "red";
+    //     currentList.changeTaskState(name,"Incomplete");
+    // })
+    // newTask.appendChild(change);
+    document.getElementById('tsk').appendChild(newTask);
+}
+
+function clearContainer(){
+    document.getElementById('tsk').innerHTML = '';
+}

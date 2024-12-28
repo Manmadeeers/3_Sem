@@ -22,6 +22,7 @@ namespace lab12
                 Console.WriteLine($"Amount of subdirectories: {subDirs.Length}");
                 Console.WriteLine($"Root directory: {dirInfo.Root}");
                 Console.WriteLine("<---------->");
+                FIALog.WriteLog("Get directory info", dirPath, dirInfo.FullName);
 
             }
             else

@@ -1,4 +1,4 @@
-﻿Сборка начата 23.12.2024 11:28:31.
+﻿Сборка начата 27.12.2024 10:19:01.
 Уровень детализации журнала: Normal.     1>Проект "C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.vcxproj" в узле 2 (целевые объекты Build).
      1>PrepareForBuild:
          Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
@@ -10,22 +10,22 @@
          lab_10.cpp
      1>C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(77,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
      1>C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(115,6): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
-     1>C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(136,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-     1>C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(193,30): warning C4267: аргумент: преобразование из "size_t" в "_Ty"; возможна потеря данных
-C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(193,30): warning C4267:         with
-C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(193,30): warning C4267:         [
-C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(193,30): warning C4267:             _Ty=int
-C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(193,30): warning C4267:         ]
-     1>C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(206,42): warning C4267: аргумент: преобразование из "size_t" в "_Ty"; возможна потеря данных
-C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(206,42): warning C4267:         with
-C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(206,42): warning C4267:         [
-C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(206,42): warning C4267:             _Ty=int
-C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(206,42): warning C4267:         ]
-     1>C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(217,38): warning C4267: аргумент: преобразование из "size_t" в "_Ty"; возможна потеря данных
-C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(217,38): warning C4267:         with
-C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(217,38): warning C4267:         [
-C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(217,38): warning C4267:             _Ty=int
-C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(217,38): warning C4267:         ]
+     1>C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(135,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+     1>C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(192,30): warning C4267: аргумент: преобразование из "size_t" в "_Ty"; возможна потеря данных
+C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(192,30): warning C4267:         with
+C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(192,30): warning C4267:         [
+C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(192,30): warning C4267:             _Ty=int
+C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(192,30): warning C4267:         ]
+     1>C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(205,42): warning C4267: аргумент: преобразование из "size_t" в "_Ty"; возможна потеря данных
+C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(205,42): warning C4267:         with
+C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(205,42): warning C4267:         [
+C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(205,42): warning C4267:             _Ty=int
+C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(205,42): warning C4267:         ]
+     1>C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(216,38): warning C4267: аргумент: преобразование из "size_t" в "_Ty"; возможна потеря данных
+C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(216,38): warning C4267:         with
+C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(216,38): warning C4267:         [
+C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(216,38): warning C4267:             _Ty=int
+C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(216,38): warning C4267:         ]
        Link:
          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\x64\Debug\lab_10.exe" /INCREMENTAL /ILK:"x64\Debug\lab_10.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\x64\Debug\lab_10.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\x64\Debug\lab_10.lib" /MACHINE:X64 x64\Debug\lab_10.obj
          lab_10.vcxproj -> C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\x64\Debug\lab_10.exe
@@ -40,24 +40,24 @@ C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(217,38): w
        (Целевой объект ClCompile) -> 
          C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(77,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
          C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(115,6): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
-         C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(136,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-         C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(193,30): warning C4267: аргумент: преобразование из "size_t" в "_Ty"; возможна потеря данных
-       C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(193,30): warning C4267:         with
-       C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(193,30): warning C4267:         [
-       C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(193,30): warning C4267:             _Ty=int
-       C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(193,30): warning C4267:         ]
-         C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(206,42): warning C4267: аргумент: преобразование из "size_t" в "_Ty"; возможна потеря данных
-       C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(206,42): warning C4267:         with
-       C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(206,42): warning C4267:         [
-       C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(206,42): warning C4267:             _Ty=int
-       C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(206,42): warning C4267:         ]
-         C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(217,38): warning C4267: аргумент: преобразование из "size_t" в "_Ty"; возможна потеря данных
-       C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(217,38): warning C4267:         with
-       C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(217,38): warning C4267:         [
-       C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(217,38): warning C4267:             _Ty=int
-       C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(217,38): warning C4267:         ]
+         C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(135,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+         C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(192,30): warning C4267: аргумент: преобразование из "size_t" в "_Ty"; возможна потеря данных
+       C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(192,30): warning C4267:         with
+       C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(192,30): warning C4267:         [
+       C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(192,30): warning C4267:             _Ty=int
+       C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(192,30): warning C4267:         ]
+         C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(205,42): warning C4267: аргумент: преобразование из "size_t" в "_Ty"; возможна потеря данных
+       C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(205,42): warning C4267:         with
+       C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(205,42): warning C4267:         [
+       C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(205,42): warning C4267:             _Ty=int
+       C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(205,42): warning C4267:         ]
+         C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(216,38): warning C4267: аргумент: преобразование из "size_t" в "_Ty"; возможна потеря данных
+       C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(216,38): warning C4267:         with
+       C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(216,38): warning C4267:         [
+       C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(216,38): warning C4267:             _Ty=int
+       C:\Users\Manmade\Desktop\3_Sem\ASD_3sem\Code\lab_10\lab_10\lab_10.cpp(216,38): warning C4267:         ]
 
     Предупреждений: 6
     Ошибок: 0
 
-Прошло времени 00:00:01.11
+Прошло времени 00:00:01.38
