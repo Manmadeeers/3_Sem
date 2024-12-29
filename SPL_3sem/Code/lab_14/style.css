@@ -15,6 +15,15 @@
     border: 1px solid;
     flex: 1 1 50%;
 }
+.sud h2{
+    flex: 1 1 100%;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    color: rgb(5, 173, 140);
+    text-decoration: underline;
+}
+
 .oper{
     border: 1px solid;
     flex: 1 1 30%;
@@ -22,9 +31,18 @@
     flex-flow: row wrap;
 }
 
+.oper h2{
+    /* flex:1 1 100%; */
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: rgb(5, 173, 140);
+    text-decoration: underline;
+}
+
 .oper button{
     height:  60px;
-    /* flex:1 1 60%; */
+    /* flex:1 1 100%; */
     width: 60%;
     margin-left: auto;
     margin-right: auto;
