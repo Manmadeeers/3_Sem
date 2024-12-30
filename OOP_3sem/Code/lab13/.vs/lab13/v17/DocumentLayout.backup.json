@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Manmade\\Desktop\\3_Sem\\OOP_3sem\\Code\\lab13\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5B8FF5D0-B431-4F25-AF2C-F412136F5599}|lab13\\lab13.csproj|c:\\users\\manmade\\desktop\\3_sem\\oop_3sem\\code\\lab13\\lab13\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B8FF5D0-B431-4F25-AF2C-F412136F5599}|lab13\\lab13.csproj|solutionrelative:lab13\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Manmade\\Desktop\\3_Sem\\OOP_3sem\\Code\\lab13\\lab13\\Program.cs",
+              "RelativeDocumentMoniker": "lab13\\Program.cs",
+              "ToolTip": "C:\\Users\\Manmade\\Desktop\\3_Sem\\OOP_3sem\\Code\\lab13\\lab13\\Program.cs",
+              "RelativeToolTip": "lab13\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T21:40:39.85Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
