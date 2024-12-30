@@ -31,6 +31,7 @@ namespace lab12
                         writer.WriteLine(sub.Name);
                       
                     }
+                    writer.Close();
                 }
                 FIALog.WriteLog("List of files and directories was written down to a file","fiaDirInfo.txt",infoFilePath);
                 Console.WriteLine("All files and subdirectories were written down to a file");
@@ -83,11 +84,12 @@ namespace lab12
                 DirectoryInfo directoryInfo = new DirectoryInfo(dirPath);
                 string zipFileName = Path.Combine(Path.GetDirectoryName(directoryInfo.FullName), "Archive");
                 //Console.Write(zipFileName);
-                ZipFile.CreateFromDirectory(directoryInfo.FullName, zipFileName);
-                Console.WriteLine($"Directory {dirPath.Split('\\').Last()} was sucsessfully archived to {zipFileName.Split('\\').Last()} file");
-                string targetFolder = Path.Combine(Path.GetDirectoryName(directoryInfo.FullName), "Unarchived");
-                ZipFile.ExtractToDirectory(zipFileName, targetFolder);
-                Console.WriteLine($"{zipFileName.Split('\\').Last()} was sucsessfully extracted to {targetFolder.Split('\\').Last()} folder");
+                int archIterator = 0;
+                ZipFile.CreateFromDirectory(directoryInfo.FullName,$"{zipFileName}_{archIterator}");
+                Console.WriteLine($"Directory {dirPath.Split('\\').Last()} was sucsessfully archived to {zipFileName.Split('\\').Last()}_{archIterator} file");
+                string targetFolder = Path.Combine(Path.GetDirectoryName(directoryInfo.FullName), $"Unarchived_{archIterator}");
+                ZipFile.ExtractToDirectory($"{zipFileName}_{archIterator}", targetFolder);
+                Console.WriteLine($"{zipFileName.Split('\\').Last()}_{archIterator} was sucsessfully extracted to {targetFolder.Split('\\').Last()}_{archIterator} folder");
             }
             else
             {

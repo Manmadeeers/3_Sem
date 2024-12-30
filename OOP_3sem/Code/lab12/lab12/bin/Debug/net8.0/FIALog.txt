@@ -1,0 +1,40 @@
+23:55:29.8764197|30.12.2024 0:00:00|Files with *.txt extension were copied|FIAFiles|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAinspect\FIAFiles
+00:01:06.1999378|31.12.2024 0:00:00|Get drive info|NONE|NONE
+00:01:06.2195279|31.12.2024 0:00:00|Get file info|file.txt|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\file.txt
+00:01:06.2219768|31.12.2024 0:00:00|Get directory info|info|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\info
+00:01:06.2242828|31.12.2024 0:00:00|List of files and directories was written down to a file|fiaDirInfo.txt|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAInspect\fiaDirInfo.txt
+00:01:06.2279271|31.12.2024 0:00:00|File was copied to another folder and deleted|fiaDirinfoCopy.txt|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAInspect\fiaDirinfoCopy.txt
+00:01:06.2286745|31.12.2024 0:00:00|Subdirectory created|FIAFiles|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAinspect\FIAFiles
+00:01:06.2298140|31.12.2024 0:00:00|Files with *.txt extension were copied|FIAFiles|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAinspect\FIAFiles
+00:01:06.2301412|31.12.2024 0:00:00|Files with *.txt extension were copied|FIAFiles|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAinspect\FIAFiles
+00:01:36.7438388|31.12.2024 0:00:00|Get drive info|NONE|NONE
+00:01:36.7680396|31.12.2024 0:00:00|Get file info|file.txt|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\file.txt
+00:01:36.7719330|31.12.2024 0:00:00|Get directory info|info|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\info
+00:01:36.7743890|31.12.2024 0:00:00|List of files and directories was written down to a file|fiaDirInfo.txt|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAInspect\fiaDirInfo.txt
+00:01:36.7760345|31.12.2024 0:00:00|File was copied to another folder and deleted|fiaDirinfoCopy.txt|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAInspect\fiaDirinfoCopy.txt
+00:01:36.7766521|31.12.2024 0:00:00|Subdirectory created|FIAFiles|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAinspect\FIAFiles
+00:01:36.7776215|31.12.2024 0:00:00|Files with *.txt extension were copied|FIAFiles|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAinspect\FIAFiles
+00:01:36.7778974|31.12.2024 0:00:00|Files with *.txt extension were copied|FIAFiles|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAinspect\FIAFiles
+00:09:03.9017400|31.12.2024 0:00:00|Get drive info|NONE|NONE
+00:09:03.9290274|31.12.2024 0:00:00|Get file info|file.txt|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\file.txt  
+00:09:03.9332149|31.12.2024 0:00:00|Get directory info|info|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\info
+00:09:03.9352560|31.12.2024 0:00:00|List of files and directories was written down to a file|fiaDirInfo.txt|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAInspect\fiaDirInfo.txt
+00:09:03.9368765|31.12.2024 0:00:00|File was copied to another folder and deleted|fiaDirinfoCopy.txt|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAInspect\fiaDirinfoCopy.txt
+00:09:03.9375578|31.12.2024 0:00:00|Subdirectory created|FIAFiles|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAinspect\FIAFiles
+00:09:03.9385884|31.12.2024 0:00:00|Files with *.txt extension were copied|FIAFiles|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAinspect\FIAFiles
+00:09:03.9389615|31.12.2024 0:00:00|Files with *.txt extension were copied|FIAFiles|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAinspect\FIAFiles
+00:09:08.3407805|31.12.2024 0:00:00|Get drive info|NONE|NONE
+00:09:08.3575277|31.12.2024 0:00:00|Get file info|file.txt|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\file.txt
+00:09:08.3613276|31.12.2024 0:00:00|Get directory info|info|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\info
+00:09:08.3636825|31.12.2024 0:00:00|List of files and directories was written down to a file|fiaDirInfo.txt|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAInspect\fiaDirInfo.txt
+00:09:08.3657779|31.12.2024 0:00:00|File was copied to another folder and deleted|fiaDirinfoCopy.txt|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAInspect\fiaDirinfoCopy.txt
+00:09:08.3663964|31.12.2024 0:00:00|Subdirectory created|FIAFiles|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAinspect\FIAFiles
+00:09:08.3674308|31.12.2024 0:00:00|Files with *.txt extension were copied|FIAFiles|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAinspect\FIAFiles
+00:09:08.3676656|31.12.2024 0:00:00|Files with *.txt extension were copied|FIAFiles|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAinspect\FIAFiles00:38:55.1298945|31.12.2024 0:00:00|Get drive info|NONE|NONE
+00:38:55.1473534|31.12.2024 0:00:00|Get file info|file.txt|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\file.txt
+00:38:55.1501732|31.12.2024 0:00:00|Get directory info|info|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\info
+00:38:55.1527357|31.12.2024 0:00:00|List of files and directories was written down to a file|fiaDirInfo.txt|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAInspect\fiaDirInfo.txt
+00:38:55.1549647|31.12.2024 0:00:00|File was copied to another folder and deleted|fiaDirinfoCopy.txt|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAInspect\fiaDirinfoCopy.txt
+00:38:55.1562046|31.12.2024 0:00:00|Subdirectory created|FIAFiles|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAinspect\FIAFiles
+00:38:55.1580382|31.12.2024 0:00:00|Files with *.txt extension were copied|FIAFiles|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAinspect\FIAFiles
+00:38:55.1592760|31.12.2024 0:00:00|Files with *.txt extension were copied|FIAFiles|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAinspect\FIAFiles
