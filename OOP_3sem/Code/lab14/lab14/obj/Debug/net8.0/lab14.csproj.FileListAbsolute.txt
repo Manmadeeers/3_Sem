@@ -1,0 +1,15 @@
+C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab14\lab14\bin\Debug\net8.0\lab14.exe
+C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab14\lab14\bin\Debug\net8.0\lab14.deps.json
+C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab14\lab14\bin\Debug\net8.0\lab14.runtimeconfig.json
+C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab14\lab14\bin\Debug\net8.0\lab14.dll
+C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab14\lab14\bin\Debug\net8.0\lab14.pdb
+C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab14\lab14\obj\Debug\net8.0\lab14.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab14\lab14\obj\Debug\net8.0\lab14.AssemblyInfoInputs.cache
+C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab14\lab14\obj\Debug\net8.0\lab14.AssemblyInfo.cs
+C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab14\lab14\obj\Debug\net8.0\lab14.csproj.CoreCompileInputs.cache
+C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab14\lab14\obj\Debug\net8.0\lab14.sourcelink.json
+C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab14\lab14\obj\Debug\net8.0\lab14.dll
+C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab14\lab14\obj\Debug\net8.0\refint\lab14.dll
+C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab14\lab14\obj\Debug\net8.0\lab14.pdb
+C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab14\lab14\obj\Debug\net8.0\lab14.genruntimeconfig.cache
+C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab14\lab14\obj\Debug\net8.0\ref\lab14.dll
