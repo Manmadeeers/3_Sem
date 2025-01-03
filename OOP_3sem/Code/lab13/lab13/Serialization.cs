@@ -81,7 +81,7 @@ namespace lab13
         public void FormatDeserialize(string filename)
         {
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(T));
-            //Console.WriteLine(typeof(T));
+            //.Console.WriteLine(typeof(T));
             using (FileStream sw = new FileStream(filename, FileMode.Open))
             {
                 T? obj = xmlSerializer.Deserialize(sw) as T;

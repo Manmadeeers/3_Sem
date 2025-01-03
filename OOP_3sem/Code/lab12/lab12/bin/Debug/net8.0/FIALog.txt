@@ -38,3 +38,11 @@
 00:38:55.1562046|31.12.2024 0:00:00|Subdirectory created|FIAFiles|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAinspect\FIAFiles
 00:38:55.1580382|31.12.2024 0:00:00|Files with *.txt extension were copied|FIAFiles|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAinspect\FIAFiles
 00:38:55.1592760|31.12.2024 0:00:00|Files with *.txt extension were copied|FIAFiles|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAinspect\FIAFiles
+13:30:14.0221210|03.01.2025 0:00:00|Get drive info|NONE|NONE
+13:30:14.0422322|03.01.2025 0:00:00|Get file info|file.txt|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\file.txt
+13:30:14.0450792|03.01.2025 0:00:00|Get directory info|info|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\info
+13:30:14.0490758|03.01.2025 0:00:00|List of files and directories was written down to a file|fiaDirInfo.txt|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAInspect\fiaDirInfo.txt
+13:30:14.0536376|03.01.2025 0:00:00|File was copied to another folder and deleted|fiaDirinfoCopy.txt|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAInspect\fiaDirinfoCopy.txt
+13:30:14.0543957|03.01.2025 0:00:00|Subdirectory created|FIAFiles|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAinspect\FIAFiles
+13:30:14.0556806|03.01.2025 0:00:00|Files with *.txt extension were copied|FIAFiles|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAinspect\FIAFiles
+13:30:14.0565595|03.01.2025 0:00:00|Files with *.txt extension were copied|FIAFiles|C:\Users\Manmade\Desktop\3_Sem\OOP_3sem\Code\lab12\lab12\bin\Debug\net8.0\FIAinspect\FIAFiles
