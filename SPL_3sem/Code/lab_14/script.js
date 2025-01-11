@@ -75,7 +75,7 @@ class Sudoku{
                 flag2 = true;
             }
         }
-        for (let i = 0; i < (9*9)-5; i++) {
+        for (let i = 0; i < (9*9)-9; i++) {
             let xcord = Math.floor(Math.random() * 9);
             let ycord = Math.floor(Math.random() * 9);
             if (this.board[xcord][ycord] != null){
